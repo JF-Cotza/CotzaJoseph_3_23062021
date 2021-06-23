@@ -1,0 +1,16 @@
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-third:#99E2D0;
+@mixin font-maininfo{ 
+                @font-face {
+                            font-family: "Shrikhand ";
+                            src: url("../base/fonts/Shrikhand/Shrikhand-Regular.ttf") format("ttf")
+                            }
+                    };
+
+@mixin font-text{
+                @font-face {
+                        font-family: "Shrikhand ";
+                        src: url("../base/fonts/Roboto/Roboto-Regular") format("ttf")
+                        }
+                };

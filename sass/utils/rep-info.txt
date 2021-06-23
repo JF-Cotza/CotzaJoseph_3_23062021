@@ -1,0 +1,2 @@
+2. Utils: dans utils/, vous rangez vos variables, fonctions, mixins et les  %placeholders pour les extensions (si vous en utilisez) 
+	- _variables.scss (l'underscore '_' indique que c'est un fichier 'partiel')
