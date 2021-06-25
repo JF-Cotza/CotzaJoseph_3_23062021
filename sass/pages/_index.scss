@@ -1,0 +1,58 @@
+.header{   
+    & .header-form{
+        height: 305px;
+        position: relative;
+        & label{
+            position: absolute;
+            top:3px;
+            left:6.5rem;
+        }
+        & span{
+            font-size: 1rem;
+        }
+        & input{
+            font-size: 1.1rem;
+            margin-left: .3rem;
+            text-indent: .3rem;
+            font-size: map-get($map:$font-size , $key:normal );
+            margin-top: 10px;
+            font-weight: bold;
+        }        
+    }
+    & .header-location{
+        border:none;
+        height: 50px;
+        background-color:lighten($color: $color-third, $amount: 10%);
+        &::before{
+            content: "";
+            box-shadow: inset 0 2px 2px darken($color: $color-third, $amount: 50%);
+            height: 50px;
+            display: inline-block;
+            width: 100%;           
+        }
+    }
+    & .header-slogan{
+        color:red;
+        & .mainTitle{
+            margin-top: 38px;
+            width: 65%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        & p{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 13px;
+            width: 88%;
+            font-size: map-get($map: $font-size, $key: title);
+        }
+        & button{
+            margin-top: 31px;
+            padding: 13px 22px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: map-get($map: $font-size, $key: title);
+            border-radius: 25px;
+        }
+    }    
+}

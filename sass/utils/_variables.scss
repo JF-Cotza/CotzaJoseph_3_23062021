@@ -1,16 +1,28 @@
+/*inclusion des fonts */
+@font-face {
+ font-family: "roboto";
+ src: url('../base/fonts/Roboto/Roboto-Regular') format('ttf')
+}
+
+@font-face {
+ font-family: "shrikhand";
+ src: url('../base/fonts/Shrikhand/Shrikhand-Regular') format('ttf')
+}
+
+/************* variable **************/
+/* color */
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-third:#99E2D0;
-@mixin font-maininfo{ 
-                @font-face {
-                            font-family: "Shrikhand ";
-                            src: url("../base/fonts/Shrikhand/Shrikhand-Regular.ttf") format("ttf")
-                            }
-                    };
 
-@mixin font-text{
-                @font-face {
-                        font-family: "Shrikhand ";
-                        src: url("../base/fonts/Roboto/Roboto-Regular") format("ttf")
-                        }
-                };
+/* font */
+$font-text:'roboto';
+$font-main_info:'shrikhand';
+$font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
+
+
+/*mixin*/
+@mixin font-face($name, $src){
+	                font-family:$name ;
+	                src: $src,
+}

@@ -1,8 +1,12 @@
 /* attention dans import: ni extension ni _ */
-@import url(./utils/variables);
+@import "./utils/variables";
 
-@import url(./pages/index);
-@import url(./pages/delice);
-@import url(./pages/francaise);
-@import url(./pages/note);
-@import url(./pages/palette);
+@import "./base/base";
+@import "./components/components";
+@import "./layouts/header";
+
+@import "./pages/index";
+@import "./pages/delice";
+@import "./pages/francaise";
+@import "./pages/note";
+@import "./pages/palette";
