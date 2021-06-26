@@ -10,7 +10,7 @@
         & span{
             grid-column: 1/2;
             text-align: left;
-            text-indent: map-get($map: $marge, $key:medium);
+            text-indent: map-get($map: $marge-horizontal, $key:medium);
             font-size: map-get($map:$font-size , $key:title );
             padding-top: 5px;
             }

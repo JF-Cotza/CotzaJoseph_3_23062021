@@ -1,23 +1,9 @@
-.header{   
+.main{
+    width: 100%;   
     &-form{
         background: lighten($color: $color-secondary, $amount: 25%);
         position: relative;
-        & label{
-            position: absolute;
-            top:3px;
-            left:6.5rem;
-        }
-        & span{
-            font-size: map-get($map: $font-size, $key: normal);
-        }
-        & input{
-            font-size: map-get($map: $font-size, $key: title);
-            margin-left: map-get($map: $marge, $key: minimum);
-            text-indent: map-get($map: $marge, $key: minimum);
-            font-size: map-get($map:$font-size , $key:normal );
-            margin-top: 10px;
-            font-weight: bold;
-        }        
+                
     }
     &-location{
         border:none;
@@ -30,8 +16,25 @@
             display: inline-block;
             width: 100%;           
         }
+        & label{
+            position: absolute;
+            top:3px;
+            left:6.5rem;
+        }
+        & span{
+            font-size: map-get($map: $font-size, $key: normal);
+        }
+        & input{
+            font-size: map-get($map: $font-size, $key: title);
+            margin-left: map-get($map: $marge-horizontal, $key: minimum);
+            text-indent: map-get($map: $marge-horizontal, $key: minimum);
+            font-size: map-get($map:$font-size , $key:normal );
+            margin-top: 10px;
+            font-weight: bold;
+        }
     }
     &-slogan{
+        text-align: center;
         & .mainTitle{
             margin-top: 38px;
             width: 65%;
@@ -50,16 +53,12 @@
             margin-bottom: 58px;
        }
     }    
-}
-
-.main{
-    width: 100%;
     &-working{
         padding-bottom: 74px;
         padding-top: 46px;
         & .mainTitle{
             margin-bottom: 8px;
-            margin-left: map-get($map: $marge, $key: small);
+            margin-left: map-get($map: $marge-horizontal, $key: small);
         }
         & ul{
             display: flex;
@@ -67,7 +66,7 @@
             justify-content: center;
             list-style: none;
             width: 86.5%;
-            margin-left:map-get($map: $marge, $key:standard );
+            margin-left:map-get($map: $marge-horizontal, $key:standard );
             margin-right: auto;
             font-weight: bold;
             & li{
@@ -90,7 +89,7 @@
                     z-index:1;
                 }     
                 & i{
-                    text-indent: map-get($map: $marge, $key: standard);
+                    text-indent: map-get($map: $marge-horizontal, $key: standard);
                     font-size: map-get($map: $font-size, $key: title);
                     
                 }
@@ -106,7 +105,7 @@
         padding-bottom: 67px;
         & .mainTitle{
             padding-top: 52px;
-            margin-left: map-get($map: $marge, $key: small);
+            margin-left: map-get($map: $marge-horizontal, $key: small);
         }
         & ul{
             margin-top: 5px;
@@ -126,7 +125,7 @@
             background-image: url('../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
         }
         & .restaurant{
-            margin-left: map-get($map: $marge, $key: small);
+            margin-left: map-get($map: $marge-horizontal, $key: small);
             margin-right: auto;
             width: 89%;
             height: 250px;
@@ -161,43 +160,23 @@
                 & h3{
                     padding-top: 13px;
                     font-weight: bold;
-                    text-indent: map-get($map: $marge, $key:xsmall );
+                    text-indent: map-get($map: $marge-horizontal, $key:xsmall );
                 }
                 & p{
                     margin-top: 3px;
                     padding-bottom: 15px;
-                    text-indent: map-get($map: $marge, $key:xsmall );
+                    text-indent: map-get($map: $marge-horizontal, $key:xsmall );
                 }
                 & .favori{
-                        text-indent: none;
                         position: absolute;
                         top: 21px;
                         right: 1.5rem;
                         font-size: map-get($map: $font-size, $key:mainTitle );
                         width: map-get($map: $font-size, $key:mainTitle );
                         z-index: 2;
-                        &:hover{
-                            background: $gradient;
-                            padding: 4px;
-                            border-radius: map-get($map: $border-radius, $key: round);
-                            top:17px;
-                            right: 1.2rem;
-                            opacity: .5;
-                        }
                 }
-                & .unchecked{
-                        display: none;
-                        &--active{
-                                color:black;
-                                }
-                            }
-                & .checked{
-                        display: none;
-                            &--active{
-                                color:$color-primary;
-                                    }
-                        }
-                }
+            }    
+                
         }            
 
     }

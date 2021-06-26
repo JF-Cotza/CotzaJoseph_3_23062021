@@ -17,105 +17,124 @@
             <img src="./sass/base/images/logo/ohmyfood.png"
                 alt="logo oh my food" id='logo'>
         </p>
-        
-        <form action="" method="get" class='header-form'>
-            <fieldset class='header-location'>
+    </header>
+    
+    <!-- main -->
+    <main class='main'>
+        <form action="" method="get" class='main-form'>
+            <fieldset class='main-location'>
                 <label for="place"><span class="fas fa-map-marker-alt"></span>
                     <input type="search" name="place" id="place" value='Paris, Belleville'>
                 </label>
             </fieldset>
-            <div class='header-slogan'>
+            <div class='main-slogan'>
                 <h1 class='mainTitle'>Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                 <button class='btn'>Explorez nos restaurants</button>
             </div>
+    
+            <article class='main-working'>
+                <h2 class="mainTitle">
+                    Fonctionnement
+                </h2>
+                <ul>
+                    <li>
+                    <span class="number">1</span><i class="fas fa-mobile-alt"></i><span class="info">Choisissez le restaurant</span>
+                    </li>
+                    <li>
+                        <span class="number">2</span><i class="fas fa-list-ul"></i><span class="info">Composez votre menu</span>
+                    </li>
+                    <li>
+                        <span class="number">3</span><i class="fas fa-store"></i><span class="info">Dégustez au restaurant</span>
+                    </li>
+            </article>
+            <section class='main-places'>
+                <h2 class='mainTitle'>Restaurants</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <article class='restaurant'>
+                                <p class='restaurant-new--active'>Nouveau</p>
+                                <div class='restaurant-details'>
+                                    <h3>La palette du goût</h3>
+                                    <p>Ménilmontant</p>
+                                    <fieldset class='favori'>
+                                        <input type="checkbox" name="palette" id="palette">
+                                            <label for="palette">
+                                                <i class="far fa-heart unchecked"></i>
+                                                <i class="fas fa-heart checked"></i>
+                                            </label>
+                                    </fieldset>
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <article class='restaurant'>
+                                <p class='restaurant-new--active'>Nouveau</p>
+                                <div class='restaurant-details'>
+                                    <h3>La note enchantée</h3>
+                                    <p>Charonne</p>
+                                    <fieldset class='favori'>
+                                        <input type="checkbox" name="note" id="note">
+                                        <label for="note">
+                                            <i class="far fa-heart unchecked"></i>
+                                            <i class="fas fa-heart checked"></i>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <article class='restaurant'>
+                                <p class='restaurant-new'>Nouveau</p>
+                                <div class='restaurant-details'>
+                                    <h3>&#192; la française</h3>
+                                    <p>Cité Rouge</p>
+                                    <fieldset class='favori'>
+                                        <input type="checkbox" name="french" id="french">
+                                        <label for="french">
+                                            <i class="far fa-heart unchecked"></i>
+                                            <i class="fas fa-heart checked"></i>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="delices.html">
+                            <article class='restaurant'>
+                                <p class='restaurant-new'>Nouveau</p>
+                                <div class='restaurant-details'>
+                                    <h3>Le délice des sens</h3>
+                                    <p>Folie-Méricourt</p>
+                                    <fieldset class='favori'>
+                                        <input type="checkbox" name="sens" id="sens">
+                                        <label for="sens">
+                                            <i class="far fa-heart unchecked"></i>
+                                            <i class="fas fa-heart checked"></i>
+                                        </label>
+                                    </fieldset>
+                                    
+                                </div>
+                            </article>
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </form>
-    </header>
-
-    <!-- main -->
-    <main class='main'>
-        <article class='main-working'>
-            <h2 class="mainTitle">
-                Fonctionnement
-            </h2>
-            <ul>
-                <li>
-                   <span class="number">1</span><i class="fas fa-mobile-alt"></i><span class="info">Choisissez le restaurant</span>
-                </li>
-                <li>
-                    <span class="number">2</span><i class="fas fa-list-ul"></i><span class="info">Composez votre menu</span>
-                </li>
-                <li>
-                    <span class="number">3</span><i class="fas fa-store"></i><span class="info">Dégustez au restaurant</span>
-                </li>
-        </article>
-        <section class='main-places'>
-            <h2 class='mainTitle'>Restaurants</h2>
-            <ul>
-                <li>
-                    <a href="">
-                        <article class='restaurant'>
-                            <p class='restaurant-new--active'>Nouveau</p>
-                            <div class='restaurant-details'>
-                                <h3>La palette du goût</h3>
-                                <p>Ménilmontant</p>
-                                <span class="far fa-heart favori unchecked--active"></span>
-                                <span class="fas fa-heart favori checked"></span>
-                            
-                            </div>
-                        </article>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <article class='restaurant'>
-                            <p class='restaurant-new--active'>Nouveau</p>
-                            <div class='restaurant-details'>
-                                <h3>La note enchantée</h3>
-                                <p>Charonne</p>
-                                
-                                    <span class="far fa-heart favori unchecked"></span>
-                                    <span class="fas fa-heart favori checked--active"></span>
-                                
-                            </div>
-                        </article>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <article class='restaurant'>
-                            <p class='restaurant-new'>Nouveau</p>
-                            <div class='restaurant-details'>
-                                <h3>&#192; la française</h3>
-                                <p>Cité Rouge</p>
-                                <span class="far fa-heart favori unchecked--active"></span>
-                                <span class="fas fa-heart favori checked"></span>
-                            </div>
-                        </article>
-                    </a>
-                </li>
-                <li>
-                    <a href="delices.html">
-                        <article class='restaurant'>
-                            <p class='restaurant-new'>Nouveau</p>
-                            <div class='restaurant-details'>
-                                <h3>Le délice des sens</h3>
-                                <p>Folie-Méricourt</p>
-                                <i class="far fa-heart favori unchecked--active"></i>
-                                <i class="fas fa-heart favori checked"></i>
-                            </div>
-                        </article>
-                    </a>
-                </li>
-            </ul>
-        </section>
     </main>
 
     <!-- footer -->
     <footer class="footer">
         <ul>
-            <li><a href="#">Proposer un restaurant</a></li>
-            <li><a href="#">Devenir partenaire</a></li>
+            <li><img src="./sass/base/images/logo/ohmyfood@2x.svg" alt="logo ohmyfood" class='invertcolor'></li>
+            <li><a href="#"><i class="fas fa-utensils"></i>  Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping"></i>  Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>
             <li><a href="mailto:contact@omf.org"></a> Contact</li> <!-- l'adresse mail n'existe pas -->
         </ul>

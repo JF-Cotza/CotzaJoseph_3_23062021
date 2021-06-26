@@ -13,3 +13,32 @@
             border-radius: map-get($map: $border-radius, $key:button );
             color:white;
 }
+
+.favori{
+    border:none;
+    input{
+            display:none;
+            &+label{
+                & .checked{
+                    transform: scale(0);
+                }
+                & .unchecked{
+                    transform: scale(1);
+                    color:darken($color: $color-primary, $amount: 50%);
+                }
+            }
+            &:checked+label{
+                & .checked{
+                    transform: scale(1);
+                    color:$color-primary;
+                }
+                & .unchecked{
+                    transform: scale(0);
+                }
+            }
+            &:hover+label i
+            {
+                    transition:all 600ms ease-in-out ;   
+            }
+        }
+    }
