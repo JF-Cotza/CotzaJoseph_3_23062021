@@ -1,1 +1,278 @@
-@font-face{font-family:"roboto";src:url("../base/fonts/Roboto/Roboto-Regular") format("ttf")}@font-face{font-family:"shrikhand";src:url("../base/fonts/Shrikhand/Shrikhand-Regular") format("ttf")}*{font-family:"roboto";margin:0;padding:0}body{width:100%}.mainTitle{font-size:1.5rem;font-family:"shrikhand"}.header{text-align:center;width:100%}.header .header-title{width:100%;height:63px;display:grid;grid-template-columns:28% 44% 28%;align-items:center}.header .header-title span{grid-column:1/2;text-align:left;text-indent:1.5rem;font-size:1.1rem;padding-top:5px}.header .header-title #logo{grid-column:2/3;width:100%;display:inline-block;padding-top:10px}.header .header-form{height:305px;position:relative}.header .header-form label{position:absolute;top:3px;left:6.5rem}.header .header-form span{font-size:1rem}.header .header-form input{font-size:1.1rem;margin-left:.3rem;text-indent:.3rem;font-size:1rem;margin-top:10px;font-weight:bold}.header .header-location{border:none;height:50px;background-color:#c1ede2}.header .header-location::before{content:"";box-shadow:inset 0 2px 2px #1b6150;height:50px;display:inline-block;width:100%}.header .header-slogan{color:red}.header .header-slogan .mainTitle{margin-top:38px;width:65%;margin-left:auto;margin-right:auto}.header .header-slogan p{margin-left:auto;margin-right:auto;margin-top:13px;width:88%;font-size:1.1rem}.header .header-slogan button{margin-top:31px;padding:13px 22px;margin-left:auto;margin-right:auto;font-size:1.1rem;border-radius:25px}/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+/* attention dans import: ni extension ni _ */
+/*inclusion des fonts */
+@font-face {
+  font-family: "roboto";
+  src: url("../base/fonts/Roboto/Roboto-Regular") format("ttf");
+}
+@font-face {
+  font-family: "shrikhand";
+  src: url("../base/fonts/Shrikhand/Shrikhand-Regular") format("ttf");
+}
+/************* variable **************/
+/* color */
+/* dégradé */
+/* font */
+/* standard marge*/
+/* border radius */
+/*mixin*/
+* {
+  font-family: "roboto";
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainTitle {
+  font-size: 1.5rem;
+  font-family: "shrikhand";
+  font-weight: bold;
+}
+
+.btn {
+  margin-top: 31px;
+  padding: 13px 22px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+.header-title {
+  width: 100%;
+  height: 63px;
+  display: grid;
+  grid-template-columns: 28% 44% 28%;
+  align-items: center;
+}
+.header-title span {
+  grid-column: 1/2;
+  text-align: left;
+  text-indent: 1.5rem;
+  font-size: 1.1rem;
+  padding-top: 5px;
+}
+.header-title #logo {
+  grid-column: 2/3;
+  width: 100%;
+  display: inline-block;
+  padding-top: 10px;
+}
+
+.footer {
+  background: black;
+  color: white;
+}
+
+.header-form {
+  background: #fff9fd;
+  position: relative;
+}
+.header-form label {
+  position: absolute;
+  top: 3px;
+  left: 6.5rem;
+}
+.header-form span {
+  font-size: 1rem;
+}
+.header-form input {
+  font-size: 1.1rem;
+  margin-left: 0.3rem;
+  text-indent: 0.3rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.header-location {
+  border: none;
+  height: 50px;
+  background-color: #c1ede2;
+}
+.header-location::before {
+  content: "";
+  box-shadow: inset 0 2px 2px #1b6150;
+  height: 50px;
+  display: inline-block;
+  width: 100%;
+}
+.header-slogan .mainTitle {
+  margin-top: 38px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-slogan p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 13px;
+  width: 88%;
+  font-size: 1.1rem;
+}
+.header-slogan .btn {
+  background: linear-gradient(300deg, #9356DC, #FF79DA);
+  margin-bottom: 58px;
+}
+
+.main {
+  width: 100%;
+}
+.main-working {
+  padding-bottom: 74px;
+  padding-top: 46px;
+}
+.main-working .mainTitle {
+  margin-bottom: 8px;
+  margin-left: 1.3rem;
+}
+.main-working ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  width: 86.5%;
+  margin-left: 2rem;
+  margin-right: auto;
+  font-weight: bold;
+}
+.main-working ul li {
+  padding-top: 31px;
+  padding-bottom: 25px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 3px 3px black;
+}
+.main-working ul li .number {
+  position: absolute;
+  top: 30px;
+  left: -0.8rem;
+  background-color: #9356DC;
+  color: white;
+  width: 22px;
+  text-align: center;
+  border-radius: 50%;
+  height: 22px;
+  z-index: 1;
+}
+.main-working ul li i {
+  text-indent: 2rem;
+  font-size: 1.1rem;
+}
+.main-working ul li .info {
+  position: absolute;
+  top: 31px;
+  left: 4.6rem;
+}
+.main-places {
+  padding-bottom: 67px;
+}
+.main-places .mainTitle {
+  padding-top: 52px;
+  margin-left: 1.3rem;
+}
+.main-places ul {
+  margin-top: 5px;
+}
+.main-places li:nth-child(1) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: 90%;
+}
+.main-places li:nth-child(2) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position-y: 90%;
+}
+.main-places li:nth-child(3) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.main-places li:nth-child(4) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.main-places .restaurant {
+  margin-left: 1.3rem;
+  margin-right: auto;
+  width: 89%;
+  height: 250px;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.main-places .restaurant-new {
+  display: none;
+}
+.main-places .restaurant-new--active {
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  background-color: #99E2D0;
+  width: 80px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: #4acbab;
+  border-radius: 2px;
+}
+.main-places .restaurant-details {
+  background-color: white;
+  position: relative;
+  font-size: 1.1rem;
+  border-radius: 0 0 15px 15px;
+  z-index: 1;
+}
+.main-places .restaurant-details h3 {
+  padding-top: 13px;
+  font-weight: bold;
+  text-indent: 0.7rem;
+}
+.main-places .restaurant-details p {
+  margin-top: 3px;
+  padding-bottom: 15px;
+  text-indent: 0.7rem;
+}
+.main-places .restaurant-details .favori {
+  text-indent: none;
+  position: absolute;
+  top: 21px;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  z-index: 2;
+}
+.main-places .restaurant-details .favori:hover {
+  background: linear-gradient(300deg, #9356DC, #FF79DA);
+  padding: 4px;
+  border-radius: 50%;
+  top: 17px;
+  right: 1.2rem;
+  opacity: 0.5;
+}
+.main-places .restaurant-details .unchecked {
+  display: none;
+}
+.main-places .restaurant-details .unchecked--active {
+  color: black;
+}
+.main-places .restaurant-details .checked {
+  display: none;
+}
+.main-places .restaurant-details .checked--active {
+  color: #9356DC;
+}
+
+/*# sourceMappingURL=style.css.map */

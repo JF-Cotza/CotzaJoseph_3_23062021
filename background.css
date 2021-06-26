@@ -1,17 +1,15 @@
 .index{
     background-image: url('maquettes/Accueil.png');
-   opacity:.5;
+  opacity:.5;
 }
 
 .delices{
     background-image: url('maquettes/Menu\ -\ Le\ delice\ des\ sens.png');
-    opacity:.5;
+    /*opacity:.5;*/
 }
 
-/*
-.index form
-    {
-    width: 90%;    
+.footer
+{
     background-color: red;
 }
-*/
+

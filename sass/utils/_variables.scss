@@ -15,11 +15,17 @@ $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-third:#99E2D0;
 
+/* dégradé */
+$gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 /* font */
 $font-text:'roboto';
 $font-main_info:'shrikhand';
 $font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
 
+/* standard marge*/
+$marge:(standard:2rem, medium:1.5rem,small:1.3rem,xsmall:.7rem,minimum:.3rem);
+/* border radius */
+$border-radius:(round:50%,button:25px, standard:15px,minus:2px);
 
 /*mixin*/
 @mixin font-face($name, $src){
