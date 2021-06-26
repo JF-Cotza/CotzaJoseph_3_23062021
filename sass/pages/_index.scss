@@ -1,183 +1,196 @@
-.main{
-    width: 100%;   
-    &-form{
-        background: lighten($color: $color-secondary, $amount: 25%);
-        position: relative;
-                
+.index{
+    & .header{
+        & a{
+            display: none;
+        }
     }
-    &-location{
-        border:none;
-        height: 50px;
-        background-color:lighten($color: $color-third, $amount: 10%);
-        &::before{
-            content: "";
-            box-shadow: inset 0 2px 2px darken($color: $color-third, $amount: 50%);
+    & .main{
+        width: 100%;   
+        /*toute la page est un formulaire */
+        &-form{
+            background: lighten($color: $color-secondary, $amount: 25%);
+            position: relative;                
+        }
+        /*zone de recherche par lieu*/
+        &-location{
+            border:none;
             height: 50px;
-            display: inline-block;
-            width: 100%;           
-        }
-        & label{
-            position: absolute;
-            top:3px;
-            left:6.5rem;
-        }
-        & span{
-            font-size: map-get($map: $font-size, $key: normal);
-        }
-        & input{
-            font-size: map-get($map: $font-size, $key: title);
-            margin-left: map-get($map: $marge-horizontal, $key: minimum);
-            text-indent: map-get($map: $marge-horizontal, $key: minimum);
-            font-size: map-get($map:$font-size , $key:normal );
-            margin-top: 10px;
-            font-weight: bold;
-        }
-    }
-    &-slogan{
-        text-align: center;
-        & .mainTitle{
-            margin-top: 38px;
-            width: 65%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        & p{
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 13px;
-            width: 88%;
-            font-size: map-get($map: $font-size, $key: title);
-        }
-        & .btn{
-            background: $gradient;
-            margin-bottom: 58px;
-       }
-    }    
-    &-working{
-        padding-bottom: 74px;
-        padding-top: 46px;
-        & .mainTitle{
-            margin-bottom: 8px;
-            margin-left: map-get($map: $marge-horizontal, $key: small);
-        }
-        & ul{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            list-style: none;
-            width: 86.5%;
-            margin-left:map-get($map: $marge-horizontal, $key:standard );
-            margin-right: auto;
-            font-weight: bold;
-            & li{
-                padding-top: 31px;
-                padding-bottom: 25px;
-                margin-top: 20px;
-                position: relative;
-                border-radius: map-get($map: $border-radius, $key:standard );
-                box-shadow: 0 3px 3px black;
-                & .number{
-                    position: absolute;
-                    top:30px;
-                    left:-.8rem;
-                    background-color: $color-primary;
-                    color:white;
-                    width:22px;
-                    text-align: center;
-                    border-radius: map-get($map: $border-radius, $key:round);
-                    height: 22px;
-                    z-index:1;
-                }     
-                & i{
-                    text-indent: map-get($map: $marge-horizontal, $key: standard);
-                    font-size: map-get($map: $font-size, $key: title);
-                    
-                }
-                & .info{
-                    position: absolute;
-                    top:31px;
-                    left: 4.6rem;
-                }
+            background-color:lighten($color: $color-third, $amount: 10%);
+            &::before{
+                content: "";
+                box-shadow: inset 0 2px 2px darken($color: $color-third, $amount: 50%);
+                height: 50px;
+                display: inline-block;
+                width: 100%;           
             }
-        }
-    }
-    &-places{
-        padding-bottom: 67px;
-        & .mainTitle{
-            padding-top: 52px;
-            margin-left: map-get($map: $marge-horizontal, $key: small);
-        }
-        & ul{
-            margin-top: 5px;
-        }
-        & li:nth-child(1) .restaurant{
-            background-image: url('../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-            background-position: 90% /*center*/;
-        }
-        & li:nth-child(2) .restaurant{
-            background-image: url('../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
-            background-position-y: 90%;
-        }
-        & li:nth-child(3) .restaurant{
-            background-image: url('../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
-        }
-        & li:nth-child(4) .restaurant{
-            background-image: url('../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
-        }
-        & .restaurant{
-            margin-left: map-get($map: $marge-horizontal, $key: small);
-            margin-right: auto;
-            width: 89%;
-            height: 250px;
-            background-size: cover;         
-            border-radius: map-get($map: $border-radius, $key: standard );
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            &-new{
-                display:none;
-                &--active{
-                    position: absolute;
-                    top: 13px;
-                    right: 11px;
-                    background-color: #99E2D0;
-                    width: 80px;
-                    padding-top: 5px;
-                    padding-bottom: 5px;
-                    text-align: center;
-                    color:darken($color: $color-third, $amount: 20%);
-                    border-radius: map-get($map: $border-radius, $key:minus );
-                }
+            & label{
+                position: absolute;
+                top:3px;
+                left:6.5rem;
             }
-            &-details{
-                background-color: white;
-                
-                position: relative;
+            & span{
+                font-size: map-get($map: $font-size, $key: normal);
+            }
+            & input{
                 font-size: map-get($map: $font-size, $key: title);
-                border-radius: 0 0 map-get($map: $border-radius, $key: standard ) map-get($map: $border-radius, $key: standard );
-                z-index: 1;
-                & h3{
-                    padding-top: 13px;
-                    font-weight: bold;
-                    text-indent: map-get($map: $marge-horizontal, $key:xsmall );
-                }
-                & p{
-                    margin-top: 3px;
-                    padding-bottom: 15px;
-                    text-indent: map-get($map: $marge-horizontal, $key:xsmall );
-                }
-                & .favori{
+                margin-left: map-get($map: $marge-horizontal, $key: minimum);
+                text-indent: map-get($map: $marge-horizontal, $key: minimum);
+                font-size: map-get($map:$font-size , $key:normal );
+                margin-top: map-get($map: $marge-vertical, $key:small );
+                font-weight: bold;
+            }
+        }
+        /* zone de titre */
+        &-slogan{
+            text-align: center;
+            & .mainTitle{
+                margin-top: map-get($map: $marge-vertical, $key:large );
+                width: 65%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            & p{
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: map-get($map: $marge-vertical, $key:medium);
+                width: 88%;
+                font-size: map-get($map: $font-size, $key: title);
+            }
+            & .btn{
+                background: $gradient;
+                margin-bottom: map-get($map: $marge-vertical, $key: xlarge);
+        }
+        }
+        /* zone d'explication du fonctionnement*/    
+        &-working{
+            padding-bottom: map-get($map: $marge-vertical, $key:maximum );
+            padding-top: 46px;
+            & .mainTitle{
+                margin-bottom: map-get($map: $marge-vertical, $key:small);
+                margin-left: map-get($map: $marge-horizontal, $key:small);
+            }
+            & ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                list-style: none;
+                width: 86.5%;
+                margin-left:map-get($map: $marge-horizontal, $key:standard );
+                margin-right: auto;
+                font-weight: bold;
+                & li{
+                    padding-top: map-get($map: $marge-vertical, $key:large);
+                    padding-bottom: map-get($map: $marge-vertical, $key: standard);
+                    margin-top: map-get($map: $marge-vertical, $key: standard);
+                    position: relative;
+                    border-radius: map-get($map: $border-radius, $key:standard );
+                    box-shadow: 0 3px 3px black;
+                    & .number{
                         position: absolute;
-                        top: 21px;
-                        right: 1.5rem;
-                        font-size: map-get($map: $font-size, $key:mainTitle );
-                        width: map-get($map: $font-size, $key:mainTitle );
-                        z-index: 2;
+                        top:30px;
+                        left:-.8rem;
+                        background-color: $color-primary;
+                        color:white;
+                        width:22px;
+                        text-align: center;
+                        border-radius: map-get($map: $border-radius, $key:round);
+                        height: 22px;
+                        z-index:1;
+                    }     
+                    & i{
+                        text-indent: map-get($map: $marge-horizontal, $key: standard);
+                        font-size: map-get($map: $font-size, $key: title);
+                        
+                    }
+                    & .info{
+                        position: absolute;
+                        top:31px;
+                        left: 4.6rem;
+                    }
                 }
-            }    
-                
-        }            
+            }
+        }
+        &-places{
+            padding-bottom: map-get($map: $marge-vertical, $key: doublelarge);
+            & .mainTitle{
+                padding-top: 52px;
+                margin-left: map-get($map: $marge-horizontal, $key: small);
+            }
+            & ul{
+                margin-top: map-get($map: $marge-vertical, $key: xsmall);
+            }
+            /*fiche des restaurants */
+            & li:nth-child(1) .restaurant{
+                background-image: url('../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+                background-position: 90%;
+            }
+            & li:nth-child(2) .restaurant{
+                background-image: url('../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+                background-position-y: 90%;
+            }
+            & li:nth-child(3) .restaurant{
+                background-image: url('../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+                background-position-y: 90%;
+            }
+            & li:nth-child(4) .restaurant{
+                background-image: url('../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+                background-position-y: 90%;
+            }
+            & .restaurant{
+                margin-left: map-get($map: $marge-horizontal, $key: small);
+                margin-right: auto;
+                width: 89%;
+                height: 250px;
+                background-size: cover;         
+                border-radius: map-get($map: $border-radius, $key: standard );
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                &-new{
+                    display:none;
+                    &--active{
+                        position: absolute;
+                        top: 13px;
+                        right: 11px;
+                        background-color: #99E2D0;
+                        width: 80px;
+                        padding-top: map-get($map: $marge-vertical, $key: xsmall);
+                        padding-bottom: map-get($map: $marge-vertical, $key: xsmall);
+                        text-align: center;
+                        color:darken($color: $color-third, $amount: 20%);
+                        border-radius: map-get($map: $border-radius, $key:minus );
+                    }
+                }
+                /* details des restaurants */
+                &-details{
+                    background-color: white;
+                    position: relative;
+                    font-size: map-get($map: $font-size, $key: title);
+                    border-radius: 0 0 map-get($map: $border-radius, $key: standard ) map-get($map: $border-radius, $key: standard );
+                    z-index: 1;
+                    & h3{
+                        padding-top: map-get($map: $marge-vertical, $key:medium);
+                        font-weight: bold;
+                        text-indent: map-get($map: $marge-horizontal, $key:xsmall );
+                    }
+                    & p{
+                        margin-top: map-get($map: $marge-vertical, $key: minimum);
+                        padding-bottom: map-get($map: $marge-vertical, $key:medium );
+                        text-indent: map-get($map: $marge-horizontal, $key:xsmall );
+                    }
+                    & .favori{
+                            position: absolute;
+                            top: 21px;
+                            right: 1.5rem;
+                            font-size: map-get($map: $font-size, $key:mainTitle );
+                            width: map-get($map: $font-size, $key:mainTitle );
+                            z-index: 2;
+                    }
+                }    
+                    
+            }            
 
+        }
     }
 }
