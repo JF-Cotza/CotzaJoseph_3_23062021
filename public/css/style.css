@@ -82,6 +82,10 @@ a {
   transition: all 600ms ease-in-out;
 }
 
+.plat input {
+  display: none;
+}
+
 .header {
   text-align: center;
   width: 100%;
@@ -142,6 +146,22 @@ a {
 }
 .main .menu ul {
   margin-top: 20px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+.main .menu ul li {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: white;
+  /*width: 92%; final*/
+  width: 87%;
+  /*test*/
+  font-size: 1rem;
+  border-radius: 15px;
+}
+.main .menu ul li .plat {
+  position: relative;
 }
 
 .footer {

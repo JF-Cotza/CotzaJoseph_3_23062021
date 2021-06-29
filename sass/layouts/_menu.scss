@@ -29,6 +29,21 @@
         }
         & ul{
             margin-top: 20px;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            & li{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                background: white;
+                /*width: 92%; final*/
+                width: 87%; /*test*/
+                font-size: 1rem;
+                border-radius: 15px;
+                & .plat{
+                    position: relative;
+                }
+            }
         }
     }
 }
