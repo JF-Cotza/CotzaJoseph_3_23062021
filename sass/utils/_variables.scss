@@ -1,35 +1,85 @@
-/*inclusion des fonts */
+/*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
 @font-face {
- font-family: "roboto";
- src: url('../base/fonts/Roboto/Roboto-Regular') format('ttf')
+    font-family: 'robotoregular';
+    src: url('../../sass/base/fonts/Roboto/Roboto-Regular.ttf') format('ttf'),
+		 url('../../sass/base/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../../sass/base/fonts/Roboto/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
- font-family: "shrikhand";
- src: url('../base/fonts/Shrikhand/Shrikhand-Regular') format('ttf')
+    font-family: 'shrikhandregular';
+    src: url('../../sass/base/fonts/Shrikhand/Shrikhand-Regular.ttf') format('ttf'),
+		 url('../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+/* note : attention aux liens! lors de la compil, les chemins partent du répertoire css... */
+
 
 /************* variable **************/
 /* color */
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-third:#99E2D0;
+$color-modify:(dark:100%,light:100%,smooth:10%);
+
 
 /* dégradé */
 $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 /* font */
-$font-text:'roboto';
-$font-main_info:'shrikhand';
+$font-text:'robotoregular';
+$font-main_info:'shrikhandregular';
 $font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
 
 /* standard marge*/
 $marge-horizontal:(standard:2rem, medium:1.5rem,small:1.3rem,xsmall:.7rem,minimum:.3rem);
-$marge-vertical:(maximum:75px,doublelarge:66px, xlarge:55px,large:33px,standard:20px,medium:13px,small:10px,xsmall:5px,minimum:3px);
+/*pour les margin et les padding verticaux (exprimé en px)*/
+$padding:(sixhead:60px,fivehead:50px,fourhead:40px,threehead:30px,twohalf:25px,dubble-head:20px,head:10px,button:13px,quarter:3px);
 /* border radius */
-$border-radius:(round:50%,button:25px, standard:15px,minus:2px);
+$border-radius:(round:50%,button:25px,menu:40px, standard:15px,minus:2px);
+/*breakpoints*/
+$breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992px);
+
 
 /*mixin*/
 @mixin font-face($name, $src){
 	                font-family:$name ;
 	                src: $src,
+}
+
+/* pour le header et la localisation */
+@mixin grid{
+			display: grid;
+			grid-template-columns: 28% 44% 28%;
+			align-items: center;
+}
+
+@mixin grid-restaurant-tablette{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-column-gap: 1.1rem;
+	grid-template-rows: repeat(2, 250px);
+	grid-row-gap: 10px;	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@mixin grid-restaurant-ordinateur{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-column-gap: 1.1rem;
+	grid-template-rows: repeat(2, 250px);
+	grid-row-gap: 10px;	
+}
+
+@function color-modify($modifier,$color,$value){
+	@if ($modifier=='dark'){
+		@return darken($color,$value);
+	}
+	@if ($modifier=='light'){
+		@return lighten($color,$value);
+	}
 }

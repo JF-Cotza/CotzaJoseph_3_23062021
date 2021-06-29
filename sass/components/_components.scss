@@ -5,8 +5,8 @@
 }
 
 .btn{
-            margin-top: 31px;
-            padding: 13px 22px;
+            margin-top: map-get($map: $padding, $key:threehead );
+            padding: map-get($map: $padding, $key:button ) 22px;
             margin-left: auto;
             margin-right: auto;
             font-size: map-get($map: $font-size, $key: title);
@@ -20,20 +20,22 @@
             display:none;
             &+label{
                 & .checked{
-                    transform: scale(0);
+                    display: none;
                 }
                 & .unchecked{
+                    display: inline-block;
                     transform: scale(1);
                     color:darken($color: $color-primary, $amount: 50%);
                 }
             }
             &:checked+label{
                 & .checked{
+                    display: inline-block;
                     transform: scale(1);
                     color:$color-primary;
                 }
                 & .unchecked{
-                    transform: scale(0);
+                    display: none;
                 }
             }
             &:hover+label i

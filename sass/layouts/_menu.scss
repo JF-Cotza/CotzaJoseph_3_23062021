@@ -1,0 +1,34 @@
+.main{
+    position: relative;
+    
+    & .menu{
+        position: absolute;
+        z-index: 2;
+        right: 0;
+        width: 100%;
+        top: 220px;
+        background-color: color-modify('light',$color-primary,map-get($color-modify,light));
+        border-radius: map-get($map: $border-radius, $key:menu );
+        &-title{
+            padding-top: 35px;
+            font-family: $font-main_info;
+            font-size: 1.7rem;
+            text-indent: 1.3rem;
+            position: relative;
+            & .favori{
+                position: absolute;
+                top: 32px;
+                right: 38px;
+            }
+        }
+        & h2{
+            text-indent: 1.3rem;
+            text-transform: uppercase;
+            font-size: 1rem;
+            margin-top: 32px;
+        }
+        & ul{
+            margin-top: 20px;
+        }
+    }
+}

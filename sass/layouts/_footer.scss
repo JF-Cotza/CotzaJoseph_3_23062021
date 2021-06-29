@@ -1,21 +1,23 @@
 .footer{
-    background: darken($color: $color-primary, $amount: 90%);
-    color:lighten($color: $color-primary, $amount: 90%);
+    background: color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
+    & * {
+        color:  color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
+    }
     & ul{
         list-style: none;
-        padding-top: map-get($map: $marge-vertical, $key: standard);
+        padding-top: map-get($map: $padding, $key: head);
         margin-left: map-get($map: $marge-horizontal, $key:medium );
-        padding-bottom: map-get($map: $marge-vertical, $key:large);
+        padding-bottom: map-get($map: $padding, $key:threehead);
     }
-    & .invertcolor{
-        filter:invert(100%);
-        width: 28.5%;
-        margin-bottom: map-get($map: $marge-vertical, $key:medium );
+    & h3{
+        margin-left: map-get($map: $marge-horizontal, $key:medium );
+        font-family: $font-main_info;
+        padding-top: map-get($map: $padding, $key:twohalf );
     }
     & li{
-        margin-top: map-get($map: $marge-vertical, $key: xsmall);
+        margin-top: map-get($map: $padding, $key: quarter);
         & a{
-            font-size: map-get($map: $font-size, $key: title);
+            font-size: map-get($map: $font-size, $key:normal);
             & i{
                 font-size: map-get($map: $font-size, $key:small );
                 width: 1rem;

@@ -16,35 +16,44 @@
             border:none;
             height: 50px;
             background-color:lighten($color: $color-third, $amount: 10%);
+            position: relative;
+            @include grid;
             &::before{
+                grid-column: 1/4;
                 content: "";
                 box-shadow: inset 0 2px 2px darken($color: $color-third, $amount: 50%);
                 height: 50px;
                 display: inline-block;
                 width: 100%;           
+                z-index: 1;
             }
             & label{
+                grid-column: 2/3;
+                z-index: 2;
                 position: absolute;
                 top:3px;
-                left:6.5rem;
+                left:0;
             }
             & span{
                 font-size: map-get($map: $font-size, $key: normal);
             }
             & input{
-                font-size: map-get($map: $font-size, $key: title);
                 margin-left: map-get($map: $marge-horizontal, $key: minimum);
                 text-indent: map-get($map: $marge-horizontal, $key: minimum);
                 font-size: map-get($map:$font-size , $key:normal );
-                margin-top: map-get($map: $marge-vertical, $key:small );
+                margin-top: map-get($map: $padding, $key:head );
                 font-weight: bold;
+                width: 80%;
+                border: none;
+                background-color:lighten($color: $color-third, $amount: 10%);;
             }
         }
         /* zone de titre */
         &-slogan{
             text-align: center;
+            padding-bottom: map-get($map: $padding, $key: fivehead);
             & .mainTitle{
-                margin-top: map-get($map: $marge-vertical, $key:large );
+                margin-top: map-get($map: $padding, $key:fourhead );
                 width: 65%;
                 margin-left: auto;
                 margin-right: auto;
@@ -52,36 +61,47 @@
             & p{
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: map-get($map: $marge-vertical, $key:medium);
+                margin-top: map-get($map: $padding, $key:head);
                 width: 88%;
                 font-size: map-get($map: $font-size, $key: title);
             }
             & .btn{
                 background: $gradient;
-                margin-bottom: map-get($map: $marge-vertical, $key: xlarge);
+                
         }
+        }
+        /*englobe la zone de fonctionnement et les restaurants*/
+        &-reactive{
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                display: flex;
+                justify-content: space-around;
+            }
         }
         /* zone d'explication du fonctionnement*/    
         &-working{
-            padding-bottom: map-get($map: $marge-vertical, $key:maximum );
-            padding-top: 46px;
+            padding-bottom: map-get($map: $padding, $key:sixhead);
+            padding-top: map-get($map: $padding, $key: fivehead);
+            @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    flex:1;
+                }
             & .mainTitle{
-                margin-bottom: map-get($map: $marge-vertical, $key:small);
+                margin-bottom: map-get($map: $padding, $key:quarter);
                 margin-left: map-get($map: $marge-horizontal, $key:small);
             }
             & ul{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
                 list-style: none;
                 width: 86.5%;
+                margin-top: map-get($map: $padding, $key:quarter );
                 margin-left:map-get($map: $marge-horizontal, $key:standard );
                 margin-right: auto;
                 font-weight: bold;
-                & li{
-                    padding-top: map-get($map: $marge-vertical, $key:large);
-                    padding-bottom: map-get($map: $marge-vertical, $key: standard);
-                    margin-top: map-get($map: $marge-vertical, $key: standard);
+            }
+            & li{
+                    display: inline-block;
+                    width: 100%;
+                    padding-top: map-get($map: $padding, $key:threehead);
+                    padding-bottom: map-get($map: $padding, $key: threehead);
+                    margin-top: map-get($map: $padding, $key: dubble-head);
                     position: relative;
                     border-radius: map-get($map: $border-radius, $key:standard );
                     box-shadow: 0 3px 3px black;
@@ -107,39 +127,103 @@
                         top:31px;
                         left: 4.6rem;
                     }
-                }
+                  
+                
+       
             }
         }
         &-places{
-            padding-bottom: map-get($map: $marge-vertical, $key: doublelarge);
+            padding-bottom: map-get($map: $padding, $key: sixhead);
+            
+            @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    flex:3;
+                }
             & .mainTitle{
-                padding-top: 52px;
+                padding-top: map-get($map: $padding, $key: fivehead);
                 margin-left: map-get($map: $marge-horizontal, $key: small);
             }
             & ul{
-                margin-top: map-get($map: $marge-vertical, $key: xsmall);
+                margin-top: map-get($map: $padding, $key: dubble-head);
+                list-style: none;
+                @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
+                   @include grid-restaurant-tablette;                
+                  
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                   @include grid-restaurant-ordinateur;                
+                }
+                & li {
+                @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max )){
+                    margin-top: map-get($map: $padding, $key:dubble-head );
+                }
+            }
+            
             }
             /*fiche des restaurants */
-            & li:nth-child(1) .restaurant{
-                background-image: url('../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-                background-position: 90%;
+            
+            & li:nth-child(1){
+                
+                @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+                & .restaurant{
+                    background-image: url('../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+                    background-position: 90%;
+                }
             }
-            & li:nth-child(2) .restaurant{
+            & li:nth-child(2){
+                @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
+                
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                & .restaurant{
                 background-image: url('../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
-                background-position-y: 90%;
+                background-position-y: 90%;                
+                }
             }
-            & li:nth-child(3) .restaurant{
+            & li:nth-child(3) {
+                @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    grid-column: 3/4;
+                    grid-row: 1/2;
+                }
+                & .restaurant{
                 background-image: url('../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
                 background-position-y: 90%;
+                
+                }
             }
-            & li:nth-child(4) .restaurant{
+            & li:nth-child(4){ 
+                @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+                & .restaurant{
                 background-image: url('../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
                 background-position-y: 90%;
+                }
             }
             & .restaurant{
-                margin-left: map-get($map: $marge-horizontal, $key: small);
                 margin-right: auto;
-                width: 89%;
+                margin-left: auto;
+                width: 335px;
                 height: 250px;
                 background-size: cover;         
                 border-radius: map-get($map: $border-radius, $key: standard );
@@ -147,6 +231,9 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+                    width: 100%;
+                }
                 &-new{
                     display:none;
                     &--active{
@@ -155,8 +242,8 @@
                         right: 11px;
                         background-color: #99E2D0;
                         width: 80px;
-                        padding-top: map-get($map: $marge-vertical, $key: xsmall);
-                        padding-bottom: map-get($map: $marge-vertical, $key: xsmall);
+                        padding-top: map-get($map: $padding, $key: quarter);
+                        padding-bottom: map-get($map: $padding, $key: quarter);
                         text-align: center;
                         color:darken($color: $color-third, $amount: 20%);
                         border-radius: map-get($map: $border-radius, $key:minus );
@@ -170,13 +257,13 @@
                     border-radius: 0 0 map-get($map: $border-radius, $key: standard ) map-get($map: $border-radius, $key: standard );
                     z-index: 1;
                     & h3{
-                        padding-top: map-get($map: $marge-vertical, $key:medium);
+                        padding-top: map-get($map: $padding, $key:head);
                         font-weight: bold;
                         text-indent: map-get($map: $marge-horizontal, $key:xsmall );
                     }
                     & p{
-                        margin-top: map-get($map: $marge-vertical, $key: minimum);
-                        padding-bottom: map-get($map: $marge-vertical, $key:medium );
+                        margin-top: map-get($map: $padding, $key: head);
+                        padding-bottom: map-get($map: $padding, $key:head );
                         text-indent: map-get($map: $marge-horizontal, $key:xsmall );
                     }
                     & .favori{

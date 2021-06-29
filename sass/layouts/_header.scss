@@ -4,9 +4,7 @@
     &-title{
         width: 100%;
         height: 63px;
-        display: grid;
-        grid-template-columns: 28% 44% 28%;
-        align-items: center;
+        @include grid;
         & a{
             grid-column: 1/2;
             text-align: left;
@@ -17,10 +15,13 @@
             }
         & #logo{ 
             grid-column: 2/3;
-            width: 100%;
+            /*width: 100%;*/
+            height: 28px;
+            width: auto;
+            /*la taille du logo reste constante quelle que soit la vue */
             display: inline-block;
-            padding-top: map-get($map: $marge-vertical, $key:small);   
-            }
+            padding-top: map-get($map: $padding, $key:head);   
+        }
         
     }
 
