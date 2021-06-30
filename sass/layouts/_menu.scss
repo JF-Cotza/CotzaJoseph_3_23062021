@@ -1,4 +1,18 @@
 .resto{
+    @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: max-content 1190px max-content;
+        .header{
+            grid-row: 1/2;
+        }
+        .main{
+            grid-row: 2/3;
+        }
+        .footer{
+            grid-row: 3/4;
+        }
+    }
     .main{
         position: relative;        
         & .plat{
@@ -82,7 +96,10 @@
                 }
             }
             &-desserts{
-                padding-bottom: 20px;
+                @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)) {
+                    padding-bottom: 20px;    
+                }
+                
                 @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
                     grid-column: 2/2;
                     grid-row: 2/2;

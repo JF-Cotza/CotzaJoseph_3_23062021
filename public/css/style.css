@@ -118,6 +118,22 @@ a {
   padding-top: 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .resto {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content 1190px max-content;
+  }
+  .resto .header {
+    grid-row: 1/2;
+  }
+  .resto .main {
+    grid-row: 2/3;
+  }
+  .resto .footer {
+    grid-row: 3/4;
+  }
+}
 .resto .main {
   position: relative;
 }
@@ -224,8 +240,10 @@ a {
     grid-row: 2/2;
   }
 }
-.resto .main .menu-desserts {
-  padding-bottom: 20px;
+@media screen and (max-width: 767px) {
+  .resto .main .menu-desserts {
+    padding-bottom: 20px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .resto .main .menu-desserts {
