@@ -146,11 +146,11 @@
                 margin-top: map-get($map: $padding, $key: dubble-head);
                 list-style: none;
                 @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
-                   @include grid-restaurant-tablette;                
+                   @include grid-restaurant-tablette(250px);                
                   
                 }
                 @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
-                   @include grid-restaurant-ordinateur;                
+                   @include grid-restaurant-ordinateur(250px);                
                 }
                 & li {
                 @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max )){

@@ -118,46 +118,161 @@ a {
   padding-top: 10px;
 }
 
-.main {
+.resto .main {
   position: relative;
 }
-.main .plat {
+.resto .main .plat {
   width: 100%;
   padding-bottom: 10px;
   padding-top: 10px;
   position: relative;
 }
-.main .plat h3, .main .plat p {
-  text-indent: 0.5rem;
-}
-.main .menu {
-  position: absolute;
-  z-index: 2;
-  right: 0;
+.resto .main .image {
   width: 100%;
-  top: 220px;
+}
+.resto .main .image-grid {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .image {
+    display: none;
+  }
+  .resto .main .image-grid {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 92%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .image {
+    display: none;
+  }
+  .resto .main .image-grid {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    margin: auto;
+  }
+}
+.resto .main h3, .resto .main p {
+  text-indent: 0.5rem;
+  text-overflow: ellipsis;
+  width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.resto .main .menu {
+  width: 100%;
   background-color: #ae80e5;
   border-radius: 40px;
 }
-.main .menu-title {
+@media screen and (max-width: 767px) {
+  .resto .main .menu {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 220px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.1rem;
+    grid-template-rows: repeat(2, 330px);
+    grid-row-gap: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.1rem;
+    grid-template-rows: repeat(2, 330px);
+    grid-row-gap: 10px;
+    position: relative;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-entrees {
+    grid-column: 2/2;
+    grid-row: 1/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-entrees {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-plats {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-plats {
+    grid-column: 2/3;
+    grid-row: 2/2;
+  }
+}
+.resto .main .menu-desserts {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-desserts {
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-desserts {
+    grid-column: 3/4;
+    grid-row: 2/2;
+  }
+}
+.resto .main .menu-title {
   padding-top: 35px;
   font-family: "shrikhandregular";
   font-size: 1.7rem;
   text-indent: 1.3rem;
   position: relative;
 }
-.main .menu-title .favori {
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-title {
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-title {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+}
+.resto .main .menu-title .favori {
   position: absolute;
   top: 32px;
   right: 38px;
 }
-.main .menu h2 {
+.resto .main .menu h2 {
   text-indent: 1.3rem;
   text-transform: uppercase;
   font-size: 1rem;
   margin-top: 32px;
 }
-.main .menu ul {
+.resto .main .menu ul {
   /*margin-top: 20px;*/
   display: flex;
   list-style: none;
@@ -165,40 +280,40 @@ a {
   margin-top: 10px;
   flex-direction: column;
 }
-.main .menu ul li {
+.resto .main .menu ul li {
   margin-top: 10px;
   background: white;
   width: 92%;
   font-size: 1rem;
   border-radius: 15px;
 }
-.main .menu ul li .add {
+.resto .main .menu ul li .add {
   border: none;
   bottom: 10px;
   position: absolute;
   right: 10px;
 }
-.main .menu ul li .add-check {
+.resto .main .menu ul li .add-check {
   display: none;
 }
-.main .menu ul li:hover .add {
+.resto .main .menu ul li:hover .add {
   height: 100%;
   bottom: 0;
   width: 109px;
   right: -5px;
 }
-.main .menu ul li:hover .add label {
+.resto .main .menu ul li:hover .add label {
   height: 100%;
   display: flex;
   align-items: flex-end;
 }
-.main .menu ul li:hover .add label span {
+.resto .main .menu ul li:hover .add label span {
   display: inline-block;
   background: white;
   padding-right: 23px;
   padding-bottom: 10px;
 }
-.main .menu ul li:hover .add-check {
+.resto .main .menu ul li:hover .add-check {
   position: relative;
   font-size: 1.3rem;
   border-radius: 0 15px 15px 0;
@@ -207,11 +322,14 @@ a {
   display: inline-block;
   background-color: #99E2D0;
 }
-.main .menu ul li:hover .add-check i {
+.resto .main .menu ul li:hover .add-check i {
   position: absolute;
   top: 33px;
   left: 1rem;
   color: white;
+}
+.resto .footer {
+  z-index: 2;
 }
 
 .footer {

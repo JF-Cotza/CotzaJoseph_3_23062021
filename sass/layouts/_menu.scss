@@ -1,97 +1,187 @@
-.main{
-    position: relative;
-    & .plat{
-        width: 100%;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        position: relative;
-        h3,p{
-            text-indent: .5rem;
-        }
-    }    
-    & .menu{
-        position: absolute;
-        z-index: 2;
-        right: 0;
-        width: 100%;
-        top: 220px;
-        background-color: color-modify('light',$color-primary,map-get($color-modify,smooth));
-        border-radius: map-get($map: $border-radius, $key:menu );
-        &-title{
-            padding-top: 35px;
-            font-family: $font-main_info;
-            font-size: 1.7rem;
-            text-indent: 1.3rem;
+.resto{
+    .main{
+        position: relative;        
+        & .plat{
+            width: 100%;
+            padding-bottom: 10px;
+            padding-top: 10px;
             position: relative;
-            & .favori{
-                position: absolute;
-                top: 32px;
-                right: 38px;
+        }
+        & .image{
+            width: 100%;
+            @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
+            }
+            &-grid{
+                display: none;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)  ){
+                display: none;
+                &-grid{
+                    display: inline-block;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    width: 92%;
+                    margin: auto;
+                }
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
+                display: none;
+                &-grid{
+                    display: inline-block;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    width: 100%;
+                    margin: auto;
+                }
             }
         }
-        & h2{
-            text-indent: 1.3rem;
-            text-transform: uppercase;
-            font-size: 1rem;
-            margin-top: 32px;
-        }
-        & ul{
-            /*margin-top: 20px;*/
-            display: flex;
-            list-style: none;
-            align-items: center;
-            margin-top: 10px;
-            flex-direction: column;
-            & li{
-                margin-top: 10px;
-                background: white;
-                width: 92%;
-                font-size: 1rem;
-                border-radius: 15px;
-                & .add{
-                    border: none;
-                    bottom: 10px;
-                    position: absolute;
-                    right: 10px;
-                    &-check{
-                        display: none;
-                    }
+        h3,p{
+                text-indent: .5rem;
+                text-overflow: ellipsis;
+                width: 80%;
+                white-space: nowrap;
+                overflow: hidden;
+            }   
+        & .menu{ 
+            width: 100%;
+            background-color: color-modify('light',$color-primary,map-get($color-modify,smooth));
+            border-radius: map-get($map: $border-radius, $key:menu );
+            @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)){
+                position: absolute;
+                z-index: 2;
+                right: 0;
+                top: 220px;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+                @include grid-restaurant-tablette(330px);
+                position: relative;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                @include grid-restaurant-ordinateur(330px);
+                position: relative;
+                align-items: center;
+            }
+            &-entrees{                
+                @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max) ){
+                    grid-column: 2/2;
+                    grid-row: 1/2;
                 }
-                &:hover{                    
-                        & .add{
-                            height: 100%;
-                            bottom: 0;
-                            width: 109px;
-                            right: -5px;
-                            & label{
-                                    height: 100%;
-                                    display: flex;
-                                    align-items: flex-end;
-                                    & span {
-                                    display: inline-block;
-                                    background: white;
-                                    padding-right: 23px;
-                                    padding-bottom: 10px;
-                                    }
-                                }
-                            &-check{
-                                position: relative;
-                                font-size: 1.3rem;
-                                border-radius:0 15px 15px 0;
-                                width: 57.6px;
+                @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
+                    grid-column: 1/2;
+                    grid-row: 2/2;
+                }
+            }
+            &-plats{
+              @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+                    grid-column: 1/2;
+                    grid-row: 2/2;  
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
+                    grid-column: 2/3;
+                    grid-row: 2/2;
+                }
+            }
+            &-desserts{
+                padding-bottom: 20px;
+                @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+                    grid-column: 2/2;
+                    grid-row: 2/2;
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
+                    grid-column: 3/4;
+                    grid-row: 2/2;
+                }
+            }
+            &-title{
+                padding-top: 35px;
+                font-family: $font-main_info;
+                font-size: 1.7rem;
+                text-indent: 1.3rem;
+                position: relative;
+                @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+                    position: absolute;
+                    z-index: 2;
+                    top: -30px;
+                    width: 100%;
+                    left: 0;
+                }
+                @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                    grid-column: 2/4;
+                    grid-row: 1/2;
+                }
+                & .favori{
+                    position: absolute;
+                    top: 32px;
+                    right: 38px;
+                }
+            }
+            & h2{
+                text-indent: 1.3rem;
+                text-transform: uppercase;
+                font-size: 1rem;
+                margin-top: 32px;
+            }
+            & ul{
+                /*margin-top: 20px;*/
+                display: flex;
+                list-style: none;
+                align-items: center;
+                margin-top: 10px;
+                flex-direction: column;
+                & li{
+                    margin-top: 10px;
+                    background: white;
+                    width: 92%;
+                    font-size: 1rem;
+                    border-radius: 15px;
+                    & .add{
+                        border: none;
+                        bottom: 10px;
+                        position: absolute;
+                        right: 10px;
+                        &-check{
+                            display: none;
+                        }
+                    }
+                    &:hover{                    
+                            & .add{
                                 height: 100%;
-                                display: inline-block;
-                                background-color: $color-third;
-                                & i {
-                                    position: absolute;
-                                    top:33px;
-                                    left:1rem;
-                                    color:color-modify('light',$color-third,map-get($color-modify,light) );
+                                bottom: 0;
+                                width: 109px;
+                                right: -5px;
+                                & label{
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: flex-end;
+                                        & span {
+                                        display: inline-block;
+                                        background: white;
+                                        padding-right: 23px;
+                                        padding-bottom: 10px;
+                                        }
+                                    }
+                                &-check{
+                                    position: relative;
+                                    font-size: 1.3rem;
+                                    border-radius:0 15px 15px 0;
+                                    width: 57.6px;
+                                    height: 100%;
+                                    display: inline-block;
+                                    background-color: $color-third;
+                                    & i {
+                                        position: absolute;
+                                        top:33px;
+                                        left:1rem;
+                                        color:color-modify('light',$color-third,map-get($color-modify,light) );
+                                    }
                                 }
                             }
                     }
                 }
             }
         }
+    }
+    & .footer{
+        z-index: 2;
     }
 }

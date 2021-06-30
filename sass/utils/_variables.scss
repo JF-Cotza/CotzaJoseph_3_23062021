@@ -57,21 +57,21 @@ $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992
 			align-items: center;
 }
 
-@mixin grid-restaurant-tablette{
+@mixin grid-restaurant-tablette($hight){
 	display: grid;
 	grid-template-columns: repeat(2,1fr);
 	grid-column-gap: 1.1rem;
-	grid-template-rows: repeat(2, 250px);
+	grid-template-rows: repeat(2, $hight);
 	grid-row-gap: 10px;	
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@mixin grid-restaurant-ordinateur{
+@mixin grid-restaurant-ordinateur($hight){
 	display: grid;
 	grid-template-columns: repeat(3,1fr);
 	grid-column-gap: 1.1rem;
-	grid-template-rows: repeat(2, 250px);
+	grid-template-rows: repeat(2, $hight);
 	grid-row-gap: 10px;	
 }
 
