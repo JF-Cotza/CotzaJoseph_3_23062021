@@ -45,10 +45,10 @@ $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992
 
 
 /*mixin*/
-@mixin font-face($name, $src){
+/*@mixin font-face($name, $src){
 	                font-family:$name ;
 	                src: $src,
-}
+}*/
 
 /* pour le header et la localisation */
 @mixin grid{

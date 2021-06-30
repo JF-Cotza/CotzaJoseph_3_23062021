@@ -1,13 +1,21 @@
 .main{
     position: relative;
-    
+    & .plat{
+        width: 100%;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        position: relative;
+        h3,p{
+            text-indent: .5rem;
+        }
+    }    
     & .menu{
         position: absolute;
         z-index: 2;
         right: 0;
         width: 100%;
         top: 220px;
-        background-color: color-modify('light',$color-primary,map-get($color-modify,light));
+        background-color: color-modify('light',$color-primary,map-get($color-modify,smooth));
         border-radius: map-get($map: $border-radius, $key:menu );
         &-title{
             padding-top: 35px;
@@ -28,20 +36,60 @@
             margin-top: 32px;
         }
         & ul{
-            margin-top: 20px;
+            /*margin-top: 20px;*/
             display: flex;
             list-style: none;
-            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            flex-direction: column;
             & li{
-                padding-top: 10px;
-                padding-bottom: 10px;
+                margin-top: 10px;
                 background: white;
-                /*width: 92%; final*/
-                width: 87%; /*test*/
+                width: 92%;
                 font-size: 1rem;
                 border-radius: 15px;
-                & .plat{
-                    position: relative;
+                & .add{
+                    border: none;
+                    bottom: 10px;
+                    position: absolute;
+                    right: 10px;
+                    &-check{
+                        display: none;
+                    }
+                }
+                &:hover{                    
+                        & .add{
+                            height: 100%;
+                            bottom: 0;
+                            width: 109px;
+                            right: -5px;
+                            & label{
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: flex-end;
+                                    & span {
+                                    display: inline-block;
+                                    background: white;
+                                    padding-right: 23px;
+                                    padding-bottom: 10px;
+                                    }
+                                }
+                            &-check{
+                                position: relative;
+                                font-size: 1.3rem;
+                                border-radius:0 15px 15px 0;
+                                width: 57.6px;
+                                height: 100%;
+                                display: inline-block;
+                                background-color: $color-third;
+                                & i {
+                                    position: absolute;
+                                    top:33px;
+                                    left:1rem;
+                                    color:color-modify('light',$color-third,map-get($color-modify,light) );
+                                }
+                            }
+                    }
                 }
             }
         }
