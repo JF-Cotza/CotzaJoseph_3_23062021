@@ -1,6 +1,6 @@
 .index{
     & .header{
-        & a{
+        & .backtoindex{
             display: none;
         }
     }
@@ -32,7 +32,8 @@
                 z-index: 2;
                 position: absolute;
                 top:3px;
-                left:0;
+                /*left:0;*/
+                width: max-content;
             }
             & span{
                 font-size: map-get($map: $font-size, $key: normal);

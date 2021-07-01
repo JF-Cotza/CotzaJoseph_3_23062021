@@ -29,32 +29,35 @@ $color-modify:(dark:100%,light:100%,smooth:10%);
 
 /* dégradé */
 $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
+
 /* font */
-$font-text:'robotoregular';
-$font-main_info:'shrikhandregular';
+$font-text:'robotoregular'; /* texte du site */
+$font-main_info:'shrikhandregular'; /* nom des restaurants sur les pages dédiées */
 $font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
 
+/**/
 /* standard marge*/
 $marge-horizontal:(standard:2rem, medium:1.5rem,small:1.3rem,xsmall:.7rem,minimum:.3rem);
 /*pour les margin et les padding verticaux (exprimé en px)*/
-$padding:(sixhead:60px,fivehead:50px,fourhead:40px,threehead:30px,twohalf:25px,dubble-head:20px,head:10px,button:13px,quarter:3px);
+$headpadding:10px;
+$buttonpadding:13px;
+$padding:(sixhead:$headpadding*6,fivehead:$headpadding*5,fourhead:$headpadding*4,threehead:$headpadding * 3,twohalf:$headpadding*2.5,dubble-head:$headpadding*2,head:$headpadding,button:$buttonpadding,quarter:$buttonpadding/4);
+
+/**/
 /* border radius */
 $border-radius:(round:50%,button:25px,menu:40px, standard:15px,minus:2px);
+
+/**/
 /*breakpoints*/
 $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992px);
 
 
-/*mixin*/
-/*@mixin font-face($name, $src){
-	                font-family:$name ;
-	                src: $src,
-}*/
-
-/* pour le header et la localisation */
+/* mixin */
 @mixin grid{
 			display: grid;
 			grid-template-columns: 28% 44% 28%;
 			align-items: center;
+			justify-items: center;
 }
 
 @mixin grid-restaurant-tablette($hight){
@@ -75,6 +78,7 @@ $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992
 	grid-row-gap: 10px;	
 }
 
+/* fonctions */
 @function color-modify($modifier,$color,$value){
 	@if ($modifier=='dark'){
 		@return darken($color,$value);
