@@ -38,10 +38,12 @@ $font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
 /**/
 /* standard marge*/
 $marge-horizontal:(standard:2rem, medium:1.5rem,small:1.3rem,xsmall:.7rem,minimum:.3rem);
+
 /*pour les margin et les padding verticaux (exprimé en px)*/
 $headpadding:10px;
 $buttonpadding:13px;
-$padding:(sixhead:$headpadding*6,fivehead:$headpadding*5,fourhead:$headpadding*4,threehead:$headpadding * 3,twohalf:$headpadding*2.5,dubble-head:$headpadding*2,head:$headpadding,button:$buttonpadding,quarter:$buttonpadding/4);
+$padding:(sixhead:$headpadding*6,fivehead:$headpadding*5,fourhead:$headpadding*4,threefive:$headpadding*3.5,threehead:$headpadding * 3,twohalf:$headpadding*2.5,dubble-head:$headpadding*2,head:$headpadding,button:$buttonpadding,quarter: div($buttonpadding,4));
+/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
 
 /**/
 /* border radius */

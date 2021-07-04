@@ -46,7 +46,7 @@
                 font-weight: bold;
                 width: 80%;
                 border: none;
-                background-color:lighten($color: $color-third, $amount: 10%);;
+                background-color:lighten($color: $color-third, $amount: 10%);
             }
         }
         /* zone de titre */
@@ -67,9 +67,8 @@
                 font-size: map-get($map: $font-size, $key: title);
             }
             & .btn{
-                background: $gradient;
-                
-        }
+                background: $gradient;               
+            }
         }
         /*englobe la zone de fonctionnement et les restaurants*/
         &-reactive{
@@ -127,15 +126,11 @@
                         position: absolute;
                         top:31px;
                         left: 4.6rem;
-                    }
-                  
-                
-       
+                    }    
             }
         }
         &-places{
-            padding-bottom: map-get($map: $padding, $key: sixhead);
-            
+            padding-bottom: map-get($map: $padding, $key: sixhead);            
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:3;
                 }
@@ -161,9 +156,7 @@
             
             }
             /*fiche des restaurants */
-            
-            & li:nth-child(1){
-                
+            & li:nth-child(1){                
                 @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
                     grid-column: 1/2;
                     grid-row: 1/2;
@@ -174,7 +167,6 @@
                 }
                 & .restaurant{
                     background-image: url('../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-                    background-position: 90%;
                 }
             }
             & li:nth-child(2){
@@ -188,8 +180,7 @@
                     grid-row: 1/2;
                 }
                 & .restaurant{
-                background-image: url('../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
-                background-position-y: 90%;                
+                background-image: url('../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');              
                 }
             }
             & li:nth-child(3) {
@@ -202,9 +193,7 @@
                     grid-row: 1/2;
                 }
                 & .restaurant{
-                background-image: url('../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
-                background-position-y: 90%;
-                
+                background-image: url('../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');               
                 }
             }
             & li:nth-child(4){ 
@@ -218,7 +207,6 @@
                 }
                 & .restaurant{
                 background-image: url('../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
-                background-position-y: 90%;
                 }
             }
             & .restaurant{
@@ -232,6 +220,8 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-end;
+                background-position: 90%;               
+
                 @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     width: 100%;
                 }
@@ -276,9 +266,7 @@
                             z-index: 2;
                     }
                 }    
-                    
             }            
-
         }
     }
 }
