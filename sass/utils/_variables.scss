@@ -62,23 +62,16 @@ $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992
 			justify-items: center;
 }
 
-@mixin grid-restaurant-tablette($hight){
+@mixin restaurant($col,$row,$hight){
 	display: grid;
-	grid-template-columns: repeat(2,1fr);
+	grid-template-columns: repeat($col, 1fr);
 	grid-column-gap: 1.1rem;
-	grid-template-rows: repeat(2, $hight);
+	grid-template-rows: repeat($row, $higth);
 	grid-row-gap: 10px;	
-	margin-left: auto;
-	margin-right: auto;
-}
+	position: relative;
+            }
 
-@mixin grid-restaurant-ordinateur($hight){
-	display: grid;
-	grid-template-columns: repeat(3,1fr);
-	grid-column-gap: 1.1rem;
-	grid-template-rows: repeat(2, $hight);
-	grid-row-gap: 10px;	
-}
+
 
 /* fonctions */
 @function color-modify($modifier,$color,$value){
