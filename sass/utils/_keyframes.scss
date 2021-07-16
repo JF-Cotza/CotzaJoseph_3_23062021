@@ -1,0 +1,28 @@
+/*durée des animations*/
+$time:4s;
+
+/*le keyframe et son mixin associé pour les coeurs*/
+@keyframes hoverfavori {
+    from{
+        transform: scale(1);
+        display: inline-block;
+    }
+    to{
+        transform: scale(0);
+        display: none;
+    }
+}
+
+@mixin heart ($direction:'reduce'){
+    margin: 0;
+    transform-origin: bottom;
+    animation: hoverfavori $time ease-in-out both;
+    @if($direction=='grow')
+        {
+            animation-direction: reverse;
+        }
+    @else if($direction=='reduce')
+        {
+        animation-direction: normal;
+        }
+}

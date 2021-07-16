@@ -15,31 +15,44 @@
 
 .favori{
     border:none;
+    margin: 0;
     input{
             display:none;
             &+label{
+                position: relative;
                 & .checked{
                     display: none;
                 }
                 & .unchecked{
-                    display: inline-block;
-                    transform: scale(1);
+                    @include favori_position(1);
+                    /*transform: scale(1);*/
                     color:darken($color: $color-primary, $amount: 50%);
                 }
             }
             &:checked+label{
                 & .checked{
-                    display: inline-block;
-                    transform: scale(1);
+                    @include favori_position(1);
+                    /*transform: scale(1);*/
                     color:$color-primary;
                 }
                 & .unchecked{
                     display: none;
                 }
             }
-            &:hover+label i
+            &:hover+label             
             {
-                    transition:all 600ms ease-in-out ;   
+                position: relative;
+                & .unchecked{
+                @include heart('reduce');
+                color:darken($color: $color-primary, $amount: 50%);
+                @include favori_position(1);
+                }
+                & .checked{
+                    @include heart('grow');
+                    color:$color-primary;
+                    @include favori_position(2);
+                    
+                }
             }
         }
     }

@@ -1,18 +1,736 @@
-/* Error: Undefined variable.
- *    ,
- * 67 |     grid-template-columns: repeat($col, 1fr);
- *    |                                   ^^^^
- *    '
- *   sass\utils\_variables.scss 67:32  @import
- *   sass\main.scss 2:9                root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 67 \2502      grid-template-columns: repeat($col, 1fr);\d\a    \2502                                    ^^^^\a    \2575 \a   sass\\utils\\_variables.scss 67:32  @import\a   sass\\main.scss 2:9                root stylesheet";
+@charset "UTF-8";
+/* attention dans import: ni extension ni _ */
+/*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
+@font-face {
+  font-family: "robotoregular";
+  src: url("../../sass/base/fonts/Roboto/Roboto-Regular.ttf") format("ttf"), url("../../sass/base/fonts/Roboto/roboto-regular-webfont.woff2") format("woff2"), url("../../sass/base/fonts/Roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("../../sass/base/fonts/Shrikhand/Shrikhand-Regular.ttf") format("ttf"), url("../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* note : attention aux liens! lors de la compil, les chemins partent du répertoire css... */
+/************* variable **************/
+/* color */
+/* dégradé */
+/* font */
+/* texte du site */
+/* nom des restaurants sur les pages dédiées */
+/**/
+/* standard marge*/
+/*pour les margin et les padding verticaux (exprimé en px)*/
+/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
+/**/
+/* border radius */
+/**/
+/*breakpoints*/
+/* mixin */
+/* fonctions */
+/*les variables, maps et mixin */
+/*durée des animations*/
+/*le keyframe et son mixin associé pour les coeurs*/
+@keyframes hoverfavori {
+  from {
+    transform: scale(1);
+    display: inline-block;
+  }
+  to {
+    transform: scale(0);
+    display: none;
+  }
+}
+/*les animations avec leurs mixins */
+* {
+  font-family: "robotoregular";
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.mainTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 13px 22px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+  border-radius: 25px;
+  color: white;
+}
+
+.favori {
+  border: none;
+  margin: 0;
+}
+.favori input {
+  display: none;
+}
+.favori input + label {
+  position: relative;
+}
+.favori input + label .checked {
+  display: none;
+}
+.favori input + label .unchecked {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  top: 16px;
+  left: 0;
+  /*transform: scale(1);*/
+  color: #18092a;
+}
+.favori input:checked + label .checked {
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  top: 16px;
+  left: 0;
+  /*transform: scale(1);*/
+  color: #9356DC;
+}
+.favori input:checked + label .unchecked {
+  display: none;
+}
+.favori input:hover + label {
+  position: relative;
+}
+.favori input:hover + label .unchecked {
+  margin: 0;
+  display: inline-block;
+  transform-origin: bottom;
+  animation: hoverfavori 4s ease-in-out both;
+  animation-direction: normal;
+  color: #18092a;
+  position: absolute;
+  display: inline-block;
+  z-index: 1;
+  top: 16px;
+  left: 0;
+}
+.favori input:hover + label .checked {
+  margin: 0;
+  display: inline-block;
+  transform-origin: bottom;
+  animation: hoverfavori 4s ease-in-out both;
+  animation-direction: reverse;
+  color: #9356DC;
+  position: absolute;
+  display: inline-block;
+  z-index: 2;
+  top: 16px;
+  left: 0;
+}
+
+.plat input {
+  display: none;
+}
+
+.header {
+  text-align: center;
+  width: 100%;
+}
+.header-title {
+  width: 100%;
+  height: 63px;
+  display: grid;
+  grid-template-columns: 28% 44% 28%;
+  align-items: center;
+  justify-items: center;
+}
+.header-title .backtoindex {
+  grid-column: 1/2;
+  text-align: left;
+  font-size: 1.1rem;
+  margin-left: 1.3rem;
+  width: 1.1rem;
+}
+.header-title #logo {
+  grid-column: 2/3;
+  /*width: 100%;*/
+  height: 28px;
+  width: auto;
+  /*la taille du logo reste constante quelle que soit la vue */
+  display: inline-block;
+  padding-top: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .resto {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: max-content 1190px max-content;
+  }
+  .resto .header {
+    grid-row: 1/2;
+  }
+  .resto .main {
+    grid-row: 2/3;
+  }
+  .resto .footer {
+    grid-row: 3/4;
+  }
+}
+.resto .main {
+  position: relative;
+}
+.resto .main .plat {
+  width: 100%;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  position: relative;
+}
+.resto .main .image {
+  width: 100%;
+}
+.resto .main .image-grid {
+  display: none;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .image {
+    display: none;
+  }
+  .resto .main .image-grid {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 92%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .image {
+    display: none;
+  }
+  .resto .main .image-grid {
+    display: inline-block;
+    grid-column: 1/2;
+    grid-row: 1/2;
+    width: 100%;
+    margin: auto;
+  }
+}
+.resto .main h3, .resto .main p {
+  text-indent: 0.5rem;
+  width: 80%;
+  /*pour que le texte qui déborde apparaissent sous la forme de ... */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.resto .main .menu {
+  width: 100%;
+  background-color: #ae80e5;
+  border-radius: 40px;
+}
+@media screen and (max-width: 767px) {
+  .resto .main .menu {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    top: 220px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.1rem;
+    grid-template-rows: repeat(2, 330px);
+    grid-row-gap: 10px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.1rem;
+    grid-template-rows: repeat(2, 330px);
+    grid-row-gap: 10px;
+    position: relative;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-entrees {
+    grid-column: 2/2;
+    grid-row: 1/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-entrees {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-plats {
+    grid-column: 1/2;
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-plats {
+    grid-column: 2/3;
+    grid-row: 2/2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .resto .main .menu-desserts {
+    padding-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-desserts {
+    grid-column: 2/2;
+    grid-row: 2/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-desserts {
+    grid-column: 3/4;
+    grid-row: 2/2;
+  }
+}
+.resto .main .menu-title {
+  padding-top: 35px;
+  font-family: "shrikhandregular";
+  font-size: 1.5rem;
+  text-indent: 1.3rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .resto .main .menu-title {
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    width: 100%;
+    left: 0;
+  }
+}
+@media screen and (min-width: 992px) {
+  .resto .main .menu-title {
+    grid-column: 2/4;
+    grid-row: 1/2;
+  }
+}
+.resto .main .menu-title .favori {
+  position: absolute;
+  top: 32px;
+  right: 38px;
+}
+.resto .main .menu h2 {
+  text-indent: 1.3rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-top: 30px;
+}
+.resto .main .menu ul {
+  /*margin-top: 20px;*/
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin-top: 10px;
+  flex-direction: column;
+}
+.resto .main .menu ul li {
+  margin-top: 10px;
+  background: white;
+  width: 92%;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+.resto .main .menu ul li .add {
+  border: none;
+  bottom: 10px;
+  position: absolute;
+  right: 10px;
+}
+.resto .main .menu ul li .add-check {
+  display: none;
+}
+.resto .main .menu ul li:hover .add {
+  height: 100%;
+  bottom: 0;
+  width: 109px;
+  right: -5px;
+}
+.resto .main .menu ul li:hover .add label {
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+.resto .main .menu ul li:hover .add label span {
+  display: inline-block;
+  background: white;
+  padding-right: 25px;
+  padding-bottom: 10px;
+}
+.resto .main .menu ul li:hover .add-check {
+  position: relative;
+  font-size: 1.3rem;
+  border-radius: 0 15px 15px 0;
+  width: 57.6px;
+  height: 100%;
+  display: inline-block;
+  background-color: #99E2D0;
+}
+.resto .main .menu ul li:hover .add-check i {
+  position: absolute;
+  top: 33px;
+  left: 1rem;
+  color: white;
+}
+.resto .footer {
+  z-index: 2;
+}
+
+.footer {
+  background: black;
+}
+.footer * {
+  color: white;
+}
+.footer ul {
+  list-style: none;
+  padding-top: 10px;
+  margin-left: 1.5rem;
+  padding-bottom: 30px;
+}
+.footer h3 {
+  margin-left: 1.5rem;
+  font-family: "shrikhandregular";
+  padding-top: 25px;
+}
+.footer li {
+  margin-top: div(13px, 4);
+}
+.footer li a {
+  font-size: 1rem;
+}
+.footer li a i {
+  font-size: 0.8rem;
+  width: 1rem;
+  margin-right: 0.3rem;
+}
+
+.index .header .backtoindex {
+  display: none;
+}
+.index .main {
+  width: 100%;
+  /*toute la page est un formulaire */
+  /*zone de recherche par lieu*/
+  /* zone de titre */
+  /*englobe la zone de fonctionnement et les restaurants*/
+  /* zone d'explication du fonctionnement*/
+}
+.index .main-form {
+  background: #fff9fd;
+  position: relative;
+}
+.index .main-location {
+  border: none;
+  height: 50px;
+  background-color: #c1ede2;
+  position: relative;
+  display: grid;
+  grid-template-columns: 28% 44% 28%;
+  align-items: center;
+  justify-items: center;
+}
+.index .main-location::before {
+  grid-column: 1/4;
+  content: "";
+  box-shadow: inset 0 2px 2px #1b6150;
+  height: 50px;
+  display: inline-block;
+  width: 100%;
+  z-index: 1;
+}
+.index .main-location label {
+  grid-column: 2/3;
+  z-index: 2;
+  position: absolute;
+  top: 3px;
+  /*left:0;*/
+  width: max-content;
+}
+.index .main-location span {
+  font-size: 1rem;
+}
+.index .main-location input {
+  margin-left: 0.3rem;
+  text-indent: 0.3rem;
+  font-size: 1rem;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 80%;
+  border: none;
+  background-color: #c1ede2;
+}
+.index .main-slogan {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.index .main-slogan .mainTitle {
+  margin-top: 40px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index .main-slogan p {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 88%;
+  font-size: 1.1rem;
+}
+.index .main-slogan .btn {
+  background: linear-gradient(300deg, #9356DC, #FF79DA);
+}
+@media screen and (min-width: 992px) {
+  .index .main-reactive {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.index .main-working {
+  padding-bottom: 60px;
+  padding-top: 50px;
+}
+@media screen and (min-width: 992px) {
+  .index .main-working {
+    flex: 1;
+  }
+}
+.index .main-working .mainTitle {
+  margin-bottom: div(13px, 4);
+  margin-left: 1.3rem;
+}
+.index .main-working ul {
+  list-style: none;
+  width: 86.5%;
+  margin-top: div(13px, 4);
+  margin-left: 2rem;
+  margin-right: auto;
+  font-weight: bold;
+}
+.index .main-working li {
+  display: inline-block;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0 3px 3px black;
+}
+.index .main-working li .number {
+  position: absolute;
+  top: 30px;
+  left: -0.8rem;
+  background-color: #9356DC;
+  color: white;
+  width: 22px;
+  text-align: center;
+  border-radius: 50%;
+  height: 22px;
+  z-index: 1;
+}
+.index .main-working li i {
+  text-indent: 2rem;
+  font-size: 1.1rem;
+}
+.index .main-working li .info {
+  position: absolute;
+  top: 31px;
+  left: 4.6rem;
+}
+.index .main-places {
+  padding-bottom: 60px;
+  /*fiche des restaurants */
+}
+@media screen and (min-width: 992px) {
+  .index .main-places {
+    flex: 3;
+  }
+}
+.index .main-places .mainTitle {
+  padding-top: 50px;
+  margin-left: 1.3rem;
+}
+.index .main-places ul {
+  margin-top: 20px;
+  list-style: none;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .index .main-places ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.1rem;
+    grid-template-rows: repeat(2, 250px);
+    grid-row-gap: 10px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 992px) {
+  .index .main-places ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1.1rem;
+    grid-template-rows: repeat(2, 250px);
+    grid-row-gap: 10px;
+    position: relative;
+  }
+}
+@media screen and (max-width: 767px) {
+  .index .main-places ul li {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .index .main-places li:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .index .main-places li:nth-child(1) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+}
+.index .main-places li:nth-child(1) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: 90%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .index .main-places li:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+@media screen and (min-width: 992px) {
+  .index .main-places li:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+}
+.index .main-places li:nth-child(2) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-position-y: 90%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .index .main-places li:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .index .main-places li:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+  }
+}
+.index .main-places li:nth-child(3) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-position-y: 90%;
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .index .main-places li:nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+  }
+}
+@media screen and (min-width: 992px) {
+  .index .main-places li:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
+.index .main-places li:nth-child(4) .restaurant {
+  background-image: url("../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-position-y: 90%;
+}
+.index .main-places .restaurant {
+  margin-right: auto;
+  margin-left: auto;
+  width: 335px;
+  height: 250px;
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /* details des restaurants */
+}
+@media screen and (min-width: 992px) {
+  .index .main-places .restaurant {
+    width: 100%;
+  }
+}
+.index .main-places .restaurant-new {
+  display: none;
+}
+.index .main-places .restaurant-new--active {
+  position: absolute;
+  top: 13px;
+  right: 11px;
+  background-color: #99E2D0;
+  width: 80px;
+  padding-top: div(13px, 4);
+  padding-bottom: div(13px, 4);
+  text-align: center;
+  color: #4acbab;
+  border-radius: 2px;
+}
+.index .main-places .restaurant-details {
+  background-color: white;
+  position: relative;
+  font-size: 1.1rem;
+  border-radius: 0 0 15px 15px;
+  z-index: 1;
+}
+.index .main-places .restaurant-details h3 {
+  padding-top: 10px;
+  font-weight: bold;
+  text-indent: 0.7rem;
+}
+.index .main-places .restaurant-details p {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  text-indent: 0.7rem;
+}
+.index .main-places .restaurant-details .favori {
+  position: absolute;
+  top: 21px;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  z-index: 2;
+}
+
+/*# sourceMappingURL=style.css.map */

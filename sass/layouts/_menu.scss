@@ -68,11 +68,11 @@
                 top: 220px;
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
-               @include restaurant (2,2,330px)
+               @include restaurant (2,2,330px);
                 
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
-                @include restaurant (3,2,330px)
+                @include restaurant (3,2,330px);
              
                 align-items: center;
             }
