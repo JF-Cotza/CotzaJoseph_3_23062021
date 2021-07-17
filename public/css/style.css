@@ -43,6 +43,36 @@
     display: none;
   }
 }
+/* keyframe pour la validation des plats et mixin associé */
+@keyframes platcheck {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  80% {
+    transform: rotate(350deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*keyframe et mixin pour la zone de plat ckeck */
+@keyframes grow {
+  from {
+    flex: 1;
+  }
+  to {
+    flex: 8;
+  }
+}
 /*les animations avec leurs mixins */
 * {
   font-family: "robotoregular";
@@ -117,7 +147,6 @@ ul {
 }
 .favori input:hover + label .unchecked {
   margin: 0;
-  display: inline-block;
   transform-origin: bottom;
   animation: hoverfavori 4s ease-in-out both;
   animation-direction: normal;
@@ -130,7 +159,6 @@ ul {
 }
 .favori input:hover + label .checked {
   margin: 0;
-  display: inline-block;
   transform-origin: bottom;
   animation: hoverfavori 4s ease-in-out both;
   animation-direction: reverse;
@@ -144,6 +172,70 @@ ul {
 
 .plat input {
   display: none;
+}
+
+.plat1 {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.plat1-info {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: red;
+  flex: 8;
+}
+.plat1-info h3, .plat1-info p {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.plat1 .add1 {
+  display: flex;
+  padding: 0 auto;
+  flex: 2;
+  text-align: center;
+  align-items: center;
+}
+.plat1 .add1 input {
+  display: none;
+}
+.plat1 .add1 input + label {
+  text-align: center;
+  display: flex;
+}
+.plat1 .add1-check {
+  display: none;
+}
+.plat1 .add1:hover {
+  background: #99E2D0;
+  /*flex:8;*/
+  animation: grow 4s ease-in-out both;
+}
+.plat1 .add1:hover label {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.plat1 .add1:hover label span {
+  flex: 1;
+  padding: div(25.2px, 2)10px 0;
+  background: white;
+  display: inline;
+}
+.plat1 .add1:hover label .add1-check {
+  display: inline-block;
+  flex: 1;
+  padding: div(25.2px, 2)10px 0;
+}
+.plat1 .add1:hover label .add1-check i {
+  animation: platcheck 4s ease-in-out both;
 }
 
 .header {

@@ -20,6 +20,7 @@
             padding-bottom: map-get($map: $padding, $key: head);
             padding-top: map-get($map: $padding, $key: head);
             position: relative;
+            
         }
         & .image{
             width: 100%;

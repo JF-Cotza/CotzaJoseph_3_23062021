@@ -79,6 +79,16 @@ $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992
     left: 0;
 }
 
+@mixin overflowtext{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@mixin paddingplat {
+	// pour centrer le prix et le check des plats
+	padding: div((46.8px-21.6px),2)+map-get($map: $padding, $key: head) 0; //(hauteur de plat1-info - hauteur du texte) /2
+}
 
 /* fonctions */
 @function color-modify($modifier,$color,$value){
