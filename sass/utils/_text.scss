@@ -1,0 +1,31 @@
+/*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../../sass/base/fonts/Roboto/Roboto-Regular.ttf') format('ttf'),
+		 url('../../sass/base/fonts/Roboto/roboto-regular-webfont.woff2') format('woff2'),
+         url('../../sass/base/fonts/Roboto/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('../../sass/base/fonts/Shrikhand/Shrikhand-Regular.ttf') format('ttf'),
+		 url('../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('../../sass/base/fonts/Shrikhand/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* note : attention aux liens! lors de la compil, les chemins partent du répertoire css... */
+
+/* font */
+$font-text:'robotoregular'; /* texte du site */
+$font-main_info:'shrikhandregular'; /* nom des restaurants sur les pages dédiées */
+$font-size:(mainTitle:1.5rem,title:1.1rem,normal:1rem,small:.8rem);
+
+/*masquer le texte et le remplacer par des ... */
+@mixin overflowtext{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

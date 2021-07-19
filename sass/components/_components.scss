@@ -43,12 +43,12 @@
             {
                 position: relative;
                 & .unchecked{
-                @include heart('reduce');
+                @include favoricheck('reduce');
                 color:darken($color: $color-primary, $amount: 50%);
                 @include favori_position(1);
                 }
                 & .checked{
-                    @include heart('grow');
+                    @include favoricheck('grow');
                     color:$color-primary;
                     @include favori_position(2);
                     

@@ -42,10 +42,11 @@
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
                 display: none;
                 &-grid{
+                    border-radius: map-get($map: $border-radius, $key:standard );
                     display: inline-block;
                     grid-column: 1/2;
                     grid-row: 1/2;
-                    width: 100%;
+                    width: 90%;
                     margin: auto;
                 }
             }
@@ -131,7 +132,7 @@
                 & .favori{
                     position: absolute;
                     top: 32px;
-                    right: 38px;
+                    right: 100px;
                 }
             }
             & h2{

@@ -1,5 +1,6 @@
 /* attention dans import: ni extension ni _ */
 @import "./utils/variables"; /*les variables, maps et mixin */
+@import "./utils/text"; /*pour les font, les fonts sizes...*/
 @import "./utils/keyframes"; /*les animations avec leurs mixins */
 
 @import "./base/base";

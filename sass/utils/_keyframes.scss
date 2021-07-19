@@ -1,5 +1,6 @@
 /*durée des animations*/
 $time:1s;
+$menutime:200ms;
 $loadtime:3s;
 
 /*le keyframe et son mixin associé pour les coeurs*/
@@ -14,7 +15,7 @@ $loadtime:3s;
     }
 }
 
-@mixin heart ($direction:'reduce'){
+@mixin favoricheck ($direction:'reduce'){
     margin: 0;
     transform-origin: bottom;
     animation: hoverfavori $time ease-in-out both;
@@ -89,7 +90,7 @@ $loadtime:3s;
 }
 
 @mixin plateshow ($delay) {
-    animation: platereveal $time $delay*$time ease-in-out both;
+    animation: platereveal $menutime $delay*$menutime ease-in-out both;
 }
 
 /*keyframes pour barre de chargement */
