@@ -118,10 +118,12 @@ $loadtime:3s;
 
 @keyframes colorchange {
     from{
+        font-size: 1rem;
         color:red;
     }
     to{
         color:$color-third;
+        font-size: 2rem;
     }
 }
 
@@ -135,7 +137,6 @@ $loadtime:3s;
 }
 
 @mixin loadrotate{
-    font-size: 2rem;
     animation: colorchange $loadtime ease-in-out, platcheck $time ease-in-out both infinite;
 }
 

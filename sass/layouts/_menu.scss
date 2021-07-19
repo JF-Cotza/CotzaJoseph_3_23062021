@@ -61,7 +61,7 @@
         & .menu{ 
             width: 100%;
             background-color: color-modify('light',$color-primary,map-get($color-modify,smooth));
-            border-radius: map-get($map: $border-radius, $key:menu );
+            border-radius: map-get($map: $border-radius, $key:menu ) map-get($map: $border-radius, $key:menu ) 0 0;
             @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)){
                 position: absolute;
                 z-index: 2;
