@@ -1,14 +1,8 @@
 
+/**/
+/*breakpoints*/
+$breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992px);
 
-/************* variable **************/
-/* color */
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-third:#99E2D0;
-$color-modify:(dark:100%,light:100%,smooth:10%);
-
-/* dégradé */
-$gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 
 /**/
 /* standard marge*/
@@ -20,44 +14,13 @@ $buttonpadding:13px;
 $padding:(sixhead:$headpadding*6,fivehead:$headpadding*5,fourhead:$headpadding*4,threefive:$headpadding*3.5,threehead:$headpadding * 3,twohalf:$headpadding*2.5,dubble-head:$headpadding*2,head:$headpadding,button:$buttonpadding,quarter: div($buttonpadding,4));
 /* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
 
-/**/
-/* border radius */
-$border-radius:(round:50%,button:25px,menu:40px, standard:15px,minus:2px);
-
-/**/
-/*breakpoints*/
-$breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992px);
-
-/* mixin */
-@mixin grid{
-			display: grid;
-			grid-template-columns: 28% 44% 28%;
-			align-items: center;
-			justify-items: center;
-}
-
-@mixin restaurant($col,$row,$hight){
-			display: grid;
-			grid-template-columns: repeat($col, 1fr);
-			grid-column-gap: 1.1rem;
-			grid-template-rows: repeat($row, $hight);
-			grid-row-gap: 10px;	
-			position: relative;
-            }
-
-
-
 @mixin paddingplat {
 	// pour centrer le prix et le check des plats
 	padding: div((46.8px-21.6px),2)+map-get($map: $padding, $key: head) 0; //(hauteur de plat1-info - hauteur du texte) /2
 }
 
-/* fonctions */
-@function color-modify($modifier,$color,$value){
-	@if ($modifier=='dark'){
-		@return darken($color,$value);
-	}
-	@if ($modifier=='light'){
-		@return lighten($color,$value);
-	}
-}
+/**/
+/* border radius */
+$border-radius:(round:50%,button:25px,menu:40px, standard:15px,minus:2px);
+
+

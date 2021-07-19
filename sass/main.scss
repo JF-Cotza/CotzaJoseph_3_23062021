@@ -1,9 +1,11 @@
 /* attention dans import: ni extension ni _ */
-@import "./utils/variables"; /*les variables, maps et mixin */
+@import "./utils/color";/*les couleurs utilisées / ligne à laisser en 1ere posotion car les couleurs sont utilisées dans d'autres pages utils*/
 @import "./utils/text"; /*pour les font, les fonts sizes...*/
 @import "./utils/keyframes"; /*les animations avec leurs mixins */
+@import "./utils/grids";/* les grids pour les pages*/
+@import "./utils/variables"; /*les variables, maps et mixin plus génériques*/
 
-@import "./base/base";
+@import "./base/base"; 
 
 //Composants: components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons.
 @import "./components/bouton";

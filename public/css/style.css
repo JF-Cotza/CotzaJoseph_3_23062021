@@ -3,17 +3,8 @@
 /************* variable **************/
 /* color */
 /* dégradé */
-/**/
-/* standard marge*/
-/*pour les margin et les padding verticaux (exprimé en px)*/
-/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
-/**/
-/* border radius */
-/**/
-/*breakpoints*/
-/* mixin */
 /* fonctions */
-/*les variables, maps et mixin */
+/*les couleurs utilisées / ligne à laisser en 1ere posotion car les couleurs sont utilisées dans d'autres pages utils*/
 /*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
 @font-face {
   font-family: "robotoregular";
@@ -124,6 +115,18 @@
   }
 }
 /*les animations avec leurs mixins */
+/*mixins*/
+/*sur la page index et l'header*/
+/* les grids pour les pages*/
+/**/
+/*breakpoints*/
+/**/
+/* standard marge*/
+/*pour les margin et les padding verticaux (exprimé en px)*/
+/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
+/**/
+/* border radius */
+/*les variables, maps et mixin plus génériques*/
 * {
   font-family: "robotoregular";
   margin: 0;

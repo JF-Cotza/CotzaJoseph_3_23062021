@@ -1,0 +1,19 @@
+/************* variable **************/
+/* color */
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-third:#99E2D0;
+$color-modify:(dark:100%,light:100%,smooth:10%);
+
+/* dégradé */
+$gradient: linear-gradient(300deg,$color-primary,$color-secondary);
+
+/* fonctions */
+@function color-modify($modifier,$color,$value){
+	@if ($modifier=='dark'){
+		@return darken($color,$value);
+	}
+	@if ($modifier=='light'){
+		@return lighten($color,$value);
+	}
+}
