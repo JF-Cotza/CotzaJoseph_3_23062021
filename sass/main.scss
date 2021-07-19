@@ -5,9 +5,11 @@
 
 @import "./base/base";
 
-@import "./components/components";
+//Composants: components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons.
+@import "./components/bouton";
 @import "./components/favori";
 @import "./components/plat";
+@import "./components/title";
 
 @import "./layouts/header";
 @import "./layouts/menu";

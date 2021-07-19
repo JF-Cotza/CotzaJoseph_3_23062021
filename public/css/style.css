@@ -143,11 +143,6 @@ ul {
   list-style: none;
 }
 
-.mainTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 .btn {
   margin-top: 30px;
   padding: 13px 22px;
@@ -286,6 +281,11 @@ ul {
 }
 .plat1 .add1:hover label .add1-check i {
   animation: platcheck 1s ease-in-out both;
+}
+
+.mainTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .header {
