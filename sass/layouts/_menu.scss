@@ -204,3 +204,41 @@
         z-index: 2;
     }
 }
+
+.menu
+{
+    &-entrees{
+        ul{
+            li{
+                @for $i from 1 to 4 {
+                    &:nth-child(#{$i}){
+                        @include plateshow($i);
+                    }
+                }
+
+            }
+        }
+    }
+    &-plats{
+        ul{
+            li{
+                @for $i from 1 to 4 {
+                    &:nth-child(#{$i}){
+                        @include plateshow(4+$i);
+                    }
+                }
+            }       
+        }
+    }
+    &-desserts{
+         ul{
+            li{
+                @for $i from 1 to 4 {
+                    &:nth-child(#{$i}){
+                        @include plateshow(8+$i);
+                    }
+                }
+            }       
+        }
+    }
+}

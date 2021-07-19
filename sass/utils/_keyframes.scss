@@ -1,5 +1,6 @@
 /*durée des animations*/
-$time:4s;
+$time:1s;
+$loadtime:3s;
 
 /*le keyframe et son mixin associé pour les coeurs*/
 @keyframes hoverfavori {
@@ -67,3 +68,77 @@ $time:4s;
 @mixin growplat {
     animation: grow $time ease-in-out both;      
 }
+
+/*keyframes et mixin pour l'affichage progressif des plats */
+@keyframes platereveal {
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: .5;
+    }
+    50%{
+        opacity: .75;
+    }
+    75%{
+        opacity: .9;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@mixin plateshow ($delay) {
+    animation: platereveal $time $delay*$time ease-in-out both;
+}
+
+/*keyframes pour barre de chargement */
+@keyframes barregrow {
+    from{
+        transform: scaleX(0);
+        
+    }
+    to{
+        transform: scaleX(1);
+        
+    }
+}
+
+@keyframes covered{
+    0%,99%{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scaleY(0);
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes colorchange {
+    from{
+        color:red;
+    }
+    to{
+        color:$color-third;
+    }
+}
+
+@mixin covering {
+    animation: covered $loadtime ease-in-out both;
+}
+
+@mixin barregrowing {
+    transform-origin: left;
+    animation: barregrow $loadtime ease-in-out both;
+}
+
+@mixin loadrotate{
+    font-size: 2rem;
+    animation: colorchange $loadtime ease-in-out, platcheck $time ease-in-out both infinite;
+}
+
+
+
+

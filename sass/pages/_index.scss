@@ -1,4 +1,5 @@
 .index{
+    position: relative;
     & .header{
         & .backtoindex{
             display: none;
@@ -120,8 +121,10 @@
                     }     
                     & i{
                         text-indent: map-get($map: $marge-horizontal, $key: standard);
-                        font-size: map-get($map: $font-size, $key: title);
-                        
+                        font-size: map-get($map: $font-size, $key: title);   
+                    }
+                    &:hover i{
+                        color: $color-primary;
                     }
                     & .info{
                         position: absolute;
@@ -279,6 +282,31 @@
                     
             }            
 
+        }
+    }
+}
+
+.load{
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 99;
+    width:100%;
+    height: 100%;
+    background: linear-gradient(-45deg,$color-primary, $color-secondary,$color-third);
+        @include covering;
+    p{
+        text-align: center;
+        margin-top: 10Vh;
+    }
+    &-barre{
+        width: 100%;
+        //background: $color-secondary;
+        @include barregrowing;
+        text-align: right;
+        i {
+            color:$color-third;
+            @include loadrotate;
         }
     }
 }
