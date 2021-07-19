@@ -45,13 +45,6 @@ $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992
 			position: relative;
             }
 
-@mixin favori_position($index,$top:16,$left:0){
-	position: absolute;
-	display: inline-block;
-	z-index: $index;
-    top: $top;
-    left: $left;
-}
 
 
 @mixin paddingplat {

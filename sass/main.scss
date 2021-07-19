@@ -4,7 +4,11 @@
 @import "./utils/keyframes"; /*les animations avec leurs mixins */
 
 @import "./base/base";
+
 @import "./components/components";
+@import "./components/favori";
+@import "./components/plat";
+
 @import "./layouts/header";
 @import "./layouts/menu";
 @import "./layouts/footer";

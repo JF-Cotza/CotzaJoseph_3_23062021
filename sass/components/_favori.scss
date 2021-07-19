@@ -1,0 +1,51 @@
+@mixin favori_position($index,$top:16,$left:0){
+	position: absolute;
+	display: inline-block;
+	z-index: $index;
+    top: $top;
+    left: $left;
+}
+
+.favori{
+    border:none;
+    margin: 0;
+    input{
+            display:none;
+            &+label{
+                position: relative;
+                & .checked{
+                    display: none;
+                }
+                & .unchecked{
+                    @include favori_position(1);
+                    /*transform: scale(1);*/
+                    color:darken($color: $color-primary, $amount: 50%);
+                }
+            }
+            &:checked+label{
+                & .checked{
+                    @include favori_position(1);
+                    /*transform: scale(1);*/
+                    color:$color-primary;
+                }
+                & .unchecked{
+                    display: none;
+                }
+            }
+            &:hover+label             
+            {
+                position: relative;
+                & .unchecked{
+                @include favoricheck('reduce');
+                color:darken($color: $color-primary, $amount: 50%);
+                @include favori_position(1);
+                }
+                & .checked{
+                    @include favoricheck('grow');
+                    color:$color-primary;
+                    @include favori_position(2);
+                    
+                }
+            }
+        }
+    }

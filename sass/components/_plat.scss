@@ -1,0 +1,66 @@
+.plat{
+    input{
+        display: none;
+    }
+}
+
+.plat1{
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    @include overflowtext;
+    &-info{ 
+        padding-bottom: map-get($map: $padding, $key: head);
+        padding-top: map-get($map: $padding, $key: head);
+        background: red;
+        flex:8;
+        h3,p{
+            width: 100%;
+            @include overflowtext;
+        }
+    }
+    & .add1{
+        display: flex;
+        padding: 0 auto;
+        flex: 2;
+        text-align: center;
+        align-items: center;
+        input{
+            display: none;
+            +label{
+                text-align: center;
+                display: flex;
+            }
+        }
+        &-check{
+            display: none;
+        }
+        &:hover{
+            background: $color-third;
+            /*flex:8;*/
+            @include growplat;
+            label{
+                width: 100%;
+                height: fit-content;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                span{
+                    flex:1;
+                    @include paddingplat;
+                    background: white;
+                    display: inline;
+                    
+                }
+                .add1-check{
+                    display: inline-block;
+                    flex:1;
+                    @include paddingplat;
+                    & i{
+                        @include platvalide;
+                    }    
+                }
+            }
+        }            
+    }
+}
