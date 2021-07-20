@@ -18,14 +18,38 @@ $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 	}
 }
 
+
 /*couleurs secondaires découlant de celles de bases */
-$background-color--footer:color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
-$background-color--menu:color-modify('light',$color-primary,map-get($color-modify,smooth));
-$background-color--indexform:lighten($color: $color-secondary, $amount: 25%);
-$background-color--location:lighten($color: $color-third, $amount: 10%);
-$background-color--info:color-modify('light',$color-primary,map-get($color-modify,light));
+$color-four:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
+$color-five:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightness: 20%, $alpha: 1.0);
+$color-six:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightness: 40%, $alpha: 1.0);
+$color-seven:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -100%, $alpha: 1.0);
+$color-height:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -50%, $alpha: 1.0);
+
+//color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
+
+
+
+//background page index:liste restaurant ,menu restaurant
+$background-color--menu:gray;//$color-four;
+$background-color--boutonfonctionnement:gray;//$color-four;
+$background-color--restaurant:gray;//$color-four;
+
+$background-color--location:gray;//$color-five;
+
+$background-color--info:gray;//$color-six;
+$background-color--default:gray;//$color-six;
+$background-color--form:gray;//$color-six;
+
+$background-color--footer:gray;//$color-height;
+
+$color--generique:gray;//$color-seven;
+
+
+
+
+
 $color--footer:color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
-$color--generique:color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
 $color--button:color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
 $color--checkplate:color-modify('light',$color-third,map-get($color-modify,light));
 $color--boxshadow:darken($color: $color-third, $amount: 50%);

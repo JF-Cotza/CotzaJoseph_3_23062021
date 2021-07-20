@@ -9,14 +9,14 @@
         width: 100%;   
         /*toute la page est un formulaire */
         &-form{
-            background: lighten($color: $color-secondary, $amount: 25%);
+            background: $background-color--form;
             position: relative;                
         }
         /*zone de recherche par lieu*/
         &-location{
             border:none;
             height: 50px;
-            background-color:$background-color--indexform;
+            background-color:$background-color--location;
             position: relative;
             @include grid;
             &::before{
@@ -107,6 +107,7 @@
                     position: relative;
                     border-radius: map-get($map: $border-radius, $key:standard );
                     box-shadow: 0 3px 3px black;
+                    background-color: $background-color--boutonfonctionnement;
                     & .number{
                         position: absolute;
                         top:30px;
@@ -138,7 +139,7 @@
         }
         &-places{
             padding-bottom: map-get($map: $padding, $key: sixhead);
-            
+            background-color: $background-color--restaurant;
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:3;
                 }

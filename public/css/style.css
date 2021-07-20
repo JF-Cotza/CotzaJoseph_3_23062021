@@ -108,6 +108,7 @@
 @keyframes colorchange {
   from {
     font-size: 1rem;
+    color: red;
   }
   to {
     color: #99E2D0;
@@ -131,11 +132,12 @@
   font-family: "robotoregular";
   margin: 0;
   padding: 0;
-  color: black;
+  color: gray;
 }
 
 body {
   width: 100%;
+  background: gray;
 }
 
 a {
@@ -175,7 +177,7 @@ ul {
   z-index: 1;
   top: 16;
   left: 0;
-  color: black;
+  color: gray;
 }
 .favori input:checked + label .checked {
   position: absolute;
@@ -196,7 +198,7 @@ ul {
   transform-origin: bottom;
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: normal;
-  color: black;
+  color: gray;
   position: absolute;
   display: inline-block;
   z-index: 1;
@@ -409,7 +411,7 @@ ul {
 }
 .resto .main .menu {
   width: 100%;
-  background-color: #ae80e5;
+  background-color: gray;
   border-radius: 40px 40px 0 0;
 }
 @media screen and (max-width: 767px) {
@@ -604,7 +606,7 @@ ul {
 }
 
 .footer {
-  background: black;
+  background: gray;
 }
 .footer * {
   color: white;
@@ -647,13 +649,13 @@ ul {
   /* zone d'explication du fonctionnement*/
 }
 .index .main-form {
-  background: #fff9fd;
+  background: gray;
   position: relative;
 }
 .index .main-location {
   border: none;
   height: 50px;
-  background-color: #fff9fd;
+  background-color: gray;
   position: relative;
   display: grid;
   grid-template-columns: 28% 44% 28%;
@@ -688,7 +690,7 @@ ul {
   font-weight: bold;
   width: 80%;
   border: none;
-  background-color: #c1ede2;
+  background-color: gray;
 }
 .index .main-slogan {
   text-align: center;
@@ -746,6 +748,7 @@ ul {
   position: relative;
   border-radius: 15px;
   box-shadow: 0 3px 3px black;
+  background-color: gray;
 }
 .index .main-working li .number {
   position: absolute;
@@ -773,6 +776,7 @@ ul {
 }
 .index .main-places {
   padding-bottom: 60px;
+  background-color: gray;
   /*fiche des restaurants */
 }
 @media screen and (min-width: 992px) {
@@ -911,7 +915,7 @@ ul {
   border-radius: 2px;
 }
 .index .main-places .restaurant-details {
-  background-color: white;
+  background-color: gray;
   position: relative;
   font-size: 1.1rem;
   border-radius: 0 0 15px 15px;
