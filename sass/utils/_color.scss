@@ -1,5 +1,5 @@
 /************* variable **************/
-/* color */
+/* couleurs de base*/
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-third:#99E2D0;
@@ -17,3 +17,16 @@ $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 		@return lighten($color,$value);
 	}
 }
+
+/*couleurs secondaires découlant de celles de bases */
+$background-color--footer:color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
+$background-color--menu:color-modify('light',$color-primary,map-get($color-modify,smooth));
+$background-color--indexform:lighten($color: $color-secondary, $amount: 25%);
+$background-color--location:lighten($color: $color-third, $amount: 10%);
+$background-color--info:color-modify('light',$color-primary,map-get($color-modify,light));
+$color--footer:color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
+$color--generique:color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
+$color--button:color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
+$color--checkplate:color-modify('light',$color-third,map-get($color-modify,light));
+$color--boxshadow:darken($color: $color-third, $amount: 50%);
+$color-new:darken($color: $color-third, $amount: 20%);

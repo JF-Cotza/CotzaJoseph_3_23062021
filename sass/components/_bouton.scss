@@ -5,5 +5,5 @@
             margin-right: auto;
             font-size: map-get($map: $font-size, $key: title);
             border-radius: map-get($map: $border-radius, $key:button );
-            color:white;
+            color:$color--button;
 }

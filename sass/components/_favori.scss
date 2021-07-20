@@ -18,14 +18,12 @@
                 }
                 & .unchecked{
                     @include favori_position(1);
-                    /*transform: scale(1);*/
-                    color:darken($color: $color-primary, $amount: 50%);
+                    color:$color--generique;
                 }
             }
             &:checked+label{
                 & .checked{
                     @include favori_position(1);
-                    /*transform: scale(1);*/
                     color:$color-primary;
                 }
                 & .unchecked{
@@ -37,7 +35,7 @@
                 position: relative;
                 & .unchecked{
                 @include favoricheck('reduce');
-                color:darken($color: $color-primary, $amount: 50%);
+                color:$color--generique;
                 @include favori_position(1);
                 }
                 & .checked{

@@ -1,7 +1,7 @@
 .footer{
-    background: color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
+    background: $background-color--footer;
     & * {
-        color:  color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
+        color:  $color--footer;
     }
     & ul{
         list-style: none;
