@@ -7,6 +7,35 @@ $padding--large:15px;
 $margin--standard:10px;
 $border-radius--standard:10px;
 
+//@mixin
+@mixin labelplat{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+@mixin spanplat{
+    margin-right: $margin--standard;
+    height: $height-plats;    
+    background:$background-color--plat;
+    justify-self: flex-end;
+}
+
+@mixin addcheckplat {
+    background: $background-color--hoverplate;        
+    font-size: 2rem;
+    display: inline-block;
+    width: $twoinfo;
+    height: calc($height-plats - $padding--large);
+    padding-top: $padding--large;
+    & i{
+        color:$color--button;
+        @include platvalide;
+    }    
+}
+
 //le code pour les plat
 .plat{
     display: flex;
@@ -51,32 +80,17 @@ $border-radius--standard:10px;
             flex:1;
             @include growplat;
             label{                
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
+                @include labelplat;
                 span{
-                    margin-right: $margin--standard;
                     @include paddingplat;
-                    height: $height-plats;    
-                    background:$background-color--plat;
-                    justify-self: flex-end;
+                    @include spanplat;
                 }
                 .add-check{
-                    background: $background-color--hoverplate;        
-                    font-size: 2rem;
-                    display: inline-block;
-                    width: $twoinfo;
-                    height: calc($height-plats - $padding--large);
-                    padding-top: $padding--large;
-                    & i{
-                        color:$color--button;
-                        @include platvalide;
-                    }    
+                    @include addcheckplat;    
                 }
             }
-        }            
+        }
+                    
     }
 }
 
@@ -87,3 +101,18 @@ $border-radius--standard:10px;
         margin-bottom: $margin--standard;
     }
 }
+
+.plat{
+    input:checked{
+            & +label{                
+                @include labelplat;
+                span{
+                    @include spanplat;
+                }
+                .add-check{
+                    @include addcheckplat;               
+                }    
+            }
+    }
+}
+    

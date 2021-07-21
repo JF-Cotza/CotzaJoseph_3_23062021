@@ -26,7 +26,7 @@
 /*masquer le texte et le remplacer par des ... */
 /*pour les font, les fonts sizes...*/
 /*durée des animations*/
-/*le keyframe et son mixin associé pour les coeurs*/
+/*le keyframe et son mixin associé pour les restaurants favoris (coeurs)*/
 @keyframes hoverfavori {
   from {
     transform: scale(1);
@@ -259,7 +259,7 @@ ul {
 .plat-info {
   padding-bottom: 10px;
   padding-top: 10px;
-  background: grey;
+  background: white;
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -277,7 +277,7 @@ ul {
   align-items: center;
   height: 70px;
   justify-content: space-between;
-  background-color: grey;
+  background-color: white;
 }
 .plat .add input {
   display: none;
@@ -303,10 +303,10 @@ ul {
   justify-content: space-around;
 }
 .plat .add:hover label span {
-  margin-right: 10px;
   padding: div(25.2px, 2)10px 0;
+  margin-right: 10px;
   height: 70px;
-  background: grey;
+  background: white;
   justify-self: flex-end;
 }
 .plat .add:hover label .add-check {
@@ -319,7 +319,7 @@ ul {
 }
 .plat .add:hover label .add-check i {
   color: white;
-  animation: platcheck 1s ease-in-out both;
+  animation: platcheck 600ms ease-in-out both;
 }
 
 .prix {
@@ -328,6 +328,32 @@ ul {
 }
 .prix .value {
   margin-bottom: 10px;
+}
+
+.plat input:checked + label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.plat input:checked + label span {
+  margin-right: 10px;
+  height: 70px;
+  background: white;
+  justify-self: flex-end;
+}
+.plat input:checked + label .add-check {
+  background: #99E2D0;
+  font-size: 2rem;
+  display: inline-block;
+  width: 100px;
+  height: calc($height-plats - $padding--large);
+  padding-top: 15px;
+}
+.plat input:checked + label .add-check i {
+  color: white;
+  animation: platcheck 600ms ease-in-out both;
 }
 
 .mainTitle {
@@ -368,7 +394,7 @@ ul {
   .resto {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: max-content 1190px max-content;
+    grid-template-rows: max-content max-content max-content;
   }
   .resto .header {
     grid-row: 1/2;
@@ -544,40 +570,6 @@ ul {
   width: 92%;
   font-size: 1rem;
   border-radius: 15px;
-  /*    &:hover{                    
-              & .add{
-                  height: 100%;
-                  bottom: 0;
-                  width: 109px;
-                  right: -5px;
-                  & label{
-                          height: 100%;
-                          display: flex;
-                          align-items: flex-end;
-                          & span {
-                          display: inline-block;
-                          background: $background-color--menu;
-                          padding-right: map-get($map: $padding, $key:twohalf );
-                          padding-bottom: map-get($map: $padding, $key: head);
-                          }
-                      }
-                  &-check{
-                      position: relative;
-                      font-size: 1.3rem;
-                      border-radius:0 15px 15px 0;
-                      width: 57.6px;
-                      height: 100%;
-                      display: inline-block;
-                      background-color:$color--checked;
-                      & i {
-                          position: absolute;
-                          top:33px;
-                          left:1rem;
-                          color:$color--check;
-                      }
-                  }
-              }
-      }*/
 }
 .resto .footer {
   z-index: 2;
@@ -609,6 +601,19 @@ ul {
 }
 .menu-desserts ul li:nth-child(3) {
   animation: platereveal 200ms 2200ms ease-in-out both;
+}
+
+.buttonarea {
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.buttonarea .btn {
+  font-size: 1.1rem;
+  margin: auto;
+  height: 50px;
+  background: linear-gradient(300deg, #9356DC, #FF79DA);
 }
 
 .footer {

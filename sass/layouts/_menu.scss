@@ -2,7 +2,7 @@
     @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: max-content 1190px max-content;
+        grid-template-rows: max-content max-content max-content;
         .header{
             grid-row: 1/2;
         }
@@ -147,40 +147,6 @@
                     width: 92%;
                     font-size: map-get($map: $font-size, $key: normal);
                     border-radius: 15px;
-                /*    &:hover{                    
-                            & .add{
-                                height: 100%;
-                                bottom: 0;
-                                width: 109px;
-                                right: -5px;
-                                & label{
-                                        height: 100%;
-                                        display: flex;
-                                        align-items: flex-end;
-                                        & span {
-                                        display: inline-block;
-                                        background: $background-color--menu;
-                                        padding-right: map-get($map: $padding, $key:twohalf );
-                                        padding-bottom: map-get($map: $padding, $key: head);
-                                        }
-                                    }
-                                &-check{
-                                    position: relative;
-                                    font-size: 1.3rem;
-                                    border-radius:0 15px 15px 0;
-                                    width: 57.6px;
-                                    height: 100%;
-                                    display: inline-block;
-                                    background-color:$color--checked;
-                                    & i {
-                                        position: absolute;
-                                        top:33px;
-                                        left:1rem;
-                                        color:$color--check;
-                                    }
-                                }
-                            }
-                    }*/
                 }
             }
         }
@@ -225,5 +191,19 @@
                 }
             }       
         }
+    }
+    
+}
+
+.buttonarea{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    .btn{
+        font-size: 1.1rem;
+        margin: auto;
+        height: 50px;
+        background:$background--mainbutton ;
     }
 }

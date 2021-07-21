@@ -1,9 +1,10 @@
 /*durée des animations*/
 $time:1s;
+$timecheck:600ms;
 $menutime:200ms;
 $loadtime:3s;
 
-/*le keyframe et son mixin associé pour les coeurs*/
+/*le keyframe et son mixin associé pour les restaurants favoris (coeurs)*/
 @keyframes hoverfavori {
     from{
         transform: scale(1);
@@ -53,7 +54,7 @@ $loadtime:3s;
 }
 
 @mixin platvalide{
-    animation: platcheck $time ease-in-out both;
+    animation: platcheck $timecheck ease-in-out both;
 }
 
 /*keyframe et mixin pour la zone de plat ckeck */
