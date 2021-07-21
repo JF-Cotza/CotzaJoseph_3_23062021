@@ -15,13 +15,6 @@
     }
     .main{
         position: relative;        
-        & .plat{
-            width: 100%;
-            padding-bottom: map-get($map: $padding, $key: head);
-            padding-top: map-get($map: $padding, $key: head);
-            position: relative;
-            
-        }
         & .image{
             width: 100%;
             @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
@@ -150,20 +143,11 @@
                 flex-direction: column;
                 & li{
                     margin-top: map-get($map: $padding, $key: head);
-                    background: white;
+                    background: $background-color--menu;
                     width: 92%;
                     font-size: map-get($map: $font-size, $key: normal);
                     border-radius: 15px;
-                    & .add{
-                        border: none;
-                        bottom: 10px;
-                        position: absolute;
-                        right: 10px;
-                        &-check{
-                            display: none;
-                        }
-                    }
-                    &:hover{                    
+                /*    &:hover{                    
                             & .add{
                                 height: 100%;
                                 bottom: 0;
@@ -175,7 +159,7 @@
                                         align-items: flex-end;
                                         & span {
                                         display: inline-block;
-                                        background: white;
+                                        background: $background-color--menu;
                                         padding-right: map-get($map: $padding, $key:twohalf );
                                         padding-bottom: map-get($map: $padding, $key: head);
                                         }
@@ -187,16 +171,16 @@
                                     width: 57.6px;
                                     height: 100%;
                                     display: inline-block;
-                                    background-color: $color-third;
+                                    background-color:$color--checked;
                                     & i {
                                         position: absolute;
                                         top:33px;
                                         left:1rem;
-                                        color:$color--checkplate;
+                                        color:$color--check;
                                     }
                                 }
                             }
-                    }
+                    }*/
                 }
             }
         }

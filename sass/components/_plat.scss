@@ -1,66 +1,89 @@
+//variables pour le width du prix et l'ajout du plat
+$oneinfo:50px;
+$twoinfo:100px;
+$height-plats:70px;
+$padding--standard:10px;
+$padding--large:15px;
+$margin--standard:10px;
+$border-radius--standard:10px;
+
+//le code pour les plat
 .plat{
+    display: flex;
+    width: 100%;
+    border-radius: $border-radius--standard;
+    height: $height-plats;
     input{
         display: none;
-    }
-}
-
-.plat1{
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
+    } 
     @include overflowtext;
     &-info{ 
-        padding-bottom: map-get($map: $padding, $key: head);
-        padding-top: map-get($map: $padding, $key: head);
-        background: red;
-        flex:8;
+        padding-bottom: $padding--standard;
+        padding-top: $padding--standard;
+        background: $background-color--plat;
+        width:100%;
+        @include overflowtext;
         h3,p{
             width: 100%;
             @include overflowtext;
         }
     }
-    & .add1{
+    & .add{
         display: flex;
-        padding: 0 auto;
-        flex: 2;
         text-align: center;
         align-items: center;
+        height: $height-plats;
+        justify-content: space-between;
+        background-color: $background-color--plat;        
         input{
             display: none;
             +label{
-                text-align: center;
                 display: flex;
+                text-align: center;
+                align-self: flex-end;
+                width: $oneinfo;
             }
         }
         &-check{
             display: none;
         }
-        &:hover{
-            background: $color-third;
-            /*flex:8;*/
+        &:hover{    
+            flex:1;
             @include growplat;
-            label{
+            label{                
                 width: 100%;
-                height: fit-content;
+                height: 100%;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-around;
                 span{
-                    flex:1;
+                    margin-right: $margin--standard;
                     @include paddingplat;
-                    background: white;
-                    display: inline;
-                    
+                    height: $height-plats;    
+                    background:$background-color--plat;
+                    justify-self: flex-end;
                 }
-                .add1-check{
+                .add-check{
+                    background: $background-color--hoverplate;        
+                    font-size: 2rem;
                     display: inline-block;
-                    flex:1;
-                    @include paddingplat;
+                    width: $twoinfo;
+                    height: calc($height-plats - $padding--large);
+                    padding-top: $padding--large;
                     & i{
+                        color:$color--button;
                         @include platvalide;
                     }    
                 }
             }
         }            
+    }
+}
+
+.prix{
+    display: flex;
+    align-items: flex-end;
+    .value{
+        margin-bottom: $margin--standard;
     }
 }

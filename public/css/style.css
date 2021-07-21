@@ -2,9 +2,9 @@
 /* attention dans import: ni extension ni _ */
 /************* variable **************/
 /* couleurs de base*/
-/* dégradé */
 /* fonctions */
 /*couleurs secondaires découlant de celles de bases */
+/* dégradé */
 /*les couleurs utilisées / ligne à laisser en 1ere posotion car les couleurs sont utilisées dans d'autres pages utils*/
 /*! font woff et woff Généré par Font Squirrel (https://www.fontsquirrel.com) on June 28, 2021 */
 @font-face {
@@ -132,12 +132,13 @@
   font-family: "robotoregular";
   margin: 0;
   padding: 0;
-  color: gray;
+  color: black;
+  border: none;
 }
 
 body {
   width: 100%;
-  background: gray;
+  background: white;
 }
 
 a {
@@ -175,16 +176,16 @@ ul {
   position: absolute;
   display: inline-block;
   z-index: 1;
-  top: 16;
-  left: 0;
-  color: gray;
+  top: 16px;
+  left: 0px;
+  color: black;
 }
 .favori input:checked + label .checked {
   position: absolute;
   display: inline-block;
   z-index: 1;
-  top: 16;
-  left: 0;
+  top: 16px;
+  left: 0px;
   color: #9356DC;
 }
 .favori input:checked + label .unchecked {
@@ -198,12 +199,12 @@ ul {
   transform-origin: bottom;
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: normal;
-  color: gray;
+  color: black;
   position: absolute;
   display: inline-block;
   z-index: 1;
-  top: 16;
-  left: 0;
+  top: 16px;
+  left: 0px;
 }
 .favori input:hover + label .checked {
   margin: 0;
@@ -214,8 +215,8 @@ ul {
   position: absolute;
   display: inline-block;
   z-index: 2;
-  top: 16;
-  left: 0;
+  top: 16px;
+  left: 0px;
 }
 
 .load {
@@ -243,72 +244,90 @@ ul {
   animation: colorchange 3s ease-in-out, platcheck 1s ease-in-out both infinite;
 }
 
+.plat {
+  display: flex;
+  width: 100%;
+  border-radius: 10px;
+  height: 70px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .plat input {
   display: none;
 }
-
-.plat1 {
-  width: 100%;
-  border-radius: 10px;
-  display: flex;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.plat1-info {
+.plat-info {
   padding-bottom: 10px;
   padding-top: 10px;
-  background: red;
-  flex: 8;
-}
-.plat1-info h3, .plat1-info p {
+  background: grey;
   width: 100%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.plat1 .add1 {
+.plat-info h3, .plat-info p {
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.plat .add {
   display: flex;
-  padding: 0 auto;
-  flex: 2;
   text-align: center;
   align-items: center;
+  height: 70px;
+  justify-content: space-between;
+  background-color: grey;
 }
-.plat1 .add1 input {
+.plat .add input {
   display: none;
 }
-.plat1 .add1 input + label {
-  text-align: center;
+.plat .add input + label {
   display: flex;
+  text-align: center;
+  align-self: flex-end;
+  width: 50px;
 }
-.plat1 .add1-check {
+.plat .add-check {
   display: none;
 }
-.plat1 .add1:hover {
-  background: #99E2D0;
-  /*flex:8;*/
+.plat .add:hover {
+  flex: 1;
   animation: grow 1s ease-in-out both;
 }
-.plat1 .add1:hover label {
+.plat .add:hover label {
   width: 100%;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-.plat1 .add1:hover label span {
-  flex: 1;
+.plat .add:hover label span {
+  margin-right: 10px;
   padding: div(25.2px, 2)10px 0;
-  background: white;
-  display: inline;
+  height: 70px;
+  background: grey;
+  justify-self: flex-end;
 }
-.plat1 .add1:hover label .add1-check {
+.plat .add:hover label .add-check {
+  background: #99E2D0;
+  font-size: 2rem;
   display: inline-block;
-  flex: 1;
-  padding: div(25.2px, 2)10px 0;
+  width: 100px;
+  height: calc($height-plats - $padding--large);
+  padding-top: 15px;
 }
-.plat1 .add1:hover label .add1-check i {
+.plat .add:hover label .add-check i {
+  color: white;
   animation: platcheck 1s ease-in-out both;
+}
+
+.prix {
+  display: flex;
+  align-items: flex-end;
+}
+.prix .value {
+  margin-bottom: 10px;
 }
 
 .mainTitle {
@@ -364,12 +383,6 @@ ul {
 .resto .main {
   position: relative;
 }
-.resto .main .plat {
-  width: 100%;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  position: relative;
-}
 .resto .main .image {
   width: 100%;
 }
@@ -411,7 +424,7 @@ ul {
 }
 .resto .main .menu {
   width: 100%;
-  background-color: gray;
+  background-color: #f2eafb;
   border-radius: 40px 40px 0 0;
 }
 @media screen and (max-width: 767px) {
@@ -527,51 +540,44 @@ ul {
 }
 .resto .main .menu ul li {
   margin-top: 10px;
-  background: white;
+  background: #f2eafb;
   width: 92%;
   font-size: 1rem;
   border-radius: 15px;
-}
-.resto .main .menu ul li .add {
-  border: none;
-  bottom: 10px;
-  position: absolute;
-  right: 10px;
-}
-.resto .main .menu ul li .add-check {
-  display: none;
-}
-.resto .main .menu ul li:hover .add {
-  height: 100%;
-  bottom: 0;
-  width: 109px;
-  right: -5px;
-}
-.resto .main .menu ul li:hover .add label {
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-}
-.resto .main .menu ul li:hover .add label span {
-  display: inline-block;
-  background: white;
-  padding-right: 25px;
-  padding-bottom: 10px;
-}
-.resto .main .menu ul li:hover .add-check {
-  position: relative;
-  font-size: 1.3rem;
-  border-radius: 0 15px 15px 0;
-  width: 57.6px;
-  height: 100%;
-  display: inline-block;
-  background-color: #99E2D0;
-}
-.resto .main .menu ul li:hover .add-check i {
-  position: absolute;
-  top: 33px;
-  left: 1rem;
-  color: white;
+  /*    &:hover{                    
+              & .add{
+                  height: 100%;
+                  bottom: 0;
+                  width: 109px;
+                  right: -5px;
+                  & label{
+                          height: 100%;
+                          display: flex;
+                          align-items: flex-end;
+                          & span {
+                          display: inline-block;
+                          background: $background-color--menu;
+                          padding-right: map-get($map: $padding, $key:twohalf );
+                          padding-bottom: map-get($map: $padding, $key: head);
+                          }
+                      }
+                  &-check{
+                      position: relative;
+                      font-size: 1.3rem;
+                      border-radius:0 15px 15px 0;
+                      width: 57.6px;
+                      height: 100%;
+                      display: inline-block;
+                      background-color:$color--checked;
+                      & i {
+                          position: absolute;
+                          top:33px;
+                          left:1rem;
+                          color:$color--check;
+                      }
+                  }
+              }
+      }*/
 }
 .resto .footer {
   z-index: 2;
@@ -606,7 +612,7 @@ ul {
 }
 
 .footer {
-  background: gray;
+  background: #18092a;
 }
 .footer * {
   color: white;
@@ -649,13 +655,13 @@ ul {
   /* zone d'explication du fonctionnement*/
 }
 .index .main-form {
-  background: gray;
+  background: white;
   position: relative;
 }
 .index .main-location {
   border: none;
   height: 50px;
-  background-color: gray;
+  background-color: #e8f9f5;
   position: relative;
   display: grid;
   grid-template-columns: 28% 44% 28%;
@@ -665,7 +671,7 @@ ul {
 .index .main-location::before {
   grid-column: 1/4;
   content: "";
-  box-shadow: inset 0 2px 2px #1b6150;
+  box-shadow: inset 0 2px 2px #18092a;
   height: 50px;
   display: inline-block;
   width: 100%;
@@ -690,7 +696,7 @@ ul {
   font-weight: bold;
   width: 80%;
   border: none;
-  background-color: gray;
+  background-color: #e8f9f5;
 }
 .index .main-slogan {
   text-align: center;
@@ -747,8 +753,8 @@ ul {
   margin-top: 20px;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0 3px 3px black;
-  background-color: gray;
+  box-shadow: 0 3px 3px #18092a;
+  background-color: #f2eafb;
 }
 .index .main-working li .number {
   position: absolute;
@@ -766,6 +772,10 @@ ul {
   text-indent: 2rem;
   font-size: 1.1rem;
 }
+.index .main-working li:hover {
+  background: #d7c0f2;
+  box-shadow: 0 3px 3px black;
+}
 .index .main-working li:hover i {
   color: #9356DC;
 }
@@ -776,7 +786,7 @@ ul {
 }
 .index .main-places {
   padding-bottom: 60px;
-  background-color: gray;
+  background-color: #f2eafb;
   /*fiche des restaurants */
 }
 @media screen and (min-width: 992px) {
@@ -915,7 +925,7 @@ ul {
   border-radius: 2px;
 }
 .index .main-places .restaurant-details {
-  background-color: gray;
+  background-color: white;
   position: relative;
   font-size: 1.1rem;
   border-radius: 0 0 15px 15px;

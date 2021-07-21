@@ -5,9 +5,6 @@ $color-secondary:#FF79DA;
 $color-third:#99E2D0;
 $color-modify:(dark:100%,light:100%,smooth:10%);
 
-/* dégradé */
-$gradient: linear-gradient(300deg,$color-primary,$color-secondary);
-
 /* fonctions */
 @function color-modify($modifier,$color,$value){
 	@if ($modifier=='dark'){
@@ -18,6 +15,11 @@ $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 	}
 }
 
+$background-color--operation: $color-primary;
+$color--checked: $color-primary;
+$color--check: $color-third;
+$background-color--hoverplate: $color-third;
+$background-color--new: $color-third;
 
 /*couleurs secondaires découlant de celles de bases */
 $color-four:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
@@ -25,32 +27,37 @@ $color-five:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightn
 $color-six:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightness: 40%, $alpha: 1.0);
 $color-seven:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -100%, $alpha: 1.0);
 $color-height:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -50%, $alpha: 1.0);
-
-//color-modify('dark',$color-primary, map-get($map: $color-modify, $key: dark));
-
-
+$color-nine:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: 25%, $alpha: 1.0);
 
 //background page index:liste restaurant ,menu restaurant
-$background-color--menu:gray;//$color-four;
-$background-color--boutonfonctionnement:gray;//$color-four;
-$background-color--restaurant:gray;//$color-four;
+$background-color--menu: $color-four;
+$background-color--boutonfonctionnement: $color-four;
+$background-color--restaurant: $color-four;
 
-$background-color--location:gray;//$color-five;
+$background-color--location: $color-five;
 
-$background-color--info:gray;//$color-six;
-$background-color--default:gray;//$color-six;
-$background-color--form:gray;//$color-six;
+$background-color--info: $color-six;
+$background-color--default: $color-six;
+$background-color--form: $color-six;
+$background-color--plat: grey;//$color-six;
+$color--footer: $color-six;
+$color--button: $color-six;
 
-$background-color--footer:gray;//$color-height;
+$color--generique: $color-seven;
 
-$color--generique:gray;//$color-seven;
+$background-color--footer: $color-height;
 
+$background-color--infohover:$color-nine;
 
+$color-new: darken($color: $color-third, $amount: 20%);
 
+//dégradé : background main bouton
 
+/* dégradé */
+$gradient: linear-gradient(300deg,$color-primary,$color-secondary);
+$background--loader: linear-gradient(-45deg,$color-primary, $color-secondary,$color-third);
+$background--mainbutton: $gradient;
 
-$color--footer:color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
-$color--button:color-modify('light',$color-primary, map-get($map: $color-modify,$key: light));
-$color--checkplate:color-modify('light',$color-third,map-get($color-modify,light));
-$color--boxshadow:darken($color: $color-third, $amount: 50%);
-$color-new:darken($color: $color-third, $amount: 20%);
+//box-shadow
+$shadowlight:$color-height;
+$shadowdark:$color-seven;

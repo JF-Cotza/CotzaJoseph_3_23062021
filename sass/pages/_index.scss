@@ -22,7 +22,7 @@
             &::before{
                 grid-column: 1/4;
                 content: "";
-                box-shadow: inset 0 2px 2px $color--boxshadow;
+                box-shadow: inset 0 2px 2px $shadowlight;
                 height: 50px;
                 display: inline-block;
                 width: 100%;           
@@ -68,9 +68,9 @@
                 font-size: map-get($map: $font-size, $key: title);
             }
             & .btn{
-                background: $gradient;
+                background: $background--mainbutton;
                 
-        }
+            }
         }
         /*englobe la zone de fonctionnement et les restaurants*/
         &-reactive{
@@ -106,13 +106,13 @@
                     margin-top: map-get($map: $padding, $key: dubble-head);
                     position: relative;
                     border-radius: map-get($map: $border-radius, $key:standard );
-                    box-shadow: 0 3px 3px black;
+                    box-shadow: 0 3px 3px $shadowlight;
                     background-color: $background-color--boutonfonctionnement;
                     & .number{
                         position: absolute;
                         top:30px;
                         left:-.8rem;
-                        background-color: $color-primary;
+                        background-color: $background-color--operation;
                         color:$color--button;
                         width:22px;
                         text-align: center;
@@ -124,17 +124,18 @@
                         text-indent: map-get($map: $marge-horizontal, $key: standard);
                         font-size: map-get($map: $font-size, $key: title);   
                     }
-                    &:hover i{
-                        color: $color-primary;
+                    &:hover{
+                        background:$background-color--infohover;
+                        box-shadow: 0 3px 3px $shadowdark;
+                        i{
+                        color: $color--checked;
+                        }
                     }
                     & .info{
                         position: absolute;
                         top:31px;
                         left: 4.6rem;
-                    }
-                  
-                
-       
+                    }                                         
             }
         }
         &-places{
@@ -245,7 +246,7 @@
                         position: absolute;
                         top: 13px;
                         right: 11px;
-                        background-color: $color-third;
+                        background-color:$background-color--new;
                         width: 80px;
                         padding-top: map-get($map: $padding, $key: quarter);
                         padding-bottom: map-get($map: $padding, $key: quarter);

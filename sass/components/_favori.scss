@@ -1,4 +1,4 @@
-@mixin favori_position($index,$top:16,$left:0){
+@mixin favori_position($index,$top:16px,$left:0px){
 	position: absolute;
 	display: inline-block;
 	z-index: $index;
@@ -24,7 +24,7 @@
             &:checked+label{
                 & .checked{
                     @include favori_position(1);
-                    color:$color-primary;
+                    color:$color--checked;
                 }
                 & .unchecked{
                     display: none;
@@ -34,13 +34,13 @@
             {
                 position: relative;
                 & .unchecked{
-                @include favoricheck('reduce');
-                color:$color--generique;
-                @include favori_position(1);
+                    @include favoricheck('reduce');
+                    color:$color--generique;
+                    @include favori_position(1);
                 }
                 & .checked{
                     @include favoricheck('grow');
-                    color:$color-primary;
+                    color:$color--checked;
                     @include favori_position(2);
                     
                 }
