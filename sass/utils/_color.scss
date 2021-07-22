@@ -52,7 +52,6 @@ $background-color--infohover:$color-nine;
 $color-new: darken($color: $color-third, $amount: 20%);
 
 //dégradé : background main bouton
-
 /* dégradé */
 $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
 $background--loader: linear-gradient(-45deg,$color-primary, $color-secondary,$color-third);

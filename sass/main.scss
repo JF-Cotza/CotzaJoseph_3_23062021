@@ -5,7 +5,7 @@
 @import "./utils/grids";/* les grids pour les pages*/
 @import "./utils/variables"; /*les variables, maps et mixin plus génériques*/
 
-@import "./base/base"; 
+@import "./base/base"; //éléments génériques
 
 //Composants: components/ est utilisé pour ranger les blocs BEM qui sont plus indépendants, comme les boutons.
 @import "./components/bouton";
@@ -14,10 +14,10 @@
 @import "./components/plat";
 @import "./components/title";
 @import "./components/underbarre";
+@import "./components/background"; //pour l'image de fond
 
 @import "./layouts/header";
 @import "./layouts/menu";
 @import "./layouts/footer";
 
 @import "./pages/index";
-@import "./pages/background";
