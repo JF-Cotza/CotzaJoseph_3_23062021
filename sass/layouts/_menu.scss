@@ -56,12 +56,12 @@
             width: 100%;
             background-color: $background-color--menu;
             border-radius: map-get($map: $border-radius, $key:menu ) map-get($map: $border-radius, $key:menu ) 0 0;
-            @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)){
+            /*@media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)){
                 position: absolute;
                 z-index: 2;
                 right: 0;
                 top: 220px;
-            }
+            }*/
             @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
                @include restaurant (2,2,330px);
                 
@@ -111,13 +111,13 @@
                 font-size: map-get($map: $font-size, $key: mainTitle);
                 text-indent: map-get($map: $marge-horizontal, $key: small);
                 position: relative;
-                @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+                /*@media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
                     position: absolute;
                     z-index: 2;
                     top: -30px;
                     width: 100%;
                     left: 0;
-                }
+                }*/
                 @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                     grid-column: 2/4;
                     grid-row: 1/2;
@@ -151,9 +151,9 @@
             }
         }
     }
-    & .footer{
+    /*& .footer{
         z-index: 2;
-    }
+    }*/
 }
 
 .menu

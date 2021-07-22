@@ -390,6 +390,11 @@ ul {
   padding-top: 10px;
 }
 
+.resto {
+  /*& .footer{
+      z-index: 2;
+  }*/
+}
 @media screen and (max-width: 767px) {
   .resto {
     display: grid;
@@ -452,14 +457,12 @@ ul {
   width: 100%;
   background-color: #f2eafb;
   border-radius: 40px 40px 0 0;
-}
-@media screen and (max-width: 767px) {
-  .resto .main .menu {
-    position: absolute;
-    z-index: 2;
-    right: 0;
-    top: 220px;
-  }
+  /*@media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)){
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      top: 220px;
+  }*/
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .resto .main .menu {
@@ -529,15 +532,13 @@ ul {
   font-size: 1.5rem;
   text-indent: 1.3rem;
   position: relative;
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .resto .main .menu-title {
-    position: absolute;
-    z-index: 2;
-    top: -30px;
-    width: 100%;
-    left: 0;
-  }
+  /*@media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+      position: absolute;
+      z-index: 2;
+      top: -30px;
+      width: 100%;
+      left: 0;
+  }*/
 }
 @media screen and (min-width: 992px) {
   .resto .main .menu-title {
@@ -570,9 +571,6 @@ ul {
   width: 92%;
   font-size: 1rem;
   border-radius: 15px;
-}
-.resto .footer {
-  z-index: 2;
 }
 
 .menu-entrees ul li:nth-child(1) {
@@ -953,6 +951,39 @@ ul {
   font-size: 1.5rem;
   width: 1.5rem;
   z-index: 2;
+}
+
+/*pour que le fond soit visible*/
+.resto .main .menu {
+  margin-top: 190px;
+}
+
+.delices {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("./../../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.francaise {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("./../../sass/base/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.note {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("./../../sass/base/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.palette {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-image: url("./../../sass/base/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
