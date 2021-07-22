@@ -129,10 +129,14 @@
                 }
             }
             & h2{
+                position: relative;
                 text-indent: map-get($map: $marge-horizontal, $key: small);
                 text-transform: uppercase;
                 font-size: map-get($map: $font-size, $key: title);
                 margin-top: map-get($map: $padding, $key:threehead );
+                &::before{
+                    @include underline;
+                }
             }
             & ul{
                 /*margin-top: 20px;*/
@@ -143,7 +147,7 @@
                 flex-direction: column;
                 & li{
                     margin-top: map-get($map: $padding, $key: head);
-                    background: $background-color--menu;
+                    background: $background-color--plat;
                     width: 92%;
                     font-size: map-get($map: $font-size, $key: normal);
                     border-radius: 15px;

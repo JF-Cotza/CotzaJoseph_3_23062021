@@ -1,0 +1,9 @@
+@mixin underline{
+    position: absolute;
+    bottom:-5px;
+    left:1.3rem; //même valeur que le texte indent de h2
+    content: " ";
+    width: 2.8rem;
+    height: 2px;
+    background: $color-third;
+}

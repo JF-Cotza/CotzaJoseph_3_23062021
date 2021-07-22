@@ -552,10 +552,20 @@ ul {
   right: 100px;
 }
 .resto .main .menu h2 {
+  position: relative;
   text-indent: 1.3rem;
   text-transform: uppercase;
   font-size: 1.1rem;
   margin-top: 30px;
+}
+.resto .main .menu h2::before {
+  position: absolute;
+  bottom: -5px;
+  left: 1.3rem;
+  content: " ";
+  width: 2.8rem;
+  height: 2px;
+  background: #99E2D0;
 }
 .resto .main .menu ul {
   /*margin-top: 20px;*/
@@ -567,7 +577,7 @@ ul {
 }
 .resto .main .menu ul li {
   margin-top: 10px;
-  background: #f2eafb;
+  background: white;
   width: 92%;
   font-size: 1rem;
   border-radius: 15px;
@@ -958,6 +968,7 @@ ul {
   margin-top: 190px;
 }
 
+/*background image des différents restaurants*/
 .delices {
   background-position: top;
   background-repeat: no-repeat;
