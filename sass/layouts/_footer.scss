@@ -1,4 +1,3 @@
-$font-size-normal:1rem;
 
 .footer{
     background: $background-color--footer;
@@ -7,23 +6,23 @@ $font-size-normal:1rem;
     }
     & ul{
         list-style: none;
-        padding-top: map-get($map: $padding, $key: head);
-        margin-left: map-get($map: $marge-horizontal, $key:medium );
-        padding-bottom: map-get($map: $padding, $key:threehead);
+        padding-top: $padding-footer_normal;
+        margin-left: $margin-footer_liens;
+        padding-bottom: $padding-footer_large;
     }
     & h3{
-        margin-left: map-get($map: $marge-horizontal, $key:medium );
+        margin-left: $margin-footer_title;
         font-family: $font-main_info;
-        padding-top: map-get($map: $padding, $key:twohalf );
+        padding-top: $padding-footer_title;
     }
     & li{
-        margin-top: map-get($map: $padding, $key: quarter);
+        margin-top: $margin-footer_interline;
         & a{
-            font-size:$font-size-normal;
+            font-size:$fontsize-footer;
             & i{
-                font-size: $font-size-normal;
-                width: 1rem;
-                margin-right: map-get($marge-horizontal,minimum);
+                font-size: $fontsize-footer;
+                width: $width-footer_icone;
+                margin-right: $margin-footer_icone;
             }
         }
     

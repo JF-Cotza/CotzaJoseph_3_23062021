@@ -94,18 +94,7 @@ $loadtime:3s;
     animation: platereveal $menutime $delay*$menutime ease-in-out both;
 }
 
-/*keyframes pour barre de chargement */
-@keyframes barregrow {
-    from{
-        transform: scaleX(0);
-        
-    }
-    to{
-        transform: scaleX(1);
-        
-    }
-}
-
+/*keyframes pour le loader */
 @keyframes covered{
     0%,99%{
         transform: scaleY(1);
@@ -118,30 +107,30 @@ $loadtime:3s;
     }
 }
 
-@keyframes colorchange {
-    from{
-        font-size: 1rem;
-        color:red;
-    }
-    to{
-        color:$color-third;
-        font-size: 2rem;
-    }
-}
-
 @mixin covering {
     animation: covered $loadtime ease-in-out both;
 }
 
-@mixin barregrowing {
-    transform-origin: left;
-    animation: barregrow $loadtime ease-in-out both;
+//rotation du couvercle du loader
+@keyframes rotate {
+    0%{
+        transform: rotateZ(0deg);
+    }
+    25%{
+        transform: rotateZ(-5deg);
+    }
+    30%, 35%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(-10deg);
+    }
+    55%, 60%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(-30deg);
+    }
 }
-
-@mixin loadrotate{
-    animation: colorchange $loadtime ease-in-out, platcheck $time ease-in-out both infinite;
-}
-
-
 
 

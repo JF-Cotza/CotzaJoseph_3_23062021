@@ -1,26 +1,98 @@
-.load{
-    position: absolute;
-    top:0;
-    left:0;
-    z-index: 99;
-    width:100%;
-    height: 100%;
-    background: $background-color--footer;
-        @include covering;
-    p{
-        color:$color--footer;
-        text-align: center;
-        margin-top: 10Vh;
+@mixin rotation{
+    transform-origin: bottom left;
+    animation: rotate 3s ease-in-out both;
+}
 
-    }
-    &-barre{
-        width: 100%;
-        background: $background--loader;
-        @include barregrowing;
-        text-align: right;
-        i {
-            color:$color-third;
-            @include loadrotate;
+@mixin animation($height,$fontsize,$top) {
+    .load{
+        width: 6*$height;
+        height: 3*$height;
+        position: relative;
+        .container{
+            display: flex;
+            justify-content: space-around;
+        }
+        .couvercle{
+            @include rotation;      
+            position: absolute;
+            top:0;
+            left:$height;
+            z-index: 2;
+            .prise{
+                height: $height;
+                width: $height;
+                margin: auto;
+                background: $color-loader;
+                border-radius: 50%;
+            }
+            .cloche{
+                height: $height;
+                width: 4*$height;
+                border-top-left-radius: $height;
+                border-top-right-radius: $height;
+                margin: auto;
+                background: $color-loader;
+            }
+        }
+        .texte{
+            width: 100%;
+            position: absolute;
+            top:1.3*$height;
+            text-align: center;
+            left: 0;
+            p{          
+                font-size:$fontsize;
+                text-align: center;
+                margin: 0;
+            }
+        }
+        .assiette{
+            position: absolute;
+            top:2*$height;
+            left:0;
+            z-index: 1;
+            margin: auto;
+            
+            .hautplat{
+                width: 6*$height;
+                height: div($height, 5);
+                min-height: 2px;
+                margin: auto;
+                background: $color-loader;
+            }
+            .basplat{       
+                width:5*$height;
+                height: div($height, 5);
+                min-height: 2px; 
+                margin: auto;
+                background: $color-loader;
+            }
         }
     }
+}
+
+.bloc{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 99;
+    animation: covered 3s ease-in-out both;
+    line-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: $background--loader;
+}
+
+@media screen and (max-width: 375px){
+        @include animation(20px,.8rem,40px);    
+    }
+@media screen and (min-width: 375px) and (max-width:795px){
+        @include animation(50px,1.3rem,100px ); 
+    }
+@media screen and (min-width: 795px){
+    @include animation(100px,2rem,200px);
 }

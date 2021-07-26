@@ -30,7 +30,7 @@ $color-height:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $li
 $color-nine:adjust-color($color: grey, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
 
 //background page index:liste restaurant ,menu restaurant
-$background-color--menu: $color-four;
+$background-color--menu: $color-nine;
 $background-color--boutonfonctionnement: $color-four;
 $background-color--restaurant: $color-four;
 
@@ -42,7 +42,7 @@ $background-color--form: $color-six;
 $background-color--plat: $color-six;
 $color--footer: $color-six;
 $color--button: $color-six;
-
+$color-loader:silver;
 $color--generique: $color-seven;
 
 $background-color--footer: $color-height;
@@ -50,7 +50,6 @@ $background-color--footer: $color-height;
 $background-color--infohover:$color-nine;
 
 $color-new: darken($color: $color-third, $amount: 20%);
-
 //dégradé : background main bouton
 /* dégradé */
 $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
