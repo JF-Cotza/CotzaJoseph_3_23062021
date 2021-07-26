@@ -7,11 +7,11 @@
 			justify-items: center;
 }
 
-@mixin restaurant($col,$row,$hight){
+@mixin restaurant($col,$row,$hightrepeat,$hightnorepeat:0){
 			display: grid;
 			grid-template-columns: repeat($col, 1fr);
 			grid-column-gap: 1.1rem;
-			grid-template-rows: repeat($row, $hight);
+			grid-template-rows: repeat($row, $hightrepeat) $hightnorepeat;
 			grid-row-gap: 10px;	
 			position: relative;
             }

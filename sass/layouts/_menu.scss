@@ -1,3 +1,9 @@
+$border-radius-menu:40px;
+$border-radius-standard:15px;
+$font-size-mainTitle:1.5rem;
+$font-size-title:1.1rem;
+$font-size-normal:1rem;
+
 .resto{
     @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
         display: grid;
@@ -35,7 +41,7 @@
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
                 display: none;
                 &-grid{
-                    border-radius: map-get($map: $border-radius, $key:standard );
+                    border-radius: $border-radius-standard;
                     display: inline-block;
                     grid-column: 1/2;
                     grid-row: 1/2;
@@ -55,19 +61,16 @@
         & .menu{ 
             width: 100%;
             background-color: $background-color--menu;
-            border-radius: map-get($map: $border-radius, $key:menu ) map-get($map: $border-radius, $key:menu ) 0 0;
-            /*@media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)){
-                position: absolute;
-                z-index: 2;
-                right: 0;
-                top: 220px;
-            }*/
+            border-radius: $border-radius-menu $border-radius-menu 0 0;
+            @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max)){
+                padding-bottom: 50px;
+            }
             @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
-               @include restaurant (2,2,330px);
+               @include restaurant (2,2,330px,150px);
                 
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
-                @include restaurant (3,2,330px);
+                @include restaurant (3,2,330px,150px); //test modifié
              
                 align-items: center;
             }
@@ -108,38 +111,42 @@
             &-title{
                 padding-top: map-get($map: $padding, $key:threefive );
                 font-family: $font-main_info;
-                font-size: map-get($map: $font-size, $key: mainTitle);
+                font-size: $font-size-mainTitle;
                 text-indent: map-get($map: $marge-horizontal, $key: small);
                 position: relative;
-                /*@media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
-                    position: absolute;
-                    z-index: 2;
-                    top: -30px;
-                    width: 100%;
-                    left: 0;
-                }*/
+                
                 @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                     grid-column: 2/4;
                     grid-row: 1/2;
                 }
+                
                 & .favori{
+                    padding-top: 35px;
                     position: absolute;
-                    top: 32px;
-                    right: 100px;
+                    top: 0.625*1.5rem;
+                    right: 100px;        
+                    }
+                }
+                @media screen and (min-width: map-get($map: $breakpoints, $key:tablette-min )) and (max-width: map-get($map: $breakpoints, $key:tablette-max )){
+                & .favori{
+                    padding-top: 35px;
+                    position: absolute;
+                    top: 0.625*1.5rem;
+                    right: 100px;    
+                    }
                 }
             }
             & h2{
                 position: relative;
                 text-indent: map-get($map: $marge-horizontal, $key: small);
                 text-transform: uppercase;
-                font-size: map-get($map: $font-size, $key: title);
+                font-size: $font-size-title;
                 margin-top: map-get($map: $padding, $key:threehead );
                 &::before{
                     @include underline;
                 }
             }
             & ul{
-                /*margin-top: 20px;*/
                 display: flex;
                 list-style: none;
                 align-items: center;
@@ -149,16 +156,13 @@
                     margin-top: map-get($map: $padding, $key: head);
                     background: $background-color--plat;
                     width: 92%;
-                    font-size: map-get($map: $font-size, $key: normal);
+                    font-size: $font-size-normal;
                     border-radius: 15px;
                 }
             }
         }
     }
-    /*& .footer{
-        z-index: 2;
-    }*/
-}
+
 
 .menu
 {
@@ -199,15 +203,30 @@
     
 }
 
+
 .buttonarea{
     width: 100%;
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 100px;
     .btn{
         font-size: 1.1rem;
         margin: auto;
         height: 50px;
         background:$background--mainbutton ;
+    }
+}
+
+//test modifié
+
+@media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min)) and (max-width:map-get($map: $breakpoints, $key:tablette-max)){
+    .buttonarea{
+    grid-row: 3/4;
+    grid-column: 1/3;
+    }
+}
+@media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min)) {
+    .buttonarea{
+    grid-row: 3/4;
+    grid-column: 1/4;
     }
 }

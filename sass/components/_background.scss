@@ -3,6 +3,7 @@ $delice:"louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg";
 $francaise:"toa-heftiba-DQKerTsQwi0-unsplash.jpg";
 $note:"stil-u2Lp8tXIcjw-unsplash.jpg";
 $palette:"jay-wennington-N_Y88TWmGwA-unsplash.jpg";
+$marge:190px;
 
 // mixin pour les images de fond des restaurants
 @mixin background($link){
@@ -12,11 +13,20 @@ $palette:"jay-wennington-N_Y88TWmGwA-unsplash.jpg";
     background-image:url("./../../sass/base/images/restaurants/"+$link);
 }
 
+@mixin backgroundtest($link){
+    background-position:top left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-image:url("./../../sass/base/images/restaurants/"+$link);
+}
+
 //le code
 /*pour que le fond soit visible*/
-.resto .main .menu{
-    margin-top: 190px;
-}
+
+    .resto .main .menu{
+        margin-top: $marge;
+    }    
+
 
 /*background image des différents restaurants*/
 .delices{
@@ -32,5 +42,5 @@ $palette:"jay-wennington-N_Y88TWmGwA-unsplash.jpg";
 }
 
 .palette{
-    @include background($palette);
+    @include backgroundtest($palette);
 }

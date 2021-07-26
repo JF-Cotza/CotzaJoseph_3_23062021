@@ -1,9 +1,15 @@
+$margin-standard:10px;
+$buttonpadding-s:13px;
+$buttonpadding-l:13px;
+$font-size:1.1rem;
+$border-radius:25px;
+
 .btn{
-            margin-top: map-get($map: $padding, $key:threehead );
-            padding: map-get($map: $padding, $key:button ) 22px;
+            margin-top: 3*$margin-standard;
+            padding: $buttonpadding-s $buttonpadding-l;
             margin-left: auto;
             margin-right: auto;
-            font-size: map-get($map: $font-size, $key: title);
-            border-radius: map-get($map: $border-radius, $key:button );
+            font-size:$font-size;
+            border-radius: $border-radius;
             color:$color--button;
 }

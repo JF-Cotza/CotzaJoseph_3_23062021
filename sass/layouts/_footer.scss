@@ -1,3 +1,5 @@
+$font-size-normal:1rem;
+
 .footer{
     background: $background-color--footer;
     & * {
@@ -17,9 +19,9 @@
     & li{
         margin-top: map-get($map: $padding, $key: quarter);
         & a{
-            font-size: map-get($map: $font-size, $key:normal);
+            font-size:$font-size-normal;
             & i{
-                font-size: map-get($map: $font-size, $key:small );
+                font-size: $font-size-normal;
                 width: 1rem;
                 margin-right: map-get($marge-horizontal,minimum);
             }

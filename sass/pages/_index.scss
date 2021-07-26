@@ -1,3 +1,10 @@
+$font-size-normal:1rem;
+$font-size-title:1.1rem;
+$font-size-maintitle:1.5rem;
+$border-radius-standard:15px;
+$border-radius-round:50px;
+$border-radius-minus:2px;
+
 .index{
     position: relative;
     & .header{
@@ -37,12 +44,12 @@
                 width: max-content;
             }
             & span{
-                font-size: map-get($map: $font-size, $key: normal);
+                font-size: $font-size-normal;
             }
             & input{
                 margin-left: map-get($map: $marge-horizontal, $key: minimum);
                 text-indent: map-get($map: $marge-horizontal, $key: minimum);
-                font-size: map-get($map:$font-size , $key:normal );
+                font-size: $font-size-normal;
                 margin-top: map-get($map: $padding, $key:head );
                 font-weight: bold;
                 width: 80%;
@@ -65,7 +72,7 @@
                 margin-right: auto;
                 margin-top: map-get($map: $padding, $key:head);
                 width: 88%;
-                font-size: map-get($map: $font-size, $key: title);
+                font-size: $font-size-title;
             }
             & .btn{
                 background: $background--mainbutton;
@@ -105,7 +112,7 @@
                     padding-bottom: map-get($map: $padding, $key: threehead);
                     margin-top: map-get($map: $padding, $key: dubble-head);
                     position: relative;
-                    border-radius: map-get($map: $border-radius, $key:standard );
+                    border-radius: $border-radius-standard;
                     box-shadow: 0 3px 3px $shadowlight;
                     background-color: $background-color--boutonfonctionnement;
                     & .number{
@@ -116,13 +123,13 @@
                         color:$color--button;
                         width:22px;
                         text-align: center;
-                        border-radius: map-get($map: $border-radius, $key:round);
+                        border-radius: $border-radius-round;
                         height: 22px;
                         z-index:1;
                     }     
                     & i{
                         text-indent: map-get($map: $marge-horizontal, $key: standard);
-                        font-size: map-get($map: $font-size, $key: title);   
+                        font-size: $font-size-title;   
                     }
                     &:hover{
                         background:$background-color--infohover;
@@ -232,7 +239,7 @@
                 width: 335px;
                 height: 250px;
                 background-size: cover;         
-                border-radius: map-get($map: $border-radius, $key: standard );
+                border-radius: $border-radius-standard;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -252,15 +259,15 @@
                         padding-bottom: map-get($map: $padding, $key: quarter);
                         text-align: center;
                         color:$color-new;
-                        border-radius: map-get($map: $border-radius, $key:minus );
+                        border-radius: $border-radius-minus;
                     }
                 }
                 /* details des restaurants */
                 &-details{
                     background-color: $background-color--info;
                     position: relative;
-                    font-size: map-get($map: $font-size, $key: title);
-                    border-radius: 0 0 map-get($map: $border-radius, $key: standard ) map-get($map: $border-radius, $key: standard );
+                    font-size: $font-size-title;
+                    border-radius: 0 0 $border-radius-standard $border-radius-standard;
                     z-index: 1;
                     & h3{
                         padding-top: map-get($map: $padding, $key:head);
@@ -276,8 +283,8 @@
                             position: absolute;
                             top: 21px;
                             right: 1.5rem;
-                            font-size: map-get($map: $font-size, $key:mainTitle );
-                            width: map-get($map: $font-size, $key:mainTitle );
+                            font-size: $font-size-maintitle;
+                            width: $font-size-maintitle;
                             z-index: 2;
                     }
                 }    

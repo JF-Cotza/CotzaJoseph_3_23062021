@@ -1,3 +1,5 @@
+$fontsize:1.1rem;
+$margin-small:1.3rem;
 .header{
     text-align: center;
     width: 100%;
@@ -8,9 +10,9 @@
         & .backtoindex{
             grid-column: 1/2;
             text-align: left;
-            font-size: map-get($map:$font-size , $key:title );
-            margin-left: map-get($map: $marge-horizontal, $key:small );
-            width: map-get($map:$font-size , $key:title );
+            font-size: $fontsize;
+            margin-left: $margin-small;
+            width: $fontsize;
             }
         & #logo{ 
             grid-column: 2/3;
