@@ -828,7 +828,7 @@ ul {
   font-size: 1.1rem;
 }
 .index .main-working li:hover {
-  background: #d7c0f2;
+  background: #d9d9d9;
   box-shadow: 0 3px 3px black;
 }
 .index .main-working li:hover i {

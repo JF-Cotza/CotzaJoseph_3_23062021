@@ -27,7 +27,7 @@ $color-five:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightn
 $color-six:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightness: 40%, $alpha: 1.0);
 $color-seven:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -100%, $alpha: 1.0);
 $color-height:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -50%, $alpha: 1.0);
-$color-nine:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: 25%, $alpha: 1.0);
+$color-nine:adjust-color($color: grey, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
 
 //background page index:liste restaurant ,menu restaurant
 $background-color--menu: $color-four;
