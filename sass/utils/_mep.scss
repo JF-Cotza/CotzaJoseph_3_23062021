@@ -1,9 +1,7 @@
-/*value*/
-$espace:(standard:10px,smallest:3px);
-$fontsize:0px;
-$radius:0;
+/* les breakpoints */
+    $breakpoints:(phone-max:767px,tablette-min:768px,tablette-max:991px,ordi-min:992px);
 
-//pour le _background
+//pour _background
     $margin-background_image:190px;
     //nom des fichiers images
     $delice:"louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg";
@@ -13,21 +11,28 @@ $radius:0;
     //emplacement des images
     $place:"./../../sass/base/images/restaurants/";
 
-//pour le _bouton
-    $borderradius-button:25px;
-    $buttonpadding-small:13px;
-    $buttonpadding-large:13px;
-    $fontsize-button:1.1rem;
-    $margin-button:3*map-get($map: $espace, $key: standard);
+/*value*/
+$espace:(standard:10px,smallest:3px);
+$fontsize:0px;
+$radius:(standard:10px,smallest:2px);
 
-//pour le _plat
-    $borderradius-plat:10px;
+$horizontalspace:(standard:0);
+
+//pour _bouton
+    $borderradius-button:2.5*map-get($map: $radius, $key:standard);
+    $margin-button:3*map-get($map: $espace, $key: standard);
+    $buttonpadding-small:map-get($map: $espace, $key: standard);
+    $buttonpadding-large:1.3*map-get($map: $espace, $key: standard);
+    $fontsize-button:1.1rem;
+
+//pour _plat
+    $borderradius-plat:map-get($map: $radius, $key:standard);
     $margin-plat:map-get($map: $espace, $key: standard);
     $padding-plat_standard:map-get($map: $espace, $key: standard);
     $padding-plat_large:1.5*map-get($map: $espace, $key: standard);
-    $height-plats:70px;
-    $width-price:50px;
-    $width-pricecheck:70px;
+    $height-plats:7*map-get($map: $espace, $key: standard);
+    $width-price:5*map-get($map: $espace, $key: standard);
+    $width-pricecheck:7*map-get($map: $espace, $key: standard);
     $fontsize-checkplat:2rem;
 
 //pour _title
@@ -45,9 +50,71 @@ $radius:0;
     $margin-footer_liens:1.5rem;
     $width-footer_icone:1rem;
 
+
 //pour _header
-    $fontsize-header:1.1rem;
     $padding-header_logo:map-get($map: $espace, $key: standard);
+    $height-header_title:6.3*map-get($map: $espace, $key: standard);
+    $height-header_logo:2.8*map-get($map: $espace, $key: standard);
+    $fontsize-header:1.1rem;
     $margin-header:1.3rem;
-    $height-header_title:63px;
-    $height-header_logo:28px;
+    
+
+//pour _menu
+    $borderradius-menu:4*map-get($map: $radius, $key:standard);
+    $borderradius-menustandard:1.5*map-get($map: $radius, $key:standard);
+
+    $fontsize-mainTitlemenu:1.5rem;
+    $fontsize-titlemenu:1.1rem;
+    $fontsize-menu:1rem;
+
+    $padding-menudessert:2*map-get($map: $espace, $key: standard);
+    $padding-menutitle:3.5*map-get($map: $espace, $key: standard);
+    $padding-menufavori:3.5*map-get($map: $espace, $key: standard);
+    $padding-menubottom:5*map-get($map: $espace, $key: standard);
+    
+    $height-menurepeat:33*map-get($map: $radius, $key:standard);
+    $heigth-button:15*map-get($map: $radius, $key:standard);
+    $heigth-menubutton:5*map-get($map: $radius, $key:standard);
+
+    $textindent-menutitle:1.3rem;
+    $margin-menubutton:5*map-get($map: $espace, $key:standard);
+    $margin-menulist:map-get($map: $espace, $key:standard);
+    $margin-menutitle:3*map-get($map: $espace, $key:standard);
+    $marge-indexliste:map-get($map: $espace, $key:standard);
+    $margin-indexplacemaintitle:1.3rem;
+    $textindent-indextitledetails:.7rem;
+    $textindent-indexparagraphe:.7rem;
+
+//pour _index
+    $borderradius-indexminus:map-get($map: $radius, $key:smallest);
+    $borderradius-indexstandard:1.5*map-get($map: $radius, $key:standard);
+    $borderradius-indexround:5*map-get($map: $radius, $key:standard);
+    
+    $fontsize-indexnormal:1rem;
+    $fontsize-indextitle:1.1rem;
+    $fontsize-indexmaintitle:1.5rem;
+    $heigth-indexloaction:5*map-get($map: $espace, $key:standard);
+    $textindent-indexiconeinfo:2rem;
+    $textindent-indexinput:.3rem;
+    
+    $margin-indexrestaurantlist:2*map-get($map: $espace, $key:standard);
+    $margin-indexlist:2*map-get($map: $espace, $key:standard);
+    $marge-indexinput:.3rem;
+    $marge-indextopinput:1.5*map-get($map: $espace, $key:standard);
+    $margin-indexmaintitle:3px;
+    $margin_left-indexmaintitle:1.3rem;
+    $marge-indexlist:3px;
+    $marge_left-indexlist:2rem;
+    $margine-indexparagraphe:map-get($map: $espace, $key:standard);
+    $margin-indexsloganmaintitle:4*map-get($map: $espace, $key:standard);
+    $padding-indexslogan:5*map-get($map: $espace, $key:standard);
+
+    $padding-indexplacesmaintitle:5*map-get($map: $espace, $key:standard);
+    $padding-indexparagraphe:map-get($map: $espace, $key:standard);
+    $padding-indextitle:map-get($map: $espace, $key:standard);
+    $padding-indexnew:map-get($map: $espace, $key:smallest);    
+    $padding-indexplaces:6*map-get($map: $espace, $key:standard);
+    $padding-indexlist:3*map-get($map: $espace, $key:standard);
+    $padding-indexworking_top:5*map-get($map: $espace, $key:standard);
+    $padding-indexworking-bottom:6*map-get($map: $espace, $key:standard);
+    

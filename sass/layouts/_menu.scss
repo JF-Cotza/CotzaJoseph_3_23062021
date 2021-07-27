@@ -1,8 +1,4 @@
-$border-radius-menu:40px;
-$border-radius-standard:15px;
-$font-size-mainTitle:1.5rem;
-$font-size-title:1.1rem;
-$font-size-normal:1rem;
+
 
 .resto{
     @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
@@ -41,7 +37,7 @@ $font-size-normal:1rem;
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
                 display: none;
                 &-grid{
-                    border-radius: $border-radius-standard;
+                    border-radius: $borderradius-menustandard;
                     display: inline-block;
                     grid-column: 1/2;
                     grid-row: 1/2;
@@ -61,17 +57,16 @@ $font-size-normal:1rem;
         & .menu{ 
             width: 100%;
             background-color: $background-color--menu;
-            border-radius: $border-radius-menu $border-radius-menu 0 0;
+            border-radius: $borderradius-menustandard $borderradius-menustandard 0 0;
             @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max)){
-                padding-bottom: 50px;
+                padding-bottom: $padding-menubottom;
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
-               @include restaurant (2,2,330px,150px);
+               @include restaurant (2,2,$height-menurepeat,$heigth-button);
                 
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
-                @include restaurant (3,2,330px,150px); //test modifié
-             
+                @include restaurant (3,2,$height-menurepeat,$heigth-button); //test modifié             
                 align-items: center;
             }
             &-entrees{                
@@ -96,9 +91,8 @@ $font-size-normal:1rem;
             }
             &-desserts{
                 @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)) {
-                    padding-bottom: map-get($map: $padding, $key:dubble-head );    
-                }
-                
+                    padding-bottom: $padding-menudessert;    
+                }   
                 @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
                     grid-column: 2/2;
                     grid-row: 2/2;
@@ -109,19 +103,17 @@ $font-size-normal:1rem;
                 }
             }
             &-title{
-                padding-top: map-get($map: $padding, $key:threefive );
+                padding-top:$padding-menutitle;
                 font-family: $font-main_info;
-                font-size: $font-size-mainTitle;
-                text-indent: map-get($map: $marge-horizontal, $key: small);
-                position: relative;
-                
+                font-size: $fontsize-mainTitlemenu;
+                text-indent: $textindent-menutitle;
+                position: relative;                
                 @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                     grid-column: 2/4;
                     grid-row: 1/2;
-                }
-                
+                }                
                 & .favori{
-                    padding-top: 35px;
+                    padding-top: $padding-menufavori;
                     position: absolute;
                     top: 0.625*1.5rem;
                     right: 100px;        
@@ -129,7 +121,7 @@ $font-size-normal:1rem;
                 }
                 @media screen and (min-width: map-get($map: $breakpoints, $key:tablette-min )) and (max-width: map-get($map: $breakpoints, $key:tablette-max )){
                 & .favori{
-                    padding-top: 35px;
+                    padding-top:$padding-menufavori;
                     position: absolute;
                     top: 0.625*1.5rem;
                     right: 100px;    
@@ -138,10 +130,10 @@ $font-size-normal:1rem;
             }
             & h2{
                 position: relative;
-                text-indent: map-get($map: $marge-horizontal, $key: small);
+                text-indent: $textindent-menutitle;
                 text-transform: uppercase;
-                font-size: $font-size-title;
-                margin-top: map-get($map: $padding, $key:threehead );
+                font-size: $fontsize-titlemenu;
+                margin-top: $margin-menutitle;
                 &::before{
                     @include underline;
                 }
@@ -150,22 +142,21 @@ $font-size-normal:1rem;
                 display: flex;
                 list-style: none;
                 align-items: center;
-                margin-top: map-get($map: $padding, $key: head);
+                margin-top: $margin-menulist;
                 flex-direction: column;
                 & li{
-                    margin-top: map-get($map: $padding, $key: head);
+                    margin-top:$marge-indexliste;
                     background: $background-color--plat;
                     width: 92%;
-                    font-size: $font-size-normal;
-                    border-radius: 15px;
+                    font-size: $fontsize-menu;
+                    border-radius: $borderradius-menu;
                 }
             }
         }
     }
 
 
-.menu
-{
+.menu{
     &-entrees{
         ul{
             li{
@@ -203,20 +194,17 @@ $font-size-normal:1rem;
     
 }
 
-
 .buttonarea{
     width: 100%;
     text-align: center;
-    margin-top: 50px;
+    margin-top: $margin-menubutton;
     .btn{
         font-size: 1.1rem;
         margin: auto;
-        height: 50px;
+        height: $heigth-menubutton;
         background:$background--mainbutton ;
     }
 }
-
-//test modifié
 
 @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min)) and (max-width:map-get($map: $breakpoints, $key:tablette-max)){
     .buttonarea{
@@ -224,9 +212,16 @@ $font-size-normal:1rem;
     grid-column: 1/3;
     }
 }
+
 @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min)) {
     .buttonarea{
     grid-row: 3/4;
     grid-column: 1/4;
+    }
+}
+                
+@media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)){
+    .main{
+        display: flex;
     }
 }

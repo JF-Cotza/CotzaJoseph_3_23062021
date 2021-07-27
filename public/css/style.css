@@ -121,15 +121,7 @@
 /*mixins*/
 /*sur la page index et l'header*/
 /* les grids pour les pages*/
-/**/
-/*breakpoints*/
-/**/
-/* standard marge*/
-/*pour les margin et les padding verticaux (exprimé en px)*/
-/* attention : $buttonpadding/4 provoque une erreur. voir: https://sass-lang.com/documentation/breaking-changes/slash-div */
-/**/
-/* border radius */
-/*les variables, maps et mixin plus génériques*/
+/* les breakpoints */
 /*value*/
 /*les mises en pages*/
 * {
@@ -155,7 +147,7 @@ ul {
 
 .btn {
   margin-top: 30px;
-  padding: 13px 13px;
+  padding: 10px 13px;
   margin-left: auto;
   margin-right: auto;
   font-size: 1.1rem;
@@ -232,15 +224,16 @@ ul {
   line-height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 172vh;
   background: linear-gradient(-45deg, #9356DC, #FF79DA, #99E2D0);
 }
 
 @media screen and (max-width: 375px) {
   .load {
+    margin-top: 40px;
     width: 120px;
     height: 60px;
     position: relative;
@@ -308,6 +301,7 @@ ul {
 }
 @media screen and (min-width: 375px) and (max-width: 795px) {
   .load {
+    margin-top: 100px;
     width: 300px;
     height: 150px;
     position: relative;
@@ -375,6 +369,7 @@ ul {
 }
 @media screen and (min-width: 795px) {
   .load {
+    margin-top: 200px;
     width: 600px;
     height: 300px;
     position: relative;
@@ -499,7 +494,6 @@ ul {
   justify-content: space-around;
 }
 .plat .add:hover label span {
-  padding: div(25.2px, 2)10px 0;
   margin-right: 10px;
   height: 70px;
   background: white;
@@ -680,7 +674,7 @@ ul {
 .resto .main .menu {
   width: 100%;
   background-color: #d9d9d9;
-  border-radius: 40px 40px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 @media screen and (max-width: 767px) {
   .resto .main .menu {
@@ -804,7 +798,7 @@ ul {
   background: white;
   width: 92%;
   font-size: 1rem;
-  border-radius: 15px;
+  border-radius: 40px;
 }
 
 .menu-entrees ul li:nth-child(1) {
@@ -859,6 +853,11 @@ ul {
     grid-column: 1/4;
   }
 }
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+  }
+}
 .footer {
   background: #18092a;
 }
@@ -905,6 +904,7 @@ ul {
 .index .main-form {
   background: white;
   position: relative;
+  width: 100%;
 }
 .index .main-location {
   border: none;
@@ -940,7 +940,7 @@ ul {
   margin-left: 0.3rem;
   text-indent: 0.3rem;
   font-size: 1rem;
-  margin-top: 10px;
+  margin-top: 15px;
   font-weight: bold;
   width: 80%;
   border: none;
@@ -982,13 +982,13 @@ ul {
   }
 }
 .index .main-working .mainTitle {
-  margin-bottom: div(13px, 4);
+  margin-bottom: 3px;
   margin-left: 1.3rem;
 }
 .index .main-working ul {
   list-style: none;
   width: 86.5%;
-  margin-top: div(13px, 4);
+  margin-top: 3px;
   margin-left: 2rem;
   margin-right: auto;
   font-weight: bold;
@@ -1166,8 +1166,8 @@ ul {
   right: 11px;
   background-color: #99E2D0;
   width: 80px;
-  padding-top: div(13px, 4);
-  padding-bottom: div(13px, 4);
+  padding-top: 3px;
+  padding-bottom: 3px;
   text-align: center;
   color: #4acbab;
   border-radius: 2px;

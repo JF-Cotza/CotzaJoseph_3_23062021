@@ -1,9 +1,3 @@
-$font-size-normal:1rem;
-$font-size-title:1.1rem;
-$font-size-maintitle:1.5rem;
-$border-radius-standard:15px;
-$border-radius-round:50px;
-$border-radius-minus:2px;
 
 .index{
     position: relative;
@@ -17,12 +11,13 @@ $border-radius-minus:2px;
         /*toute la page est un formulaire */
         &-form{
             background: $background-color--form;
-            position: relative;                
+            position: relative;     
+            width: 100%;           
         }
         /*zone de recherche par lieu*/
         &-location{
             border:none;
-            height: 50px;
+            height: $heigth-indexloaction;
             background-color:$background-color--location;
             position: relative;
             @include grid;
@@ -30,7 +25,7 @@ $border-radius-minus:2px;
                 grid-column: 1/4;
                 content: "";
                 box-shadow: inset 0 2px 2px $shadowlight;
-                height: 50px;
+                height: $heigth-indexloaction;
                 display: inline-block;
                 width: 100%;           
                 z-index: 1;
@@ -44,13 +39,13 @@ $border-radius-minus:2px;
                 width: max-content;
             }
             & span{
-                font-size: $font-size-normal;
+                font-size: $fontsize-indexnormal;
             }
             & input{
-                margin-left: map-get($map: $marge-horizontal, $key: minimum);
-                text-indent: map-get($map: $marge-horizontal, $key: minimum);
-                font-size: $font-size-normal;
-                margin-top: map-get($map: $padding, $key:head );
+                margin-left: $marge-indexinput;
+                text-indent: $textindent-indexinput;
+                font-size: $fontsize-indexnormal;
+                margin-top: $marge-indextopinput;
                 font-weight: bold;
                 width: 80%;
                 border: none;
@@ -60,9 +55,9 @@ $border-radius-minus:2px;
         /* zone de titre */
         &-slogan{
             text-align: center;
-            padding-bottom: map-get($map: $padding, $key: fivehead);
+            padding-bottom: $padding-indexslogan;
             & .mainTitle{
-                margin-top: map-get($map: $padding, $key:fourhead );
+                margin-top: $margin-indexsloganmaintitle;
                 width: 65%;
                 margin-left: auto;
                 margin-right: auto;
@@ -70,13 +65,12 @@ $border-radius-minus:2px;
             & p{
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: map-get($map: $padding, $key:head);
+                margin-top: $margine-indexparagraphe;
                 width: 88%;
-                font-size: $font-size-title;
+                font-size: $fontsize-indextitle;
             }
             & .btn{
                 background: $background--mainbutton;
-                
             }
         }
         /*englobe la zone de fonctionnement et les restaurants*/
@@ -88,31 +82,31 @@ $border-radius-minus:2px;
         }
         /* zone d'explication du fonctionnement*/    
         &-working{
-            padding-bottom: map-get($map: $padding, $key:sixhead);
-            padding-top: map-get($map: $padding, $key: fivehead);
+            padding-bottom: $padding-indexworking-bottom;
+            padding-top: $padding-indexworking_top;
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:1;
                 }
             & .mainTitle{
-                margin-bottom: map-get($map: $padding, $key:quarter);
-                margin-left: map-get($map: $marge-horizontal, $key:small);
+                margin-bottom: $margin-indexmaintitle;
+                margin-left: $margin_left-indexmaintitle;
             }
             & ul{
                 list-style: none;
                 width: 86.5%;
-                margin-top: map-get($map: $padding, $key:quarter );
-                margin-left:map-get($map: $marge-horizontal, $key:standard );
+                margin-top: $marge-indexlist;
+                margin-left:$marge_left-indexlist;
                 margin-right: auto;
                 font-weight: bold;
             }
             & li{
                     display: inline-block;
                     width: 100%;
-                    padding-top: map-get($map: $padding, $key:threehead);
-                    padding-bottom: map-get($map: $padding, $key: threehead);
-                    margin-top: map-get($map: $padding, $key: dubble-head);
+                    padding-top: $padding-indexlist;
+                    padding-bottom: $padding-indexlist;
+                    margin-top: $margin-indexlist;
                     position: relative;
-                    border-radius: $border-radius-standard;
+                    border-radius: $borderradius-indexstandard;
                     box-shadow: 0 3px 3px $shadowlight;
                     background-color: $background-color--boutonfonctionnement;
                     & .number{
@@ -123,13 +117,13 @@ $border-radius-minus:2px;
                         color:$color--button;
                         width:22px;
                         text-align: center;
-                        border-radius: $border-radius-round;
+                        border-radius: $borderradius-indexround;
                         height: 22px;
                         z-index:1;
                     }     
                     & i{
-                        text-indent: map-get($map: $marge-horizontal, $key: standard);
-                        font-size: $font-size-title;   
+                        text-indent: $textindent-indexiconeinfo;
+                        font-size: $fontsize-indextitle;   
                     }
                     &:hover{
                         background:$background-color--infohover;
@@ -146,17 +140,17 @@ $border-radius-minus:2px;
             }
         }
         &-places{
-            padding-bottom: map-get($map: $padding, $key: sixhead);
+            padding-bottom: $padding-indexplaces;
             background-color: $background-color--restaurant;
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:3;
                 }
             & .mainTitle{
-                padding-top: map-get($map: $padding, $key: fivehead);
-                margin-left: map-get($map: $marge-horizontal, $key: small);
+                padding-top: $padding-indexplacesmaintitle;
+                margin-left: $margin-indexplacemaintitle;
             }
             & ul{
-                margin-top: map-get($map: $padding, $key: dubble-head);
+                margin-top: $margin-indexlist;
                 list-style: none;
                 @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
                   @include restaurant(2, 2, 250px);                
@@ -167,7 +161,7 @@ $border-radius-minus:2px;
                 }
                 & li {
                 @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max )){
-                    margin-top: map-get($map: $padding, $key:dubble-head );
+                    margin-top: $margin-indexrestaurantlist;
                 }
             }
             
@@ -239,7 +233,7 @@ $border-radius-minus:2px;
                 width: 335px;
                 height: 250px;
                 background-size: cover;         
-                border-radius: $border-radius-standard;
+                border-radius: $borderradius-indexstandard;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -255,36 +249,36 @@ $border-radius-minus:2px;
                         right: 11px;
                         background-color:$background-color--new;
                         width: 80px;
-                        padding-top: map-get($map: $padding, $key: quarter);
-                        padding-bottom: map-get($map: $padding, $key: quarter);
+                        padding-top: $padding-indexnew;
+                        padding-bottom: $padding-indexnew;
                         text-align: center;
                         color:$color-new;
-                        border-radius: $border-radius-minus;
+                        border-radius: $borderradius-indexminus;
                     }
                 }
                 /* details des restaurants */
                 &-details{
                     background-color: $background-color--info;
                     position: relative;
-                    font-size: $font-size-title;
-                    border-radius: 0 0 $border-radius-standard $border-radius-standard;
+                    font-size: $fontsize-indextitle;
+                    border-radius: 0 0 $borderradius-indexstandard $borderradius-indexstandard;
                     z-index: 1;
                     & h3{
-                        padding-top: map-get($map: $padding, $key:head);
+                        padding-top: $padding-indextitle;
                         font-weight: bold;
-                        text-indent: map-get($map: $marge-horizontal, $key:xsmall );
+                        text-indent: $textindent-indextitledetails;
                     }
                     & p{
-                        margin-top: map-get($map: $padding, $key: head);
-                        padding-bottom: map-get($map: $padding, $key:head );
-                        text-indent: map-get($map: $marge-horizontal, $key:xsmall );
+                        margin-top: $margine-indexparagraphe;
+                        padding-bottom: $padding-indexparagraphe;
+                        text-indent: $textindent-indexparagraphe;
                     }
                     & .favori{
                             position: absolute;
                             top: 21px;
                             right: 1.5rem;
-                            font-size: $font-size-maintitle;
-                            width: $font-size-maintitle;
+                            font-size: $fontsize-indexmaintitle;
+                            width: $fontsize-indexmaintitle;
                             z-index: 2;
                     }
                 }    
