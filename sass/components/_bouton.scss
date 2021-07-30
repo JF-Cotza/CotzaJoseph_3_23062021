@@ -1,10 +1,16 @@
 
 .btn{
-            margin-top: $margin_btn;
-            padding: $padding_btn--small $padding_btn--large;
-            margin-left: auto;
-            margin-right: auto;
-            font-size:$fontsize_btn;
-            border-radius: $borderradius_btn;
-            color:$color--button;
+    margin-top: $margin_btn;
+    padding: $padding_btn--small $padding_btn--large;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:$fontsize_btn;
+    border-radius: $borderradius_btn;
+    color:$color_button;
+    background:$background_mainbutton;
+    box-shadow: 3px 3px 3px $shadowlight;
+    &:hover{
+        background: $background_mainbutton--light;
+        box-shadow: 3px 3px 3px $shadowdark;   
+    }
 }

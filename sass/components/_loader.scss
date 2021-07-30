@@ -23,7 +23,7 @@
                 height: $height;
                 width: $height;
                 margin: auto;
-                background: $color-loader;
+                background: $color_loader;
                 border-radius: 50%;
             }
             .cloche{
@@ -32,7 +32,7 @@
                 border-top-left-radius: $height;
                 border-top-right-radius: $height;
                 margin: auto;
-                background: $color-loader;
+                background: $color_loader;
             }
         }
         .texte{
@@ -59,14 +59,14 @@
                 height: div($height, 5);
                 min-height: 2px;
                 margin: auto;
-                background: $color-loader;
+                background: $color_loader;
             }
             .basplat{       
                 width:5*$height;
                 height: div($height, 5);
                 min-height: 2px; 
                 margin: auto;
-                background: $color-loader;
+                background: $color_loader;
             }
         }
     }
@@ -85,7 +85,7 @@
     align-items: center;
     width: 100%;
     height: 172vh;
-    background: $background--loader;
+    background: $background_loader;
 }
 
 @media screen and (max-width: 375px){

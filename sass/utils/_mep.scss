@@ -99,7 +99,7 @@ $horizontalspace:(standard:0);
     $fontsize-indexnormal:1rem;
     $fontsize-indextitle:map-get($map: $fontsize, $key: standard);
     $fontsize-indexmaintitle:1.5rem;
-    $heigth-indexloaction:5*map-get($map: $espace, $key:standard);
+    $heigth_indexlocation:5*map-get($map: $espace, $key:standard);
     $textindent-indexiconeinfo:2rem;
     $textindent-indexinput:.3rem;
     

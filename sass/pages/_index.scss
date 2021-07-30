@@ -10,22 +10,22 @@
         width: 100%;   
         /*toute la page est un formulaire */
         &-form{
-            background: $background-color--form;
+            background: $background_form;
             position: relative;     
             width: 100%;           
         }
         /*zone de recherche par lieu*/
         &-location{
             border:none;
-            height: $heigth-indexloaction;
-            background-color:$background-color--location;
+            height: $heigth_indexlocation;
+            background-color:$background_location;
             position: relative;
             @include grid;
             &::before{
                 grid-column: 1/4;
                 content: "";
                 box-shadow: inset 0 2px 2px $shadowlight;
-                height: $heigth-indexloaction;
+                height: $heigth_indexlocation;
                 display: inline-block;
                 width: 100%;           
                 z-index: 1;
@@ -49,7 +49,7 @@
                 font-weight: bold;
                 width: 80%;
                 border: none;
-                background-color:$background-color--location;
+                background-color:$background_location;
             }
         }
         /* zone de titre */
@@ -68,9 +68,6 @@
                 margin-top: $margine-indexparagraphe;
                 width: 88%;
                 font-size: $fontsize-indextitle;
-            }
-            & .btn{
-                background: $background--mainbutton;
             }
         }
         /*englobe la zone de fonctionnement et les restaurants*/
@@ -108,13 +105,13 @@
                     position: relative;
                     border-radius: $borderradius-indexstandard;
                     box-shadow: 0 3px 3px $shadowlight;
-                    background-color: $background-color--boutonfonctionnement;
+                    background-color: $background_bouton--how;
                     & .number{
                         position: absolute;
                         top:30px;
                         left:-.8rem;
-                        background-color: $background-color--operation;
-                        color:$color--button;
+                        background-color: $background_operation;
+                        color:$color_button;
                         width:22px;
                         text-align: center;
                         border-radius: $borderradius-indexround;
@@ -126,10 +123,10 @@
                         font-size: $fontsize-indextitle;   
                     }
                     &:hover{
-                        background:$background-color--infohover;
+                        background:$background_infohover;
                         box-shadow: 0 3px 3px $shadowdark;
                         i{
-                        color: $color--checked;
+                        color: $color_checked;
                         }
                     }
                     & .info{
@@ -141,7 +138,7 @@
         }
         &-places{
             padding-bottom: $padding-indexplaces;
-            background-color: $background-color--restaurant;
+            background-color: $background_restaurant;
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:3;
                 }
@@ -247,18 +244,18 @@
                         position: absolute;
                         top: 13px;
                         right: 11px;
-                        background-color:$background-color--new;
+                        background-color:$background_new;
                         width: 80px;
                         padding-top: $padding-indexnew;
                         padding-bottom: $padding-indexnew;
                         text-align: center;
-                        color:$color-new;
+                        color:$color_new;
                         border-radius: $borderradius-indexminus;
                     }
                 }
                 /* details des restaurants */
                 &-details{
-                    background-color: $background-color--info;
+                    background-color: $background_info;
                     position: relative;
                     font-size: $fontsize-indextitle;
                     border-radius: 0 0 $borderradius-indexstandard $borderradius-indexstandard;

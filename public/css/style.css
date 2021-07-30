@@ -153,16 +153,26 @@ ul {
   font-size: 1.1rem;
   border-radius: 25px;
   color: white;
+  background: linear-gradient(300deg, #9356DC, #FF79DA);
+  box-shadow: 3px 3px 3px #9356DC;
+}
+.btn:hover {
+  background: linear-gradient(300deg, #ae80e5, #fface8);
+  box-shadow: 3px 3px 3px black;
 }
 
 .favori {
   border: none;
   margin: 0;
+  width: 1.1rem;
 }
 .favori input {
   display: none;
 }
 .favori input + label {
+  display: inline-block;
+  width: 1.1rem;
+  height: auto;
   position: relative;
 }
 .favori input + label .checked {
@@ -171,6 +181,7 @@ ul {
 .favori input + label .unchecked {
   position: absolute;
   display: inline-block;
+  width: 1.1rem;
   z-index: 1;
   top: 16px;
   left: 0px;
@@ -179,6 +190,7 @@ ul {
 .favori input:checked + label .checked {
   position: absolute;
   display: inline-block;
+  width: 1.1rem;
   z-index: 1;
   top: 16px;
   left: 0px;
@@ -191,6 +203,7 @@ ul {
   position: relative;
 }
 .favori input:hover + label .unchecked {
+  width: 1.1rem;
   margin: 0;
   transform-origin: bottom;
   animation: hoverfavori 1s ease-in-out both;
@@ -198,11 +211,13 @@ ul {
   color: black;
   position: absolute;
   display: inline-block;
+  width: 1.1rem;
   z-index: 1;
   top: 16px;
   left: 0px;
 }
 .favori input:hover + label .checked {
+  width: 1.1rem;
   margin: 0;
   transform-origin: bottom;
   animation: hoverfavori 1s ease-in-out both;
@@ -210,6 +225,7 @@ ul {
   color: #9356DC;
   position: absolute;
   display: inline-block;
+  width: 1.1rem;
   z-index: 2;
   top: 16px;
   left: 0px;
@@ -835,10 +851,8 @@ ul {
   margin-top: 50px;
 }
 .buttonarea .btn {
-  font-size: 1.1rem;
   margin: auto;
   height: 50px;
-  background: linear-gradient(300deg, #9356DC, #FF79DA);
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -919,7 +933,7 @@ ul {
 .index .main-location::before {
   grid-column: 1/4;
   content: "";
-  box-shadow: inset 0 2px 2px #18092a;
+  box-shadow: inset 0 2px 2px #9356DC;
   height: 50px;
   display: inline-block;
   width: 100%;
@@ -963,9 +977,6 @@ ul {
   width: 88%;
   font-size: 1.1rem;
 }
-.index .main-slogan .btn {
-  background: linear-gradient(300deg, #9356DC, #FF79DA);
-}
 @media screen and (min-width: 992px) {
   .index .main-reactive {
     display: flex;
@@ -1001,7 +1012,7 @@ ul {
   margin-top: 20px;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0 3px 3px #18092a;
+  box-shadow: 0 3px 3px #9356DC;
   background-color: #f2eafb;
 }
 .index .main-working li .number {

@@ -15,11 +15,11 @@ $color-modify:(dark:100%,light:100%,smooth:10%);
 	}
 }
 
-$background-color--operation: $color-primary;
-$color--checked: $color-primary;
-$color--check: $color-third;
-$background-color--hoverplate: $color-third;
-$background-color--new: $color-third;
+
+$color_checked: $color-primary;
+$background_hoverplate: $color-third;
+$background_new: $color-third;
+$background_operation: $color-primary;
 
 /*couleurs secondaires découlant de celles de bases */
 $color-four:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
@@ -30,32 +30,35 @@ $color-height:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $li
 $color-nine:adjust-color($color: grey, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
 
 //background page index:liste restaurant ,menu restaurant
-$background-color--menu: $color-nine;
-$background-color--boutonfonctionnement: $color-four;
-$background-color--restaurant: $color-four;
+$background_bouton--how: $color-four;
+$background_default: $color-six;
+$background_form: $color-six;
+$background_footer: $color-height;
+$background_info: $color-six;
+$background_infohover:$color-nine;
+$background_location: $color-five;
+$background_menu: $color-nine;
+$background_plat: $color-six;
+$background_restaurant: $color-four;
 
-$background-color--location: $color-five;
+$color_button: $color-six;
+$color_footer: $color-six;
+$color_generique: $color-seven;
+$color_loader:silver;
+$color_new: darken($color: $color-third, $amount: 20%);
 
-$background-color--info: $color-six;
-$background-color--default: $color-six;
-$background-color--form: $color-six;
-$background-color--plat: $color-six;
-$color--footer: $color-six;
-$color--button: $color-six;
-$color-loader:silver;
-$color--generique: $color-seven;
-
-$background-color--footer: $color-height;
-
-$background-color--infohover:$color-nine;
-
-$color-new: darken($color: $color-third, $amount: 20%);
 //dégradé : background main bouton
 /* dégradé */
 $gradient: linear-gradient(300deg,$color-primary,$color-secondary);
-$background--loader: linear-gradient(-45deg,$color-primary, $color-secondary,$color-third);
-$background--mainbutton: $gradient;
+$gradient--light: linear-gradient(300deg,lighten($color-primary,10%),lighten($color-secondary,10%));
+
+
+$background_loader: linear-gradient(-45deg,$color-primary, $color-secondary,$color-third);
+$background_mainbutton: $gradient;
+$background_mainbutton--light: $gradient--light;
 
 //box-shadow
-$shadowlight:$color-height;
+$shadowlight:$color-primary;
 $shadowdark:$color-seven;
+
+//$color--check: $color-third;
