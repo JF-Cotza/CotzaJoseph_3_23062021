@@ -6,23 +6,23 @@
     }
     & ul{
         list-style: none;
-        padding-top: $padding-footer_normal;
-        margin-left: $margin-footer_liens;
-        padding-bottom: $padding-footer_large;
+        padding-top: $padding_footer--normal;
+        margin-left: $margin_footer--liens;
+        padding-bottom: $padding_footer--large;
     }
     & h3{
-        margin-left: $margin-footer_title;
+        margin-left: $margin_footer--title;
         font-family: $font-main_info;
-        padding-top: $padding-footer_title;
+        padding-top: $padding_footer--title;
     }
     & li{
-        margin-top: $margin-footer_interline;
+        margin-top: $margin_footer--interline;
         & a{
-            font-size:$fontsize-footer;
+            font-size:$fontsize_footer;
             & i{
-                font-size: $fontsize-footer;
-                width: $width-footer_icone;
-                margin-right: $margin-footer_icone;
+                font-size: $fontsize_footer;
+                width: $width_footer--icone;
+                margin-right: $margin_footer--icone;
             }
         }
     

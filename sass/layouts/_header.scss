@@ -4,22 +4,22 @@
     width: 100%;
     &-title{
         width: 100%;
-        height: $height-header_title;
+        height: $height_header--title;
         @include grid;
         & .backtoindex{
             grid-column: 1/2;
             text-align: left;
-            font-size: $fontsize-header;
-            margin-left: $margin-header;
-            width: $fontsize-header;
+            font-size: $fontsize_header;
+            margin-left: $margin_header;
+            width: $fontsize_header;
             }
         & #logo{ 
             grid-column: 2/3;
-            height: $height-header_logo;
+            height: $height_header--logo;
             width: auto;
             /*la taille du logo reste constante quelle que soit la vue */
             display: inline-block;
-            padding-top: $padding-header_logo;   
+            padding-top: $padding_header--logo;   
         }        
     }
 }

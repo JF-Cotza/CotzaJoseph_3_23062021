@@ -8,19 +8,19 @@
 }
 
 @mixin spanplat{
-    margin-right: $margin-plat;
-    height: $height-plats;    
+    margin-right: $margin_plat;
+    height: $height_plat;    
     background:$background-color--plat;
     justify-self: flex-end;
 }
 
 @mixin addcheckplat {
     background: $background-color--hoverplate;        
-    font-size: $fontsize-checkplat;
+    font-size: $fontsize_addcheckplat;
     display: inline-block;
-    width: $width-pricecheck;
-    height: calc($height-plats - $padding--large);
-    padding-top: $padding-plat_large;
+    width: $width_pricecheck;
+    height: calc($height_plat - $padding_plat--large);
+    padding-top: $padding_plat--large;
     & i{
         color:$color--button;
         @include platvalide;
@@ -31,15 +31,15 @@
 .plat{
     display: flex;
     width: 100%;
-    border-radius: $borderradius-plat;
-    height: $height-plats;
+    border-radius: $borderradius_plat;
+    height: $height_plat;
     input{
         display: none;
     } 
     @include overflowtext;
     &-info{ 
-        padding-bottom: $padding-plat_standard;
-        padding-top: $padding-plat_standard;
+        padding-bottom: $padding_plat--standard;
+        padding-top: $padding_plat--standard;
         background: $background-color--plat;
         width:100%;
         @include overflowtext;
@@ -52,7 +52,7 @@
         display: flex;
         text-align: center;
         align-items: center;
-        height: $height-plats;
+        height: $height_plat;
         justify-content: space-between;
         background-color: $background-color--plat;        
         input{
@@ -61,7 +61,7 @@
                 display: flex;
                 text-align: center;
                 align-self: flex-end;
-                width: $width-price;
+                width: $width_price;
             }
         }
         &-check{
@@ -88,7 +88,7 @@
     display: flex;
     align-items: flex-end;
     .value{
-        margin-bottom: $margin-plat;
+        margin-bottom: $margin_plat;
     }
 }
 

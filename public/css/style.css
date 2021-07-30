@@ -121,8 +121,8 @@
 /*mixins*/
 /*sur la page index et l'header*/
 /* les grids pour les pages*/
-/* les breakpoints */
 /*value*/
+/* les breakpoints */
 /*les mises en pages*/
 * {
   font-family: "robotoregular";
@@ -504,7 +504,7 @@ ul {
   font-size: 2rem;
   display: inline-block;
   width: 70px;
-  height: calc($height-plats - $padding--large);
+  height: calc($height_plat - $padding_plat--large);
   padding-top: 15px;
 }
 .plat .add:hover label .add-check i {
@@ -538,7 +538,7 @@ ul {
   font-size: 2rem;
   display: inline-block;
   width: 70px;
-  height: calc($height-plats - $padding--large);
+  height: calc($height_plat - $padding_plat--large);
   padding-top: 15px;
 }
 .plat input:checked + label .add-check i {

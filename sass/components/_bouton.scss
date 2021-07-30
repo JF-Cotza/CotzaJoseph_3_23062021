@@ -1,10 +1,10 @@
 
 .btn{
-            margin-top: $margin-button;
-            padding: $buttonpadding-small $buttonpadding-large;
+            margin-top: $margin_btn;
+            padding: $padding_btn--small $padding_btn--large;
             margin-left: auto;
             margin-right: auto;
-            font-size:$fontsize-button;
-            border-radius: $borderradius-button;
+            font-size:$fontsize_btn;
+            border-radius: $borderradius_btn;
             color:$color--button;
 }
