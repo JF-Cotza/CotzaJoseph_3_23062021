@@ -84,21 +84,15 @@ $horizontalspace:(standard:0);
 
     $fontsize_menu:map-get($map:$fontsize, $key: small);
     $fontsize_menu--title:1.1rem;         
-       
- 
-    
-    
-    
-    
-
 //pour _index
-    $borderradius-indexminus:map-get($map: $radius, $key:smallest);
-    $borderradius-indexstandard:1.5*map-get($map: $radius, $key:standard);
-    $borderradius-indexround:5*map-get($map: $radius, $key:standard);
+    $borderradius_index--minus:map-get($map: $radius, $key:smallest);
+    $borderradius_index--standard:1.5*map-get($map: $radius, $key:standard);
+    $borderradius_index--round:5*map-get($map: $radius, $key:standard);
     
-    $fontsize-indexnormal:1rem;
-    $fontsize-indextitle:map-get($map: $fontsize, $key: standard);
-    $fontsize-indexmaintitle:1.5rem;
+    $fontsize_index--maintitle:1.5rem;
+    $fontsize_index--normal:1rem;
+    $fontsize_index--title:map-get($map: $fontsize, $key: standard);
+    
     $heigth_indexlocation:5*map-get($map: $espace, $key:standard);
     $textindent-indexiconeinfo:2rem;
     $textindent-indexinput:.3rem;
@@ -107,8 +101,8 @@ $horizontalspace:(standard:0);
     $margin-indexlist:2*map-get($map: $espace, $key:standard);
     $marge-indexinput:.3rem;
     $marge-indextopinput:1.5*map-get($map: $espace, $key:standard);
-    $margin-indexmaintitle:3px;
-    $margin_left-indexmaintitle:1.3rem;
+    $margin_index--maintitle:3px;
+    $marginleft_index--maintitle:1.3rem;
     $marge-indexlist:3px;
     $marge_left-indexlist:2rem;
     $margine-indexparagraphe:map-get($map: $espace, $key:standard);
@@ -117,7 +111,7 @@ $horizontalspace:(standard:0);
 
     $padding-indexplacesmaintitle:5*map-get($map: $espace, $key:standard);
     $padding-indexparagraphe:map-get($map: $espace, $key:standard);
-    $padding-indextitle:map-get($map: $espace, $key:standard);
+    $padding_index--title:map-get($map: $espace, $key:standard);
     $padding-indexnew:map-get($map: $espace, $key:smallest);    
     $padding-indexplaces:6*map-get($map: $espace, $key:standard);
     $padding-indexlist:3*map-get($map: $espace, $key:standard);
@@ -125,5 +119,5 @@ $horizontalspace:(standard:0);
     $padding-indexworking-bottom:6*map-get($map: $espace, $key:standard);
     
     $margin-indexplacemaintitle:1.3rem;
-    $textindent-indextitledetails:.7rem;
+    $textindent_index--titledetails:.7rem;
     $textindent-indexparagraphe:.7rem;

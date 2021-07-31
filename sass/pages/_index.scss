@@ -40,12 +40,12 @@ $place:'index';
                 width: max-content;
             }
             & span{
-                font-size: $fontsize-indexnormal;
+                font-size: $fontsize_index--normal;
             }
             & input{
                 margin-left: $marge-indexinput;
                 text-indent: $textindent-indexinput;
-                font-size: $fontsize-indexnormal;
+                font-size: $fontsize_index--normal;
                 margin-top: $marge-indextopinput;
                 font-weight: bold;
                 width: 80%;
@@ -68,7 +68,7 @@ $place:'index';
                 margin-right: auto;
                 margin-top: $margine-indexparagraphe;
                 width: 88%;
-                font-size: $fontsize-indextitle;
+                font-size: $fontsize_index--title;
             }
         }
         /*englobe la zone de fonctionnement et les restaurants*/
@@ -86,8 +86,8 @@ $place:'index';
                     flex:1;
                 }
             & .mainTitle{
-                margin-bottom: $margin-indexmaintitle;
-                margin-left: $margin_left-indexmaintitle;
+                margin-bottom: $margin_index--maintitle;
+                margin-left: $marginleft_index--maintitle;
             }
             & ul{
                 list-style: none;
@@ -104,7 +104,7 @@ $place:'index';
                     padding-bottom: $padding-indexlist;
                     margin-top: $margin-indexlist;
                     position: relative;
-                    border-radius: $borderradius-indexstandard;
+                    border-radius: $borderradius_index--standard;
                     box-shadow: 0 3px 3px $shadowlight;
                     background-color: $background_bouton--how;
                     & .number{
@@ -115,13 +115,13 @@ $place:'index';
                         color:$color_button;
                         width:22px;
                         text-align: center;
-                        border-radius: $borderradius-indexround;
+                        border-radius: $borderradius_index--round;
                         height: 22px;
                         z-index:1;
                     }     
                     & i{
                         text-indent: $textindent-indexiconeinfo;
-                        font-size: $fontsize-indextitle;   
+                        font-size: $fontsize_index--title;   
                     }
                     &:hover{
                         background:$background_infohover;
@@ -231,7 +231,7 @@ $place:'index';
                 width: 335px;
                 height: 250px;
                 background-size: cover;         
-                border-radius: $borderradius-indexstandard;
+                border-radius: $borderradius_index--standard;
                 position: relative;
                 display: flex;
                 flex-direction: column;
@@ -251,20 +251,20 @@ $place:'index';
                         padding-bottom: $padding-indexnew;
                         text-align: center;
                         color:$color_new;
-                        border-radius: $borderradius-indexminus;
+                        border-radius: $borderradius_index--minus;
                     }
                 }
                 /* details des restaurants */
                 &-details{
                     background-color: $background_info;
                     position: relative;
-                    font-size: $fontsize-indextitle;
-                    border-radius: 0 0 $borderradius-indexstandard $borderradius-indexstandard;
+                    font-size: $fontsize_index--title;
+                    border-radius: 0 0 $borderradius_index--standard $borderradius_index--standard;
                     z-index: 1;
                     & h3{
-                        padding-top: $padding-indextitle;
+                        padding-top: $padding_index--title;
                         font-weight: bold;
-                        text-indent: $textindent-indextitledetails;
+                        text-indent: $textindent_index--titledetails;
                     }
                     & p{
                         margin-top: $margine-indexparagraphe;
@@ -276,8 +276,8 @@ $place:'index';
                             position: absolute;
                             top: -31px;
                             right: 1.5rem;
-                            font-size: $fontsize-indexmaintitle;
-                            width: $fontsize-indexmaintitle;
+                            font-size: $fontsize_index--maintitle;
+                            width: $fontsize_index--maintitle;
                             z-index: 2;
                     }*/
                 }    
