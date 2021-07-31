@@ -1,18 +1,17 @@
 $width:1.1rem;
 @mixin favori_position($index,$place){ 
-    
+    position: absolute;
 	display: inline-block;
     width: $width;
     z-index: $index;
     @if $place=='index'{
-        position: absolute;
-        top:15px;
+        top:0px;
         left:0px;
     }
     @if $place=='menu'{
-        top:35px;
-    }
-    
+        top:0px;
+        left: 0px;
+    }    
 }
 
 @function favoriplace($place)
@@ -78,7 +77,7 @@ $width:1.1rem;
         $size:favoriplace($place);
         @if $place=='index'{
             position: absolute;
-            top: 0px;
+            top: 15px;
             right: 1.5rem;
         }
         font-size: $size;

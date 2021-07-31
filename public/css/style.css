@@ -179,12 +179,14 @@ ul {
   display: none;
 }
 .favori input + label .unchecked {
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
   color: black;
 }
 .favori input:checked + label .checked {
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
@@ -203,6 +205,7 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: normal;
   color: black;
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
@@ -214,6 +217,7 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: reverse;
   color: #9356DC;
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 2;
@@ -782,17 +786,21 @@ ul {
   display: none;
 }
 .resto .main .menu-title .favori input + label .unchecked {
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  top: 35px;
+  top: 0px;
+  left: 0px;
   color: black;
 }
 .resto .main .menu-title .favori input:checked + label .checked {
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  top: 35px;
+  top: 0px;
+  left: 0px;
   color: #9356DC;
 }
 .resto .main .menu-title .favori input:checked + label .unchecked {
@@ -808,10 +816,12 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: normal;
   color: black;
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  top: 35px;
+  top: 0px;
+  left: 0px;
 }
 .resto .main .menu-title .favori input:hover + label .checked {
   width: 1.5rem;
@@ -820,10 +830,12 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: reverse;
   color: #9356DC;
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 2;
-  top: 35px;
+  top: 0px;
+  left: 0px;
 }
 @media screen and (min-width: 992px) {
   .resto .main .menu-title {
@@ -1261,7 +1273,7 @@ ul {
 }
 .index .main-places .restaurant-details .favori {
   position: absolute;
-  top: 0px;
+  top: 15px;
   right: 1.5rem;
   font-size: 1.1rem;
   width: 1.1rem;
@@ -1283,20 +1295,20 @@ ul {
   display: none;
 }
 .index .main-places .restaurant-details .favori input + label .unchecked {
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  position: absolute;
-  top: 15px;
+  top: 0px;
   left: 0px;
   color: black;
 }
 .index .main-places .restaurant-details .favori input:checked + label .checked {
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  position: absolute;
-  top: 15px;
+  top: 0px;
   left: 0px;
   color: #9356DC;
 }
@@ -1313,11 +1325,11 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: normal;
   color: black;
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  position: absolute;
-  top: 15px;
+  top: 0px;
   left: 0px;
 }
 .index .main-places .restaurant-details .favori input:hover + label .checked {
@@ -1327,11 +1339,11 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: reverse;
   color: #9356DC;
+  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 2;
-  position: absolute;
-  top: 15px;
+  top: 0px;
   left: 0px;
 }
 
