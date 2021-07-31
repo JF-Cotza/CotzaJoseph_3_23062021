@@ -1,3 +1,5 @@
+$place:'menu';
+
 .resto{
     @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
         display: grid;
@@ -17,8 +19,8 @@
         position: relative;        
         & .image{
             width: 100%;
-            @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
-            }
+           /* @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
+            }*/
             &-grid{
                 display: none;
             }
@@ -101,29 +103,20 @@
             }
             &-title{
                 padding-top:$padding_menu--title;
+                margin: 0 $textindent_menu--title;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                & h1{
                 font-family: $font-main_info;
                 font-size: $fontsize_mainTitle--menu;
-                text-indent: $textindent_menu--title;
-                position: relative;                
+                }
+                @include favori($place);                                
                 @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                     grid-column: 2/4;
                     grid-row: 1/2;
                 }                
-                & .favori{
-                    padding-top: $padding_title--favori;
-                    position: absolute;
-                    top: 0.625*1.5rem;
-                    right: 100px;        
-                    }
-                }
-                @media screen and (min-width: map-get($map: $breakpoints, $key:tablette-min )) and (max-width: map-get($map: $breakpoints, $key:tablette-max )){
-                & .favori{
-                    padding-top:$padding_title--favori;
-                    position: absolute;
-                    top: 0.625*1.5rem;
-                    right: 100px;    
-                    }
-                }
             }
             & h2{
                 position: relative;
@@ -151,7 +144,7 @@
             }
         }
     }
-
+}
 
 .menu{
     &-entrees{
@@ -220,3 +213,18 @@
         display: flex;
     }
 }
+
+/*
+ .favori{
+    
+    padding-top: $padding_title--favori;
+    position: absolute;
+    top: 0.625*1.5rem;
+    right: 100px;        
+    @media screen and (min-width: map-get($map: $breakpoints, $key:tablette-min )) and (max-width: map-get($map: $breakpoints, $key:tablette-max )){
+        padding-top:$padding_title--favori;
+        position: absolute;
+        top: 0.625*1.5rem;
+        right: 100px;    
+    }
+}*/

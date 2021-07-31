@@ -1,3 +1,4 @@
+$place:'index';
 
 .index{
     position: relative;
@@ -270,14 +271,15 @@
                         padding-bottom: $padding-indexparagraphe;
                         text-indent: $textindent-indexparagraphe;
                     }
-                    & .favori{
+                    @include favori($place)
+                    /*& .favori{
                             position: absolute;
-                            top: 21px;
+                            top: -31px;
                             right: 1.5rem;
                             font-size: $fontsize-indexmaintitle;
                             width: $fontsize-indexmaintitle;
                             z-index: 2;
-                    }
+                    }*/
                 }    
                     
             }            

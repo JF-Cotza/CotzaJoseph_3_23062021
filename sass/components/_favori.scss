@@ -1,16 +1,29 @@
 $width:1.1rem;
-
-@mixin favori_position($index,$top:16px,$left:0px){
-	position: absolute;
+@mixin favori_position($index,$place){ 
+    
 	display: inline-block;
     width: $width;
     z-index: $index;
-    top: $top;
-    left: $left;
+    @if $place=='index'{
+        position: absolute;
+        top:15px;
+        left:0px;
+    }
+    @if $place=='menu'{
+        top:35px;
+    }
+    
 }
 
-
-
+@function favoriplace($place)
+{
+    @if $place=='index'{
+        @return 1.1rem;
+    }   
+    @if $place=='menu'{
+        @return 1.5rem;
+    }
+}
 
 .favori{
     border:none;
@@ -27,13 +40,13 @@ $width:1.1rem;
                     display: none;
                 }
                 & .unchecked{
-                    @include favori_position(1);
+                    @include favori_position(1,$place);
                     color:$color_generique;
                 }
             }
             &:checked+label{
                 & .checked{
-                    @include favori_position(1);
+                    @include favori_position(1,$place);
                     color:$color_checked;
                 }
                 & .unchecked{
@@ -47,15 +60,74 @@ $width:1.1rem;
                     width:$width;
                     @include favoricheck('reduce');
                     color:$color_generique;
-                    @include favori_position(1);
+                    @include favori_position(1,$place);
                 }
                 & .checked{
                     width: $width;
                     @include favoricheck('grow');
                     color:$color_checked;
-                    @include favori_position(2);
+                    @include favori_position(2,$place);
                     
                 }
             }
         }
     }
+
+@mixin favori($place){
+    .favori{
+        $size:favoriplace($place);
+        @if $place=='index'{
+            position: absolute;
+            top: 0px;
+            right: 1.5rem;
+        }
+        font-size: $size;
+        width: $size;
+        z-index: 2;
+        border:none;
+        margin: 0;
+        width: $size;
+        & input{
+            display:none;
+            &+label{
+                display: inline-block;
+                width: $size;
+                height: $size;
+                position: relative;
+                & .checked{
+                    display: none;
+                }
+                & .unchecked{
+                    @include favori_position(1,$place);
+                    color:$color_generique;
+                }
+            }
+            &:checked+label{
+                & .checked{
+                    @include favori_position(1,$place);
+                    color:$color_checked;
+                }
+                & .unchecked{
+                    display: none;
+                }
+            }
+            &:hover+label             
+            {
+                position: relative;
+                & .unchecked{
+                    width:$size;
+                    @include favoricheck('reduce');
+                    color:$color_generique;
+                    @include favori_position(1,$place);
+                }
+                & .checked{
+                    width: $size;
+                    @include favoricheck('grow');
+                    color:$color_checked;
+                    @include favori_position(2,$place);
+                    
+                }
+            }
+        }
+    }
+}

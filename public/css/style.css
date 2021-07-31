@@ -179,21 +179,15 @@ ul {
   display: none;
 }
 .favori input + label .unchecked {
-  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  top: 16px;
-  left: 0px;
   color: black;
 }
 .favori input:checked + label .checked {
-  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  top: 16px;
-  left: 0px;
   color: #9356DC;
 }
 .favori input:checked + label .unchecked {
@@ -209,12 +203,9 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: normal;
   color: black;
-  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 1;
-  top: 16px;
-  left: 0px;
 }
 .favori input:hover + label .checked {
   width: 1.1rem;
@@ -223,12 +214,9 @@ ul {
   animation: hoverfavori 1s ease-in-out both;
   animation-direction: reverse;
   color: #9356DC;
-  position: absolute;
   display: inline-block;
   width: 1.1rem;
   z-index: 2;
-  top: 16px;
-  left: 0px;
 }
 
 .bloc {
@@ -650,6 +638,8 @@ ul {
 }
 .resto .main .image {
   width: 100%;
+  /* @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)  ){
+   }*/
 }
 .resto .main .image-grid {
   display: none;
@@ -761,10 +751,79 @@ ul {
 }
 .resto .main .menu-title {
   padding-top: 35px;
+  margin: 0 1.3rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resto .main .menu-title h1 {
   font-family: "shrikhandregular";
   font-size: 1.5rem;
-  text-indent: 1.3rem;
+}
+.resto .main .menu-title .favori {
+  font-size: 1.5rem;
+  width: 1.5rem;
+  z-index: 2;
+  border: none;
+  margin: 0;
+  width: 1.5rem;
+}
+.resto .main .menu-title .favori input {
+  display: none;
+}
+.resto .main .menu-title .favori input + label {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
   position: relative;
+}
+.resto .main .menu-title .favori input + label .checked {
+  display: none;
+}
+.resto .main .menu-title .favori input + label .unchecked {
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 1;
+  top: 35px;
+  color: black;
+}
+.resto .main .menu-title .favori input:checked + label .checked {
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 1;
+  top: 35px;
+  color: #9356DC;
+}
+.resto .main .menu-title .favori input:checked + label .unchecked {
+  display: none;
+}
+.resto .main .menu-title .favori input:hover + label {
+  position: relative;
+}
+.resto .main .menu-title .favori input:hover + label .unchecked {
+  width: 1.5rem;
+  margin: 0;
+  transform-origin: bottom;
+  animation: hoverfavori 1s ease-in-out both;
+  animation-direction: normal;
+  color: black;
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 1;
+  top: 35px;
+}
+.resto .main .menu-title .favori input:hover + label .checked {
+  width: 1.5rem;
+  margin: 0;
+  transform-origin: bottom;
+  animation: hoverfavori 1s ease-in-out both;
+  animation-direction: reverse;
+  color: #9356DC;
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 2;
+  top: 35px;
 }
 @media screen and (min-width: 992px) {
   .resto .main .menu-title {
@@ -772,28 +831,14 @@ ul {
     grid-row: 1/2;
   }
 }
-.resto .main .menu-title .favori {
-  padding-top: 35px;
-  position: absolute;
-  top: 0.9375rem;
-  right: 100px;
-}
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .resto .main .menu .favori {
-    padding-top: 35px;
-    position: absolute;
-    top: 0.9375rem;
-    right: 100px;
-  }
-}
-.resto .main h2 {
+.resto .main .menu h2 {
   position: relative;
   text-indent: 1.3rem;
   text-transform: uppercase;
   font-size: 1.1rem;
   margin-top: 30px;
 }
-.resto .main h2::before {
+.resto .main .menu h2::before {
   position: absolute;
   bottom: -5px;
   left: 1.3rem;
@@ -802,14 +847,14 @@ ul {
   height: 2px;
   background: #99E2D0;
 }
-.resto .main ul {
+.resto .main .menu ul {
   display: flex;
   list-style: none;
   align-items: center;
   margin-top: 10px;
   flex-direction: column;
 }
-.resto .main ul li {
+.resto .main .menu ul li {
   margin-top: 10px;
   background: white;
   width: 92%;
@@ -872,6 +917,20 @@ ul {
     display: flex;
   }
 }
+/*
+ .favori{
+
+    padding-top: $padding_title--favori;
+    position: absolute;
+    top: 0.625*1.5rem;
+    right: 100px;        
+    @media screen and (min-width: map-get($map: $breakpoints, $key:tablette-min )) and (max-width: map-get($map: $breakpoints, $key:tablette-max )){
+        padding-top:$padding_title--favori;
+        position: absolute;
+        top: 0.625*1.5rem;
+        right: 100px;    
+    }
+}*/
 .footer {
   background: #18092a;
 }
@@ -1202,11 +1261,78 @@ ul {
 }
 .index .main-places .restaurant-details .favori {
   position: absolute;
-  top: 21px;
+  top: 0px;
   right: 1.5rem;
-  font-size: 1.5rem;
-  width: 1.5rem;
+  font-size: 1.1rem;
+  width: 1.1rem;
   z-index: 2;
+  border: none;
+  margin: 0;
+  width: 1.1rem;
+}
+.index .main-places .restaurant-details .favori input {
+  display: none;
+}
+.index .main-places .restaurant-details .favori input + label {
+  display: inline-block;
+  width: 1.1rem;
+  height: 1.1rem;
+  position: relative;
+}
+.index .main-places .restaurant-details .favori input + label .checked {
+  display: none;
+}
+.index .main-places .restaurant-details .favori input + label .unchecked {
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  color: black;
+}
+.index .main-places .restaurant-details .favori input:checked + label .checked {
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  color: #9356DC;
+}
+.index .main-places .restaurant-details .favori input:checked + label .unchecked {
+  display: none;
+}
+.index .main-places .restaurant-details .favori input:hover + label {
+  position: relative;
+}
+.index .main-places .restaurant-details .favori input:hover + label .unchecked {
+  width: 1.1rem;
+  margin: 0;
+  transform-origin: bottom;
+  animation: hoverfavori 1s ease-in-out both;
+  animation-direction: normal;
+  color: black;
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 0px;
+}
+.index .main-places .restaurant-details .favori input:hover + label .checked {
+  width: 1.1rem;
+  margin: 0;
+  transform-origin: bottom;
+  animation: hoverfavori 1s ease-in-out both;
+  animation-direction: reverse;
+  color: #9356DC;
+  display: inline-block;
+  width: 1.1rem;
+  z-index: 2;
+  position: absolute;
+  top: 15px;
+  left: 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
