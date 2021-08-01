@@ -43,10 +43,10 @@ $place:'index';
                 font-size: $fontsize_index--normal;
             }
             & input{
-                margin-left: $marge-indexinput;
-                text-indent: $textindent-indexinput;
+                margin-left: $margin_index--input;
+                text-indent: $textindent_index--input;
                 font-size: $fontsize_index--normal;
-                margin-top: $marge-indextopinput;
+                margin-top: $margin_index--topinput;
                 font-weight: bold;
                 width: 80%;
                 border: none;
@@ -56,9 +56,9 @@ $place:'index';
         /* zone de titre */
         &-slogan{
             text-align: center;
-            padding-bottom: $padding-indexslogan;
+            padding-bottom: $padding_index--slogan;
             & .mainTitle{
-                margin-top: $margin-indexsloganmaintitle;
+                margin-top: $margin_index--sloganmaintitle;
                 width: 65%;
                 margin-left: auto;
                 margin-right: auto;
@@ -66,7 +66,7 @@ $place:'index';
             & p{
                 margin-left: auto;
                 margin-right: auto;
-                margin-top: $margine-indexparagraphe;
+                margin-top: $margin_index--paragraphe;
                 width: 88%;
                 font-size: $fontsize_index--title;
             }
@@ -80,8 +80,8 @@ $place:'index';
         }
         /* zone d'explication du fonctionnement*/    
         &-working{
-            padding-bottom: $padding-indexworking-bottom;
-            padding-top: $padding-indexworking_top;
+            padding-bottom: $paddingbottom_index--working;
+            padding-top: $paddingtop_index--working;
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:1;
                 }
@@ -92,17 +92,17 @@ $place:'index';
             & ul{
                 list-style: none;
                 width: 86.5%;
-                margin-top: $marge-indexlist;
-                margin-left:$marge_left-indexlist;
+                margin-top: $margin_index--list;
+                margin-left:$marginleft_index--list;
                 margin-right: auto;
                 font-weight: bold;
             }
             & li{
                     display: inline-block;
                     width: 100%;
-                    padding-top: $padding-indexlist;
-                    padding-bottom: $padding-indexlist;
-                    margin-top: $margin-indexlist;
+                    padding-top: $padding_index--list;
+                    padding-bottom: $padding_index--list;
+                    margin-top: $margin_index--list;
                     position: relative;
                     border-radius: $borderradius_index--standard;
                     box-shadow: 0 3px 3px $shadowlight;
@@ -120,7 +120,7 @@ $place:'index';
                         z-index:1;
                     }     
                     & i{
-                        text-indent: $textindent-indexiconeinfo;
+                        text-indent: $textindent_index--iconeinfo;
                         font-size: $fontsize_index--title;   
                     }
                     &:hover{
@@ -138,17 +138,17 @@ $place:'index';
             }
         }
         &-places{
-            padding-bottom: $padding-indexplaces;
+            padding-bottom: $padding_index--places;
             background-color: $background_restaurant;
             @media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
                     flex:3;
                 }
             & .mainTitle{
-                padding-top: $padding-indexplacesmaintitle;
-                margin-left: $margin-indexplacemaintitle;
+                padding-top: $padding_index--placesmaintitle;
+                margin-left: $margin_index--placesmaintitle;
             }
             & ul{
-                margin-top: $margin-indexlist;
+                margin-top: $margin_index--list;
                 list-style: none;
                 @media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
                   @include restaurant(2, 2, 250px);                
@@ -159,7 +159,7 @@ $place:'index';
                 }
                 & li {
                 @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max )){
-                    margin-top: $margin-indexrestaurantlist;
+                    margin-top: $margin_index--restaurantlist;
                 }
             }
             
@@ -247,8 +247,8 @@ $place:'index';
                         right: 11px;
                         background-color:$background_new;
                         width: 80px;
-                        padding-top: $padding-indexnew;
-                        padding-bottom: $padding-indexnew;
+                        padding-top: $padding_index--new;
+                        padding-bottom: $padding_index--new;
                         text-align: center;
                         color:$color_new;
                         border-radius: $borderradius_index--minus;
@@ -267,9 +267,9 @@ $place:'index';
                         text-indent: $textindent_index--titledetails;
                     }
                     & p{
-                        margin-top: $margine-indexparagraphe;
-                        padding-bottom: $padding-indexparagraphe;
-                        text-indent: $textindent-indexparagraphe;
+                        margin-top: $margin_index--paragraphe;
+                        padding-bottom: $padding_index--paragraphe;
+                        text-indent: $textindent_index--paragraphe;
                     }
                     @include favori($place)
                     /*& .favori{

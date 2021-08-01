@@ -94,30 +94,32 @@ $horizontalspace:(standard:0);
     $fontsize_index--title:map-get($map: $fontsize, $key: standard);
     
     $heigth_indexlocation:5*map-get($map: $espace, $key:standard);
-    $textindent-indexiconeinfo:2rem;
-    $textindent-indexinput:.3rem;
     
-    $margin-indexrestaurantlist:2*map-get($map: $espace, $key:standard);
-    $margin-indexlist:2*map-get($map: $espace, $key:standard);
-    $marge-indexinput:.3rem;
-    $marge-indextopinput:1.5*map-get($map: $espace, $key:standard);
     $margin_index--maintitle:3px;
+    $margin_index--list:3px;
+    $margin_index--restaurantlist:2*map-get($map: $espace, $key:standard);
+    $margin_index--list:2*map-get($map: $espace, $key:standard);
+    $margin_index--input:.3rem;
+    $margin_index--paragraphe:map-get($map: $espace, $key:standard);
+    $margin_index--sloganmaintitle:4*map-get($map: $espace, $key:standard);
+    $margin_index--topinput:1.5*map-get($map: $espace, $key:standard);
+    $marginleft_index--list:2rem;
     $marginleft_index--maintitle:1.3rem;
-    $marge-indexlist:3px;
-    $marge_left-indexlist:2rem;
-    $margine-indexparagraphe:map-get($map: $espace, $key:standard);
-    $margin-indexsloganmaintitle:4*map-get($map: $espace, $key:standard);
-    $padding-indexslogan:5*map-get($map: $espace, $key:standard);
+    $margin_index--placesmaintitle:1.3rem;
 
-    $padding-indexplacesmaintitle:5*map-get($map: $espace, $key:standard);
-    $padding-indexparagraphe:map-get($map: $espace, $key:standard);
+    $padding_index--list:3*map-get($map: $espace, $key:standard);
+    $padding_index--new:map-get($map: $espace, $key:smallest);    
+    $padding_index--placesmaintitle:5*map-get($map: $espace, $key:standard);
+    $padding_index--places:6*map-get($map: $espace, $key:standard);
     $padding_index--title:map-get($map: $espace, $key:standard);
-    $padding-indexnew:map-get($map: $espace, $key:smallest);    
-    $padding-indexplaces:6*map-get($map: $espace, $key:standard);
-    $padding-indexlist:3*map-get($map: $espace, $key:standard);
-    $padding-indexworking_top:5*map-get($map: $espace, $key:standard);
-    $padding-indexworking-bottom:6*map-get($map: $espace, $key:standard);
-    
-    $margin-indexplacemaintitle:1.3rem;
+    $padding_index--paragraphe:map-get($map: $espace, $key:standard);
+    $padding_index--slogan:5*map-get($map: $espace, $key:standard);
+    $paddingtop_index--working:5*map-get($map: $espace, $key:standard);
+    $paddingbottom_index--working:6*map-get($map: $espace, $key:standard);
+
+    $textindent_index--iconeinfo:2rem;
+    $textindent_index--input:.3rem;
     $textindent_index--titledetails:.7rem;
-    $textindent-indexparagraphe:.7rem;
+    $textindent_index--paragraphe:.7rem;
+    
+    
