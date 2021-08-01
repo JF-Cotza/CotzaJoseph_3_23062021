@@ -1,0 +1,6 @@
+//pour masquer le texte qui déborde
+@mixin overflow{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

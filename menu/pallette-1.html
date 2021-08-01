@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f203ca5a30.js"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/style.css">
+    <title>Oh my food</title>
+</head>
+
+<body class='resto'>
+    <!-- header -->
+    <header class='header'>
+        <p class='header-title'>
+            <a href="./../index.html" title="retour à l'accueil"><span class="fas fa-arrow-left"></span></a>
+            <img src="./../sass/base/images/logo/ohmyfood.png"
+                alt="logo oh my food" id='logo'>
+        </p>
+    </header>
+
+    <!-- main -->
+    <main class='main delices'>
+        <form action="" class='menu'>
+            <div class="menu-title">
+                <h1>Le délice des sens</h1>
+                <fieldset class='favori'>
+                <input type="checkbox" name="palette" id="palette">
+                <label for="palette">
+                    <i class="far fa-heart unchecked"></i>
+                    <i class="fas fa-heart checked"></i>
+                </label>
+                </fieldset>
+            </div> 
+            <img src="./../sass/base/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                alt="Plat délice des sens" class='image-grid'>
+            <article class='menu-entrees'>
+                <h2>Entrées</h2>
+                <ul>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Tartare de thon</h3>        
+                                <p>Assaisonné au yuzu</p>
+                            </div>
+                            <fieldset class='add'>                                 
+                                <input type="checkbox" name="tartare" id="tartare">
+                                <label for="tartare">
+                                    <span class='prix'><div class="value">25€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Bouchée de homard croustillant</h3>
+                                <p>Et sa farandole de petits légumes</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="homard" id="homard">
+                                <label for="homard">
+                                    <span class='prix'><div class="value">35€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Velouté de cèpes</h3>
+                                <p>Aux truffes</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="cepes" id="cepes">
+                                <label for="cepes">
+                                    <span class='prix'><div class="value">20€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                </ul>  
+            </article>
+            <article class='menu-plats'>
+                <h2>Plats</h2>
+                <ul>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Poulet rôti aux herbes de Provence</h3>
+                                <p>Et sa crème de truffe</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="poulet" id="poulet">
+                                <label for="poulet">
+                                    <span class='prix'><div class="value">40€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Langouste rôtie</h3>
+                                <p>Et ses légumes de saison</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="langouste"
+                                    id="langouste">
+                                <label for="langouste">
+                                    <span class='prix'><div class="value">35€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Côte de boeuf Angus</h3>
+                                <p>Et sa purée de panais</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="boeuf" id="boeuf">
+                                <label for="boeuf">
+                                    <span class='prix'><div class="value">44€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <article class="menu-desserts">
+                <h2>Desserts</h2>
+                <ul>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Farandole de desserts</h3>
+                                <p>Du chef</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="farandole" id="farandole">
+                                <label for="farandole">
+                                    <span class='prix'><div class="value">18€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Macaron au chocolat d'exception</h3>
+                                <p>Et glace à la vanille de Madagascar</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="macaron" id="macaron">
+                                <label for="macaron">
+                                    <span class='prix'><div class="value">22€</div></span>
+                                    <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                </label>
+                            </fieldset>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="plat">
+                            <div class="plat-info">
+                                <h3>Mousse au chocolat</h3>
+                                <p>Au piment d'Espelette et à la truffe noire</p>
+                            </div>
+                            <fieldset class='add'>
+                                <input type="checkbox" name="mousse" id="mousse">
+                                    <label for="mousse">
+                                        <span class='prix'><div class="value"> 23€</div></span>
+                                        <div class="add-check">
+                                        <i class="fas fa-check-circle"></i>
+                                        </div>
+                                    </label>
+                                </fieldset>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+            <div class="buttonarea">
+                <button class='btn'>Commander</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+        <h3>ohmyfood</h3>
+        <ul>
+            <li><a href="#"><i class="fas fa-utensils"></i>
+                    Proposer un restaurant</a></li>
+            <li><a href="#"><i class="fas fa-hands-helping"></i>
+                    Devenir partenaire</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="mailto:contact@omf.org">Contact</a></li> <!-- l'adresse mail n'existe pas -->
+        </ul>
+    </footer>
+</body>
+
+</html>
