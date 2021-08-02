@@ -1,6 +1,6 @@
 /*durée des animations*/
 $time:1s;
-$timecheck:600ms;
+$timecheck:2s;
 $menutime:200ms;
 $loadtime:3s;
 
@@ -52,6 +52,7 @@ $loadtime:3s;
         transform: rotate(360deg);
     }
 }
+
 
 @mixin platvalide{
     animation: platcheck $timecheck ease-in-out both;
@@ -128,7 +129,7 @@ $loadtime:3s;
     55%, 60%{
         transform: rotateZ(0deg);
     }
-    100%{
+    90%, 100%{
         transform: rotateZ(-30deg);
     }
 }

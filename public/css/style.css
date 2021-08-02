@@ -113,7 +113,7 @@
   55%, 60% {
     transform: rotateZ(0deg);
   }
-  100% {
+  90%, 100% {
     transform: rotateZ(-30deg);
   }
 }
@@ -154,7 +154,7 @@ ul {
   border-radius: 25px;
   color: white;
   background: linear-gradient(300deg, #9356DC, #FF79DA);
-  box-shadow: 3px 3px 3px #9356DC;
+  box-shadow: 3px 3px 3px #b7b7b7;
 }
 .btn:hover {
   background: linear-gradient(300deg, #ae80e5, #fface8);
@@ -235,7 +235,7 @@ ul {
   justify-content: top;
   align-items: center;
   width: 100%;
-  height: 172vh;
+  height: 100%;
   background: linear-gradient(-45deg, #9356DC, #FF79DA, #99E2D0);
 }
 
@@ -517,7 +517,7 @@ ul {
 }
 .plat .add:hover label .add-check i {
   color: white;
-  animation: platcheck 600ms ease-in-out both;
+  animation: platcheck 2s ease-in-out both;
 }
 
 .prix {
@@ -551,7 +551,7 @@ ul {
 }
 .plat input:checked + label .add-check i {
   color: white;
-  animation: platcheck 600ms ease-in-out both;
+  animation: platcheck 2s ease-in-out both;
 }
 
 .mainTitle {
@@ -683,7 +683,7 @@ ul {
 }
 .resto .main .menu {
   width: 100%;
-  background-color: #d9d9d9;
+  background-color: #f3f3f3;
   border-radius: 15px 15px 0 0;
 }
 @media screen and (max-width: 767px) {
@@ -888,7 +888,7 @@ ul {
   flex-direction: column;
 }
 .resto .main .menu ul li {
-  margin-top: 20px;
+  margin-top: 10px;
   background: white;
   width: 92%;
   font-size: 1rem;
@@ -1015,7 +1015,7 @@ ul {
 .index .main-location {
   border: none;
   height: 50px;
-  background-color: #e8f9f5;
+  background-color: #eaeaea;
   position: relative;
   display: grid;
   grid-template-columns: 28% 44% 28%;
@@ -1025,7 +1025,7 @@ ul {
 .index .main-location::before {
   grid-column: 1/4;
   content: "";
-  box-shadow: inset 0 2px 2px #9356DC;
+  box-shadow: inset 0 5px 5px #b7b7b7;
   height: 50px;
   display: inline-block;
   width: 100%;
@@ -1050,7 +1050,7 @@ ul {
   font-weight: bold;
   width: 80%;
   border: none;
-  background-color: #e8f9f5;
+  background-color: #eaeaea;
 }
 .index .main-slogan {
   text-align: center;
@@ -1091,21 +1091,21 @@ ul {
 .index .main-working ul {
   list-style: none;
   width: 86.5%;
-  margin-top: 20px;
-  margin-left: 2rem;
-  margin-right: auto;
+  margin-top: 3px;
+  margin-left: 15px;
+  margin-right: 3px;
   font-weight: bold;
 }
 .index .main-working li {
   display: inline-block;
   width: 100%;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 15px;
   position: relative;
   border-radius: 15px;
-  box-shadow: 0 3px 3px #9356DC;
-  background-color: #f2eafb;
+  box-shadow: 0 3px 3px #b7b7b7;
+  background-color: #f3f3f3;
 }
 .index .main-working li .number {
   position: absolute;
@@ -1124,7 +1124,7 @@ ul {
   font-size: 1.1rem;
 }
 .index .main-working li:hover {
-  background: #d9d9d9;
+  background: #f2eafb;
   box-shadow: 0 3px 3px black;
 }
 .index .main-working li:hover i {
@@ -1135,14 +1135,20 @@ ul {
   top: 31px;
   left: 4.6rem;
 }
+@media screen and (min-width: 800px) {
+  .index .main-working li .info {
+    top: 10px;
+  }
+}
 .index .main-places {
   padding-bottom: 60px;
-  background-color: #f2eafb;
+  background-color: #f3f3f3;
   /*fiche des restaurants */
 }
 @media screen and (min-width: 992px) {
   .index .main-places {
     flex: 3;
+    border-radius: 30px 30px 0 0;
   }
 }
 .index .main-places .mainTitle {
@@ -1150,7 +1156,7 @@ ul {
   margin-left: 1.3rem;
 }
 .index .main-places ul {
-  margin-top: 20px;
+  margin-top: 3px;
   list-style: none;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1179,6 +1185,8 @@ ul {
     grid-column-gap: 1.1rem;
     grid-row-gap: 10px;
     position: relative;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
 @media screen and (min-width: 992px) and (min-width: 768px) and (max-width: 991px) {

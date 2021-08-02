@@ -3,7 +3,7 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-third:#99E2D0;
-$color-modify:(dark:100%,light:100%,smooth:10%);
+//$color-modify:(dark:100%,light:100%,smooth:10%);
 
 /* fonctions */
 @function color-modify($modifier,$color,$value){
@@ -23,23 +23,23 @@ $background_operation: $color-primary;
 
 /*couleurs secondaires découlant de celles de bases */
 $color-four:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
-$color-five:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightness: 20%, $alpha: 1.0);
+$color-five:#eaeaea;//récupérés directement sur la maquette
 $color-six:adjust-color($color: $color-third, $hue: 0, $saturation: 0%, $lightness: 40%, $alpha: 1.0);
 $color-seven:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -100%, $alpha: 1.0);
 $color-height:adjust-color($color: $color-primary, $hue: 0, $saturation: 0%, $lightness: -50%, $alpha: 1.0);
-$color-nine:adjust-color($color: grey, $hue: 0, $saturation: 0%, $lightness: 35%, $alpha: 1.0);
+$color-nine:#f3f3f3;//récupérés directement sur la maquette
 
 //background page index:liste restaurant ,menu restaurant
-$background_bouton--how: $color-four;
 $background_default: $color-six;
 $background_form: $color-six;
 $background_footer: $color-height;
-$background_info: $color-six;
-$background_infohover:$color-nine;
+$background_info--details: $color-six;
+$background_info--hover:$color-four;
+$background_info--nothover: $color-nine;
 $background_location: $color-five;
 $background_menu: $color-nine;
 $background_plat: $color-six;
-$background_restaurant: $color-four;
+$background_restaurant: $color-nine;
 
 $color_button: $color-six;
 $color_footer: $color-six;
@@ -58,7 +58,5 @@ $background_mainbutton: $gradient;
 $background_mainbutton--light: $gradient--light;
 
 //box-shadow
-$shadowlight:$color-primary;
+$shadowlight:darken($color-five,20%);
 $shadowdark:$color-seven;
-
-//$color--check: $color-third;

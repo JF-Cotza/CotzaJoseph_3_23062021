@@ -71,7 +71,7 @@ $horizontalspace:(standard:0);
 
     $margin_menu--list:map-get($map: $espace, $key:standard);
     $margin_menu--title:3*map-get($map: $espace, $key:standard);
-    $margin_index--list:map-get($map: $espace, $key:standard);
+    
     $margin_menu--button:5*map-get($map: $espace, $key:standard);
 
     $padding_dessert:2*map-get($map: $espace, $key: standard);
@@ -88,6 +88,7 @@ $horizontalspace:(standard:0);
     $borderradius_index--minus:map-get($map: $radius, $key:smallest);
     $borderradius_index--standard:1.5*map-get($map: $radius, $key:standard);
     $borderradius_index--round:5*map-get($map: $radius, $key:standard);
+    $borderradius_index--restaurantplacedesktop:3*map-get($map: $radius, $key:standard);
     
     $fontsize_index--maintitle:1.5rem;
     $fontsize_index--normal:1rem;
@@ -95,15 +96,27 @@ $horizontalspace:(standard:0);
     
     $heigth_indexlocation:5*map-get($map: $espace, $key:standard);
     
-    $margin_index--maintitle:3px;
-    $margin_index--list:3px;
+    $margintop_index--working: map-get($map: $espace, $key:smallest);
+    $marginleft_index--working:1.5*map-get($map: $espace, $key:standard);
+    $marginright_index--working:map-get($map: $espace, $key:smallest);
+
+    $paddingtop_index--workinglist:2*map-get($map: $espace, $key:standard);
+    $paddingbottom_index--workinglist:2*map-get($map: $espace, $key:standard);
+    $margintop_index--workinglist:1.5*map-get($map: $espace, $key:standard);
+
+    $margin_index--maintitle:map-get($map: $espace, $key:smallest);
+    $margintop_index--list:map-get($map: $espace, $key:smallest);
+    $marginleft_index--list:map-get($map: $espace, $key:smallest);
+    $marginright_index--list:map-get($map: $espace, $key:smallest);
+    $margin_index--list:map-get($map: $espace, $key:standard);
+
     $margin_index--restaurantlist:2*map-get($map: $espace, $key:standard);
-    $margin_index--list:2*map-get($map: $espace, $key:standard);
+    
     $margin_index--input:.3rem;
     $margin_index--paragraphe:map-get($map: $espace, $key:standard);
     $margin_index--sloganmaintitle:4*map-get($map: $espace, $key:standard);
     $margin_index--topinput:1.5*map-get($map: $espace, $key:standard);
-    $marginleft_index--list:2rem;
+    $marginleft_index--list:1rem;
     $marginleft_index--maintitle:1.3rem;
     $margin_index--placesmaintitle:1.3rem;
 
