@@ -63,7 +63,7 @@ $place:'menu';
                @include restaurant (2,2,$height_repeat--menu,$heigth_button);                
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
-                @include restaurant (3,2,$height_repeat--menu,$heigth_button); //test modifié             
+                @include restaurant (3,1,$height_repeat--menu,$heigth_button); //test modifié             
                 align-items: center;
             }
             &-entrees{                

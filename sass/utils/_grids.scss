@@ -8,10 +8,16 @@
 }
 
 @mixin restaurant($col,$row,$hightrepeat,$hightnorepeat:0){
-			display: grid;
-			grid-template-columns: repeat($col, 1fr);
-			grid-column-gap: 1.1rem;
-			grid-template-rows: repeat($row, $hightrepeat) $hightnorepeat;
-			grid-row-gap: 10px;	
-			position: relative;
-            }
+	display: grid;
+	grid-template-columns: repeat($col, 1fr);
+	grid-column-gap: 1.1rem;
+	grid-row-gap: 10px;	
+	position: relative;
+	@media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
+		grid-template-rows: div(#{$hightrepeat},3) repeat($row, $hightrepeat) $hightnorepeat;
+	}
+	@media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {
+		grid-template-rows: div(#{$hightrepeat},3) repeat($row, $hightrepeat) $hightnorepeat;
+	}
+
+}
