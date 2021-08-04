@@ -194,6 +194,9 @@ ul {
 }
 
 .favori {
+  position: absolute;
+  top: 168px;
+  right: 10px;
   border: none;
   margin: 0;
   width: 1.1rem;
@@ -1292,6 +1295,9 @@ ul {
   .index .main-places ul {
     grid-template-rows: div(250px, 3) repeat(2, 250px) 0;
   }
+}
+.index .main-places ul li {
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   .index .main-places ul li {

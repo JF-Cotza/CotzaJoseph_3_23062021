@@ -162,6 +162,8 @@ $place:'index';
                     margin-right: $marginleft_index--list;        
                 }
                 & li {
+                    position: relative;
+
                 @media screen and (max-width:map-get($map: $breakpoints, $key:phone-max )){
                     margin-top: $margin_index--restaurantlist;
                 }
