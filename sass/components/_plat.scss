@@ -49,6 +49,7 @@
         }
     }
     & .add{
+        position: relative;
         display: flex;
         text-align: center;
         align-items: center;
@@ -67,29 +68,22 @@
         &-check{
             display: none;
         }
-        &:hover{    
+        &:hover{
+                
             flex:1;
             @include growplat;
             label{                
                 @include labelplat;
+                
                 span{
+                    position: relative;
+                    animation: come 1s ease-in-out both;
                     @include spanplat;
                 }
                 .add-check{
                     position: relative;
-                    @include addcheckplat;
-                    &::before{
-                        content:"";
-                        height: 100%;
-                        background-color:white;
-                        width: 100%;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        z-index: 2;
-                        transform-origin: right;
-                        animation: scaling 2s ease-in-out both;
-                    }    
+                    animation: come 1s ease-in-out both;
+                    @include addcheckplat;    
                 }
             }
         }
@@ -118,12 +112,5 @@
             }
     }
 }
-    
-@keyframes scaling {
-    from{
-        transform: scaleX(1);
-    }
-    to{
-        transform: scaleX(0);
-    }
-}
+
+
