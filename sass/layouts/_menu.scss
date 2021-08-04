@@ -64,7 +64,6 @@ $place:'menu';
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                 @include restaurant (3,1,$height_repeat--menu,$heigth_button); //test modifié             
-                align-items: center;
             }
             &-entrees{                
                 @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max) ){
@@ -78,13 +77,14 @@ $place:'menu';
                 }
             }
             &-plats{
-              @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
+                @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
                     grid-column: 1/2;
                     grid-row: 2/3;  
                 }
                 @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)){
                     grid-column: 2/3;
                     grid-row: 2/3;
+                    
                 }
             }
             &-desserts{
@@ -188,7 +188,7 @@ $place:'menu';
     text-align: center;
     margin-top: $margin_menu--button;
     .btn{
-        margin: auto;
+        margin-bottom: $marginbottom_menu--button;
         height: $heigth_button--menu;
     }
 }
@@ -212,18 +212,3 @@ $place:'menu';
         display: flex;
     }
 }
-
-/*
- .favori{
-    
-    padding-top: $padding_title--favori;
-    position: absolute;
-    top: 0.625*1.5rem;
-    right: 100px;        
-    @media screen and (min-width: map-get($map: $breakpoints, $key:tablette-min )) and (max-width: map-get($map: $breakpoints, $key:tablette-max )){
-        padding-top:$padding_title--favori;
-        position: absolute;
-        top: 0.625*1.5rem;
-        right: 100px;    
-    }
-}*/

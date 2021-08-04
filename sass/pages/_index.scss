@@ -132,12 +132,9 @@ $place:'index';
                     }
                     & .info{
                         position: absolute;
-                        top:31px;
+                        top:20px;
                         left: 4.6rem;
-                        @media  screen and (min-width:800px) {
-                            top:10px;
-                            
-                        }
+                        
                     }                                         
             }
         }

@@ -19,7 +19,7 @@
     font-size: $fontsize_addcheckplat;
     display: inline-block;
     width: $width_pricecheck;
-    height: calc($height_plat - $padding_plat--large);
+    height: 100%;
     padding-top: $padding_plat--large;
     & i{
         color:$color_button;
@@ -76,7 +76,20 @@
                     @include spanplat;
                 }
                 .add-check{
-                    @include addcheckplat;    
+                    position: relative;
+                    @include addcheckplat;
+                    &::before{
+                        content:"";
+                        height: 100%;
+                        background-color:white;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: 2;
+                        transform-origin: right;
+                        animation: scaling 2s ease-in-out both;
+                    }    
                 }
             }
         }
@@ -106,3 +119,11 @@
     }
 }
     
+@keyframes scaling {
+    from{
+        transform: scaleX(1);
+    }
+    to{
+        transform: scaleX(0);
+    }
+}

@@ -72,7 +72,8 @@ $horizontalspace:(standard:0);
     $margin_menu--list:map-get($map: $espace, $key:standard);
     $margin_menu--title:3*map-get($map: $espace, $key:standard);
     
-    $margin_menu--button:5*map-get($map: $espace, $key:standard);
+    $margin_menu--button:3*map-get($map: $espace, $key:standard);
+    $marginbottom_menu--button:3*map-get($map: $espace, $key:standard);
 
     $padding_dessert:2*map-get($map: $espace, $key: standard);
     $padding_menu--bottom:5*map-get($map: $espace, $key: standard);

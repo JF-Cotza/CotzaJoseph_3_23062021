@@ -9,11 +9,31 @@
         padding-top: $padding_footer--normal;
         margin-left: $margin_footer--liens;
         padding-bottom: $padding_footer--large;
+        @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(2,1fr);
+            margin-right: $margin_footer--liens;
+        }
+        @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 30px;
+            margin-right: $margin_footer--liens;
+        }
     }
     & h3{
-        margin-left: $margin_footer--title;
+        
         font-family: $font-main_info;
         padding-top: $padding_footer--title;
+        @media screen and (max-width:map-get($map: $breakpoints, $key: phone-max)) {
+            margin-left: $margin_footer--title;
+        
+        }
+        @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) {
+            text-align: center;
+        }
+        
     }
     & li{
         margin-top: $margin_footer--interline;
@@ -25,6 +45,46 @@
                 margin-right: $margin_footer--icone;
             }
         }
-    
+        &:nth-child(1){
+            @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)) {
+                grid-row: 1/2;
+                grid-column: 1/2 ;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                grid-row: 1/2;
+                grid-column: 1/2 ;
+            }
+        }
+        &:nth-child(2){
+            @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)) {
+                grid-row: 2/2;
+                grid-column: 1/2 ;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                grid-row: 1/2;
+                grid-column: 2/3 ;
+            }
+        }
+        &:nth-child(3){
+            @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)) {
+                grid-row: 1/2;
+                grid-column: 2/3 ;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                grid-row: 1/2;
+                grid-column: 3/4 ;
+            }
+        }
+        &:nth-child(4){
+            @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)) {
+                grid-row: 2/3;
+                grid-column: 2/3 ;
+            }
+            @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
+                grid-row: 1/2;
+                grid-column: 4/5 ;
+            }
+        }
     }
 }
+

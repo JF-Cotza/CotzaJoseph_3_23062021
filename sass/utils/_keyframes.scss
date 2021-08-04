@@ -55,7 +55,7 @@ $loadtime:3s;
 
 
 @mixin platvalide{
-    animation: platcheck $timecheck ease-in-out both;
+    animation: platcheck div(#{$timecheck},2) div(#{$timecheck},2) ease-in-out both;
 }
 
 /*keyframe et mixin pour la zone de plat ckeck */
