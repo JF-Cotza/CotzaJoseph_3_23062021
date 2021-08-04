@@ -194,8 +194,6 @@ ul {
 }
 
 .favori {
-  position: absolute;
-  top: 168px;
   right: 10px;
   border: none;
   margin: 0;
@@ -537,7 +535,7 @@ ul {
   flex-direction: row;
   justify-content: space-around;
 }
-.plat .add:hover label span {
+.plat .add:hover label .prix {
   position: relative;
   animation: come 1s ease-in-out both;
   margin-right: 10px;
@@ -592,6 +590,11 @@ ul {
 .plat input:checked + label .add-check i {
   color: white;
   animation: platcheck 2s ease-in-out both;
+}
+
+.plat .favori {
+  position: absolute;
+  top: 30px;
 }
 
 .mainTitle {
@@ -1492,6 +1495,11 @@ ul {
   z-index: 2;
   top: 0px;
   left: 0px;
+}
+
+.index .favori {
+  position: absolute;
+  top: 168px;
 }
 
 /*# sourceMappingURL=style.css.map */

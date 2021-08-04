@@ -7,7 +7,7 @@
     justify-content: space-around;
 }
 
-@mixin spanplat{
+@mixin spanplat{ 
     margin-right: $margin_plat;
     height: $height_plat;    
     background:$background_plat;
@@ -75,7 +75,7 @@
             label{                
                 @include labelplat;
                 
-                span{
+                .prix{
                     position: relative;
                     animation: come 1s ease-in-out both;
                     @include spanplat;
@@ -114,3 +114,7 @@
 }
 
 
+.plat .favori{
+    position:absolute;
+    top: 30px;
+}
