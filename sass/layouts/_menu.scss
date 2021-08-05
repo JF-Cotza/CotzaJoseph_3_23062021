@@ -110,10 +110,11 @@ $place:'menu';
                 justify-content: space-between;
                 align-items: center;
                 & h1{
-                font-family: $font-main_info;
-                font-size: $fontsize_mainTitle--menu;
-                }
-                @include favori($place);                                
+                    font-family: $font-main_info;
+                    font-size: $fontsize_mainTitle--menu;
+                    }
+                @include favori($place);
+                    right: 10px;                                
                 @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                     grid-column: 1/3;
                     grid-row: 1/2;
@@ -151,7 +152,7 @@ $place:'menu';
     &-entrees{
         ul{
             li{
-                @for $i from 1 to 4 {
+                @for $i from 1 to 5 {
                     &:nth-child(#{$i}){
                         @include plateshow($i);
                     }

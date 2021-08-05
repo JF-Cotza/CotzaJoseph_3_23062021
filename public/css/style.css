@@ -823,6 +823,7 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  right: 10px;
 }
 .resto .main .menu-title h1 {
   font-family: "shrikhandregular";
@@ -945,6 +946,9 @@ ul {
 }
 .menu-entrees ul li:nth-child(3) {
   animation: platereveal 200ms 600ms ease-in-out both;
+}
+.menu-entrees ul li:nth-child(4) {
+  animation: platereveal 200ms 800ms ease-in-out both;
 }
 .menu-plats ul li:nth-child(1) {
   animation: platereveal 200ms 1000ms ease-in-out both;
