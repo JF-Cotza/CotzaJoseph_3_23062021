@@ -194,7 +194,6 @@ ul {
 }
 
 .favori {
-  right: 10px;
   border: none;
   margin: 0;
   width: 1.1rem;
@@ -745,12 +744,12 @@ ul {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
   .resto .main .menu {
-    grid-template-rows: 110px repeat(2, 330px) 150px;
+    grid-template-rows: 330px repeat(2, 330px) 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 992px) {
   .resto .main .menu {
-    grid-template-rows: 110px repeat(2, 330px) 150px;
+    grid-template-rows: 330px repeat(2, 330px) 150px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -765,12 +764,12 @@ ul {
 }
 @media screen and (min-width: 992px) and (min-width: 768px) and (max-width: 991px) {
   .resto .main .menu {
-    grid-template-rows: 110px repeat(1, 330px) 150px;
+    grid-template-rows: 330px repeat(1, 330px) 150px;
   }
 }
 @media screen and (min-width: 992px) and (min-width: 992px) {
   .resto .main .menu {
-    grid-template-rows: 110px repeat(1, 330px) 150px;
+    grid-template-rows: 330px repeat(1, 330px) 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -1268,12 +1267,12 @@ ul {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
   .index .main-places ul {
-    grid-template-rows: 83.3333333333px repeat(2, 250px) 0;
+    grid-template-rows: 250px repeat(2, 250px) 0;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 992px) {
   .index .main-places ul {
-    grid-template-rows: 83.3333333333px repeat(2, 250px) 0;
+    grid-template-rows: 250px repeat(2, 250px) 0;
   }
 }
 @media screen and (min-width: 992px) {
@@ -1290,12 +1289,12 @@ ul {
 }
 @media screen and (min-width: 992px) and (min-width: 768px) and (max-width: 991px) {
   .index .main-places ul {
-    grid-template-rows: 83.3333333333px repeat(2, 250px) 0;
+    grid-template-rows: 250px repeat(2, 250px) 0;
   }
 }
 @media screen and (min-width: 992px) and (min-width: 992px) {
   .index .main-places ul {
-    grid-template-rows: 83.3333333333px repeat(2, 250px) 0;
+    grid-template-rows: 250px repeat(2, 250px) 0;
   }
 }
 .index .main-places ul li {
@@ -1499,6 +1498,7 @@ ul {
 .index .favori {
   position: absolute;
   top: 168px;
+  right: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

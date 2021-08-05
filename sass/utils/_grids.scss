@@ -17,11 +17,11 @@
 	position: relative;
 	align-content: start;
 	@media screen and (min-width:map-get($map: $breakpoints, $key:tablette-min )) and (max-width:map-get($map: $breakpoints, $key:tablette-max )) {
-		grid-template-rows: math.div($hightrepeat, 3) repeat($row, $hightrepeat) $hightnorepeat;
+		grid-template-rows: $hightrepeat repeat($row, $hightrepeat) $hightnorepeat;
 	}
 	
 	@media screen and (min-width:map-get($map: $breakpoints, $key:ordi-min )) {		
-		grid-template-rows: math.div($hightrepeat, 3)  repeat($row, $hightrepeat) $hightnorepeat;
+		grid-template-rows: $hightrepeat repeat($row, $hightrepeat) $hightnorepeat;
 	}
 
 }
