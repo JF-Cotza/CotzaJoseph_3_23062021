@@ -62,7 +62,7 @@ $place:'menu';
                 padding-bottom: $padding_menu--bottom;
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: tablette-min)) and (max-width:map-get($map: $breakpoints, $key: tablette-max)){
-               @include restaurant (2,2,$height_repeat--menu,$heigth_button);                
+                @include restaurant (2,2,$height_repeat--menu,$heigth_button);                
             }
             @media screen and (min-width:map-get($map: $breakpoints, $key: ordi-min)) {
                 @include restaurant (3,1,$height_repeat--menu,$heigth_button); //test modifié            

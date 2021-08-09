@@ -744,12 +744,12 @@ ul {
 }
 @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 768px) and (max-width: 991px) {
   .resto .main .menu {
-    grid-template-rows: 330px repeat(2, 330px) 150px;
+    grid-template-rows: 400px repeat(2, 400px) 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) and (min-width: 992px) {
   .resto .main .menu {
-    grid-template-rows: 330px repeat(2, 330px) 150px;
+    grid-template-rows: 400px repeat(2, 400px) 150px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -764,12 +764,12 @@ ul {
 }
 @media screen and (min-width: 992px) and (min-width: 768px) and (max-width: 991px) {
   .resto .main .menu {
-    grid-template-rows: 330px repeat(1, 330px) 150px;
+    grid-template-rows: 400px repeat(1, 400px) 150px;
   }
 }
 @media screen and (min-width: 992px) and (min-width: 992px) {
   .resto .main .menu {
-    grid-template-rows: 330px repeat(1, 330px) 150px;
+    grid-template-rows: 400px repeat(1, 400px) 150px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
