@@ -552,7 +552,7 @@ ul {
 }
 .plat .add:hover label .add-check {
   display: none;
-  animation: come 1s -0.5s ease-in-out both;
+  animation: come 1s -0.5s ease-in-out both; /* l'action comence lors du hover mais à l'état correspondant comme s'il avait commencé avant*/
   position: relative;
   background: #99E2D0;
   font-size: 2rem;
