@@ -537,9 +537,7 @@ ul {
   position: relative;
   animation: come 1s ease-in-out both;
   margin-right: 10px;
-  height: 70px;
   background: white;
-  justify-self: flex-end;
 }
 .plat .add:hover label .add-check {
   position: relative;
@@ -573,9 +571,7 @@ ul {
 }
 .plat input:checked + label span {
   margin-right: 10px;
-  height: 70px;
   background: white;
-  justify-self: flex-end;
 }
 .plat input:checked + label .add-check {
   background: #99E2D0;

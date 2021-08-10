@@ -9,9 +9,9 @@
 
 @mixin spanplat{ 
     margin-right: $margin_plat;
-    height: $height_plat;    
+    //height: $height_plat;    
     background:$background_plat;
-    justify-self: flex-end;
+    //justify-self: flex-end;
 }
 
 @mixin addcheckplat {
