@@ -532,16 +532,15 @@ ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  animation: come 2s ease-in-out both;
 }
 .plat .add:hover label .prix {
   position: relative;
-  animation: come 1s ease-in-out both;
   margin-right: 10px;
   background: white;
 }
 .plat .add:hover label .add-check {
   position: relative;
-  animation: come 1s ease-in-out both;
   background: #99E2D0;
   font-size: 2rem;
   display: inline-block;
@@ -569,8 +568,10 @@ ul {
   flex-direction: row;
   justify-content: space-around;
 }
-.plat input:checked + label span {
+.plat input:checked + label .prix {
   margin-right: 10px;
+}
+.plat input:checked + label span {
   background: white;
 }
 .plat input:checked + label .add-check {

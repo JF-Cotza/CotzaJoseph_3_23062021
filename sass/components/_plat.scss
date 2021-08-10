@@ -8,7 +8,7 @@
 }
 
 @mixin spanplat{ 
-    margin-right: $margin_plat;
+    //margin-right: $margin_plat;
     //height: $height_plat;    
     background:$background_plat;
     //justify-self: flex-end;
@@ -68,21 +68,21 @@
         &-check{
             display: none;
         }
-        &:hover{
-                
+        &:hover{                
             flex:1;
             @include growplat;
             label{                
                 @include labelplat;
-                
-                .prix{
+                animation: come 2s ease-in-out both;
+                   .prix{
                     position: relative;
-                    animation: come 1s ease-in-out both;
+                    //animation: come 2s ease-in-out both;
+                    margin-right: $margin_plat;
                     @include spanplat;
                 }
                 .add-check{
                     position: relative;
-                    animation: come 1s ease-in-out both;
+                    //animation: come 1s ease-in-out both;
                     @include addcheckplat;    
                 }
             }
@@ -103,6 +103,9 @@
     input:checked{
             & +label{                
                 @include labelplat;
+                .prix{
+                    margin-right: $margin_plat;
+                }
                 span{
                     @include spanplat;
                 }
