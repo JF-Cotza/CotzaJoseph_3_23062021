@@ -1,6 +1,6 @@
 /*durée des animations*/
 $time:1s;
-$timecheck:2s;
+$timecheck:1s;
 $menutime:200ms;
 $loadtime:3s;
 
@@ -69,17 +69,32 @@ $loadtime:3s;
 }
 
 @keyframes come {
-    0%{
+    /*0%{
         top:0;
-        left: 1000px;
-        display: none;
-    }
-    1%{
-        top:0;
-        left: 1000px;
+        left: 50px;
         display: inline-block;
     }
+    10%{
+        top:0;
+        left:20px;
+    }
+    50%{
+        top:0;
+        left:10px;
+        
+    }
+
     100%{
+        top:0;
+        left: 0px;
+        display: inline-block;
+    }*/
+    from{
+        top:0;
+        left: 30px;
+        display: inline-block;
+    }
+    to{
         top:0;
         left: 0px;
         display: inline-block;

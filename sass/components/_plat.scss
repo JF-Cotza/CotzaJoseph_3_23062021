@@ -69,20 +69,19 @@
             display: none;
         }
         &:hover{                
-            flex:1;
-            @include growplat;
             label{                
+                display: none;
+                
                 @include labelplat;
-                animation: come 2s ease-in-out both;
-                   .prix{
+                .prix{
                     position: relative;
-                    //animation: come 2s ease-in-out both;
                     margin-right: $margin_plat;
                     @include spanplat;
                 }
                 .add-check{
+                    display: none;;
+                    animation: come 1s -.5s ease-in-out both;
                     position: relative;
-                    //animation: come 1s ease-in-out both;
                     @include addcheckplat;    
                 }
             }
